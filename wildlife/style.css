@@ -225,6 +225,100 @@ button {
   background-color: #cccccc;
 }
 
+.latest_articles_title > .title {
+  color: #333333;
+}
+
+.latest_articles_title > .subtitle {
+  font-size: 24px;
+  line-height: 72px;
+  color: #666666;
+}
+
+.latest_articles_slider {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 103px 0;
+}
+
+.latest_articles_slider > div {
+  width: 300px;
+  height: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.latest_articles_slider > div:first-of-type,
+.latest_articles_slider > div:last-of-type {
+  width: 30px;
+  height: 39px;
+}
+
+.latest_articles_slider a {
+  display: block;
+  width: inherit;
+  height: inherit;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.latest_articles_slider .prev {
+  background-image: url(assets/icons/prev.svg);
+}
+
+.latest_articles_slider .prev:hover {
+  background-image: url(assets/icons/prev_hover.svg);
+}
+
+.latest_articles_slider .prev:active {
+  background-image: url(assets/icons/prev_active.svg);
+}
+
+.latest_articles_slider .deer {
+  background-image: url(assets/images/deer.jpg);
+}
+
+.latest_articles_slider .squirrel {
+  background-image: url(assets/images/squirrel.jpg);
+}
+
+.latest_articles_slider .bird {
+  background-image: url(assets/images/bird.jpg);
+}
+
+.latest_articles_slider .title {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 36px;
+  color: #f7f7f7;
+}
+
+.latest_articles_slider .description {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 48px;
+  color: #f7f7f7;
+  margin-bottom: 29px;
+}
+
+.latest_articles_slider .next {
+  background-image: url(assets/icons/next.svg);
+}
+
+.latest_articles_slider .next:hover {
+  background-image: url(assets/icons/next_hover.svg);
+}
+
+.latest_articles_slider .next:active {
+  background-image: url(assets/icons/next_active.svg);
+}
+
 /* Get Notified */
 
 .get_notified {
