@@ -417,3 +417,84 @@ footer {
   flex-wrap: wrap;
   padding: 150px 0;
 }
+
+.footer_cotainer .logo {
+  display: flex;
+}
+
+.footer_cotainer .logo img {
+  width: 70px;
+  height: 60px;
+}
+
+.footer_cotainer .logo a {
+  padding: 0 15px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 60px;
+  text-transform: uppercase;
+  color: #f7f7f7;
+}
+
+.footer_cotainer .menu li {
+  display: flex;
+  padding-left: 24px;
+  margin: 0 32px;
+}
+
+/* Social networks*/
+
+.footer_cotainer .social ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.footer_cotainer .social li {
+  display: flex;
+  padding-left: 26px;
+}
+
+.footer_cotainer .social a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+}
+
+.footer_cotainer .social .facebook {
+  background-image: url(assets/icons/facebook.svg);
+  background-color: #fff;
+  background-position: 11px 6px;
+}
+
+.footer_cotainer .social .instagram {
+  background-image: url(assets/icons/instagram.svg);
+  background-color: #fff;
+  background-position: 5px 5px;
+}
+
+.footer_cotainer .social .pinterest {
+  background-image: url(assets/icons/pinterest.svg);
+  background-color: #fff;
+  background-position: 10px 6px;
+}
+
+.footer_cotainer .social .telegram {
+  background-image: url(assets/icons/telegram.svg);
+  background-color: #fff;
+  background-position: 6px 8px;
+}
+
+.footer_cotainer .social a:hover {
+  background-color: #e39128;
+}
+
+.footer_cotainer .social a:active {
+  background-color: #8f5613;
+}
