@@ -18,6 +18,41 @@ body {
   margin: 0 auto;
 }
 
+h1 {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 72px;
+  color: #cd6326;
+}
+
+h2 {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 72px;
+  text-align: center;
+  color: #333333;
+}
+
+h3 {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 27px;
+  color: #f7f7f7;
+}
+
+a,
+button {
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
 /* Header and Survival*/
 
 .header_survival {
@@ -40,6 +75,100 @@ body {
   padding: 20px 0;
 }
 
+.logo {
+  display: flex;
+}
+
+.logo img {
+  width: 70px;
+  height: 60px;
+}
+
+.logo a {
+  padding: 0 15px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 60px;
+  text-transform: uppercase;
+  color: #f7f7f7;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.menu li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 65px;
+}
+
+.menu a {
+  font: 400 23px "Open Sans", sans-serif;
+  color: #f7f7f7;
+  line-height: 28px;
+}
+
+.menu a:hover {
+  color: #e39128;
+}
+
+.menu a:active {
+  color: #8f5613;
+}
+
+.menu .search {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+}
+
+.menu .search {
+  background-image: url(assets/icons/search.svg);
+}
+
+.menu .search:hover {
+  background-image: url(assets/icons/search_hover.svg);
+}
+
+.menu .search:active {
+  background-image: url(assets/icons/search_active.svg);
+}
+
+.menu .sign_in {
+  font: 400 23px "Roboto", sans-serif;
+  color: #f7f7f7;
+  line-height: 48px;
+  border: 2px solid #cd6326;
+  box-sizing: border-box;
+  border-radius: 5px;
+  width: 120px;
+  height: 50px;
+  margin: 0 auto;
+  background: none;
+  text-align: center;
+}
+
+.menu .sign_in:hover {
+  color: #f7f7f7;
+  background-color: #cd6326;
+  border-color: #cd6326;
+}
+
+.menu .sign_in:active {
+  color: #f7f7f7;
+  background-color: #8f5613;
+  border-color: #8f5613;
+}
+
 /* Survival */
 
 .survival_content_wrap {
@@ -48,6 +177,40 @@ body {
   justify-content: flex-start;
   max-width: 274px;
   padding: 115px 0 240px 0;
+}
+
+.survival h1 {
+  line-height: 44px;
+  letter-spacing: 2px;
+}
+
+.survival h3 {
+  margin: 64px 0 0 0;
+}
+
+.survival .donate {
+  background-color: #cd6326;
+  border: 0;
+  border-radius: 5px;
+  width: 160px;
+  height: 60px;
+  margin: 49px 0 0 0;
+  appearance: none;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 23px;
+  color: #f7f7f7;
+  line-height: 59px;
+  text-align: center;
+}
+
+.survival .donate:hover {
+  background-color: #e39128;
+}
+
+.survival .donate:active {
+  background-color: #8f5613;
 }
 
 /* Latest Articles */
