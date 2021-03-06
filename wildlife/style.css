@@ -334,6 +334,70 @@ button {
   text-align: center;
 }
 
+.get_notified_title .subtitle {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 27px;
+  line-height: 70px;
+  text-align: center;
+  color: #333333;
+}
+
+.get_notified_contact {
+  padding: 40px 0 47px;
+}
+
+.get_notified_contact *:focus {
+  outline: none;
+}
+
+.get_notified_contact .contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.get_notified_contact .contact input {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 23px;
+}
+
+.get_notified_contact .contact input:first-child {
+  flex: 2 1 23.5em;
+  max-width: 23.5em;
+  padding-top: 1px;
+  padding-left: 15px;
+  margin: 5px 0;
+  border: 1px solid #666666;
+  line-height: 59px;
+  align-items: center;
+  color: #666666;
+}
+
+.get_notified_contact .contact input:last-child {
+  flex: 1 1 5.31em;
+  max-width: 5.31em;
+  margin: 5px 0;
+  background-color: #cd6326;
+  border: none;
+  border-radius: 0px 5px 5px 0px;
+  line-height: 62px;
+  color: #f7f7f7;
+}
+
+.get_notified_contact input:last-child:hover {
+  background-color: #e39128;
+  cursor: pointer;
+}
+
+.get_notified_contact input:last-child:active {
+  background-color: #8f5613;
+  cursor: pointer;
+}
+
 /* Footer */
 
 footer {
