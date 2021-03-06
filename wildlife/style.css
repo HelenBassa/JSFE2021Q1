@@ -1,0 +1,98 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.cotainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header and Survival*/
+
+.header_survival {
+  background-color: #02160b;
+}
+
+.header_survival_wrapper {
+  background-image: url(assets/images/fox.jpg);
+  background-position: center;
+}
+
+/* Header */
+
+.header_content_wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+
+/* Survival */
+
+.survival_content_wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 274px;
+  padding: 115px 0 240px 0;
+}
+
+/* Latest Articles */
+
+.latest_articles {
+  background-color: #cccccc;
+}
+
+.latest_articles_wrapper {
+  padding: 121px 0;
+  text-align: center;
+  background-color: #cccccc;
+}
+
+/* Get Notified */
+
+.get_notified {
+  background-color: #cccccc;
+}
+
+.get_notified_wrapper {
+  background-color: #cccccc;
+}
+
+.get_notified_cotainer {
+  padding: 0 0 187px 0;
+  text-align: center;
+}
+
+/* Footer */
+
+footer {
+  background-color: #181617;
+}
+
+.footer_wrapper {
+  background-image: url(assets/images/leaves.jpg);
+  background-position: center;
+}
+
+.footer_content_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 150px 0;
+}
