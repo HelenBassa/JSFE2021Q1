@@ -129,6 +129,7 @@ body {
 .piano-key.sharp.piano-key-active {
 	background-color: #03978b;
 }
+
 .piano-key.none {
 	background-color: transparent;
 	border: 0;
