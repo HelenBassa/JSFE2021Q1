@@ -122,6 +122,13 @@ body {
 .piano-key.sharp.piano-key-active {
 	transform: scale(0.96);
 }
+.piano-key.piano-key-active {
+	background-color: #00c9b7;
+}
+  
+.piano-key.sharp.piano-key-active {
+	background-color: #03978b;
+}
 .piano-key.none {
 	background-color: transparent;
 	border: 0;
@@ -141,6 +148,7 @@ body {
 	bottom: -45px;
 	left: 20px;
 	transition: 0.3s;
+	pointer-events: none;
 }
 .piano-key::after {
 	display: none;
