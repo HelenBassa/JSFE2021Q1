@@ -1,5 +1,9 @@
 const piano = document.querySelector(".piano");
 const pianoKeys = document.querySelectorAll(".piano-key");
+const buttons = document.querySelector(".btn-container");
+const button = document.querySelectorAll(".btn");
+const letters = document.querySelector(".btn-letters");
+const notes = document.querySelector(".btn-notes");
 
 const keys = {};
 
@@ -12,6 +16,30 @@ for (let pianoKey of pianoKeys) {
     pianoKey.classList.add("piano-key-remove-mouse");
   }
 }
+
+buttons.addEventListener("click", (event) => {
+  if (event.target.classList.contains("btn")) {
+    button.forEach((element) => {
+      element.classList.toggle("btn-active");
+    });
+  }
+});
+
+letters.addEventListener("click", (event) => {
+  if (event.target.classList.contains("btn")) {
+    pianoKeys.forEach((element) => {
+      element.classList.add("piano-key-letter");
+    });
+  }
+});
+
+notes.addEventListener("click", (event) => {
+  if (event.target.classList.contains("btn")) {
+    pianoKeys.forEach((element) => {
+      element.classList.remove("piano-key-letter");
+    });
+  }
+});
 
 let isPressed = false;
 
