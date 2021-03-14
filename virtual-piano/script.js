@@ -107,7 +107,7 @@ window.addEventListener("keydown", (event) => {
     document
       .querySelector(`#${event.code}`)
       .classList.remove("piano-key-remove-mouse");
-    document.querySelector(`${event.code}`).classList.add("piano-key-active");
+    document.querySelector(`#${event.code}`).classList.add("piano-key-active");
   }
 });
 
