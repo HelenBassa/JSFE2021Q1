@@ -125,3 +125,21 @@ function playAudio(src) {
   audio.currentTime = 0;
   audio.play();
 }
+
+const fullScreen = document.querySelector(".fullscreen");
+
+fullScreen.addEventListener(
+  "click",
+  () => {
+    toggleFullScreen();
+  },
+  false
+);
+
+function toggleFullScreen() {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen();
+  } else {
+    document.exitFullscreen();
+  }
+}
