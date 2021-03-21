@@ -20,7 +20,8 @@ for (let pianoKey of pianoKeys) {
 buttons.addEventListener("click", (event) => {
   if (event.target.classList.contains("btn")) {
     button.forEach((element) => {
-      element.classList.toggle("btn-active");
+      element.classList.remove("btn-active");
+      event.target.classList.add("btn-active");
     });
   }
 });
@@ -140,6 +141,8 @@ function toggleFullScreen() {
   if (!document.fullscreenElement) {
     document.documentElement.requestFullscreen();
   } else {
-    document.exitFullscreen();
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    }
   }
 }

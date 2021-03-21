@@ -15,6 +15,9 @@ body {
   background-color: #313940;
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
   background: #313940;
+  background-image: url(assets/11.jpg);
+  background-position: center;
+  background-size: cover;
   overflow-x: hidden;
 }
 .header {
@@ -22,12 +25,12 @@ body {
   width: 100%;
   border-bottom: 1px solid;
   border-image-slice: 1;
-  border-image-source: linear-gradient(to left, #38495a, #a2abb3, #38495a);
+  border-image-source: linear-gradient(to left, #110205, #b98539, #110205);
 }
 .header-title {
   line-height: 60px;
-  font-weight: 300;
-  color: #fff;
+  font-weight: 400;
+  color: #110205;
 }
 .main {
   min-height: calc(100vh - 110px);
@@ -52,13 +55,13 @@ body {
   width: 150px;
   height: 40px;
   padding: 0 10px;
-  background-color: #454c53;
+  background-color: #110205;
   border: 0;
   border-radius: 2px;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
-  font-weight: 300;
-  color: #fff;
+  font-weight: 400;
+  color: #b98539;
   outline: 0;
   cursor: pointer;
   transition: 0.3s;
@@ -70,10 +73,11 @@ body {
   background-color: #00c9b7;
 }
 .btn-active {
-  background-color: #00b4a4;
+  background-color: #b98539;
+  color: #110205;
 }
 .btn-active:hover {
-  background-color: #00c9b7;
+  background-color: #e8dcc5;
 }
 .piano {
   position: relative;
@@ -88,7 +92,7 @@ body {
   position: relative;
   width: 80px;
   height: 270px;
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(232, 220, 197, 0.85);
   /*border: 4px solid #313940;*/
   margin: 4px;
   border-radius: 0px 0px 12px 12px;
@@ -96,7 +100,7 @@ body {
   cursor: pointer;
 }
 .piano-key:hover {
-  background-color: #fff;
+  background-color: #e8dcc5;
 }
 .keys-sharp {
   position: absolute;
@@ -111,25 +115,29 @@ body {
 .piano-key.sharp {
   width: 54px;
   height: 170px;
-  background-color: #313940;
+  background-color: #110205;
   border: 0;
   border-radius: 0px 0px 9px 9px;
-  top: 0;
+  top: 4px;
   z-index: 3;
   pointer-events: auto;
   transform-origin: center top;
   margin: 0px;
+}
+
+.piano-key.sharp:hover {
+  background-color: #302d2d;
 }
 .piano-key.piano-key-active,
 .piano-key.sharp.piano-key-active {
   transform: scale(0.96);
 }
 .piano-key.piano-key-active {
-  background-color: #00c9b7;
+  background-color: #7ec7c1;
 }
 
 .piano-key.sharp.piano-key-active {
-  background-color: #03978b;
+  background-color: #68a7a1;
 }
 
 .piano-key.none {
@@ -137,6 +145,13 @@ body {
   border: 0;
   border-radius: 0;
   pointer-events: none;
+}
+
+.piano-key.none::after,
+.piano-key.none::before {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
 }
 .piano-key::before,
 .piano-key::after {
@@ -147,11 +162,14 @@ body {
   font-size: 26px;
   line-height: 40px;
   text-align: center;
-  color: #a2abb3;
+  color: #110205;
   bottom: -45px;
   left: 20px;
   transition: 0.3s;
   pointer-events: none;
+  border: 1px solid rgba(232, 220, 197, 0.85);
+  border-radius: 50%;
+  background-color: rgba(232, 220, 197, 0.85);
 }
 .piano-key::after {
   display: none;
@@ -159,12 +177,12 @@ body {
 }
 .piano-key:hover::before,
 .piano-key:hover::after {
-  color: #d7dfe6;
+  color: #b98539;
 }
 
 .piano-key-active:hover::before,
 .piano-key-active:hover::after {
-  color: #00b4a4;
+  color: #68a7a1;
 }
 
 .sharp:active {
@@ -194,7 +212,7 @@ body {
 .piano-key-active-pseudo:hover::before,
 .piano-key-active::after,
 .piano-key-active::before {
-  color: #00b4a4;
+  color: #68a7a1;
 }
 
 .fullscreen {
@@ -203,7 +221,7 @@ body {
   right: 40px;
   width: 40px;
   height: 40px;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(232, 220, 197, 0.3);
   border: 0;
   outline: 0;
   background-size: contain;
@@ -212,7 +230,7 @@ body {
   background-image: url("assets/svg/fullscreen-open.svg");
 }
 .fullscreen:hover {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(232, 220, 197, 0.5);
 }
 :-webkit-full-screen .fullscreen {
   background-image: url("assets/svg/fullscreen-exit.svg");
@@ -220,7 +238,7 @@ body {
 .footer {
   border-top: 1px solid;
   border-image-slice: 1;
-  border-image-source: linear-gradient(to left, #38495a, #a2abb3, #38495a);
+  border-image-source: linear-gradient(to left, #110205, #b98539, #110205);
 }
 .footer-container {
   padding: 0 15px;
@@ -241,13 +259,13 @@ body {
   background-repeat: no-repeat;
   background-position: left center;
   line-height: 45px;
-  color: #cbd5de;
+  color: #110205;
   font-size: 16px;
   font-family: "Open Sans", sans-serif;
   transition: 0.3s;
 }
 .github:hover {
-  color: #fff;
+  color: #e8dcc5;
 }
 .rss {
   display: block;
@@ -267,7 +285,7 @@ body {
   right: 0;
   font-size: 21px;
   letter-spacing: -2px;
-  color: #cbd5de;
+  color: #110205;
   line-height: 0.9;
   font-weight: bold;
   transition: 0.3s;
@@ -275,6 +293,7 @@ body {
 .rss:hover .rss-year {
   right: -5px;
   letter-spacing: 0;
+  color: #e8dcc5;
 }
 @media (max-width: 768px) {
   .fullscreen {
@@ -296,7 +315,7 @@ body {
     width: 44px;
     height: 160px;
     border-radius: 0px 0px 8px 8px;
-    border: 2px solid #313940;
+    border: 2px solid #110205;
   }
   .keys-sharp {
     left: 26px;
