@@ -1,25 +1,21 @@
 const piano = document.querySelector(".piano");
 const pianoKeys = document.querySelectorAll(".piano-key");
-const buttons = document.querySelector(".btn-container");
-const button = document.querySelectorAll(".btn");
+const btnContainer = document.querySelector(".btn-container");
+const buttons = document.querySelectorAll(".btn");
 const letters = document.querySelector(".btn-letters");
 const notes = document.querySelector(".btn-notes");
 
 const keys = {};
 
 for (let pianoKey of pianoKeys) {
-  let letter = pianoKey.dataset.letter;
+  var letter = pianoKey.dataset.letter;
   let note = pianoKey.dataset.note;
   keys[`Key${letter}`] = note;
-
-  if (!pianoKey.classList.contains("none")) {
-    pianoKey.classList.add("piano-key-remove-mouse");
-  }
 }
 
-buttons.addEventListener("click", (event) => {
+btnContainer.addEventListener("click", (event) => {
   if (event.target.classList.contains("btn")) {
-    button.forEach((element) => {
+    buttons.forEach((element) => {
       element.classList.remove("btn-active");
       event.target.classList.add("btn-active");
     });
@@ -27,24 +23,20 @@ buttons.addEventListener("click", (event) => {
 });
 
 letters.addEventListener("click", (event) => {
-  if (event.target.classList.contains("btn")) {
-    pianoKeys.forEach((element) => {
-      element.classList.add("piano-key-letter");
-    });
-  }
+  pianoKeys.forEach((element) => {
+    element.classList.add("piano-key-letter");
+  });
 });
 
 notes.addEventListener("click", (event) => {
-  if (event.target.classList.contains("btn")) {
-    pianoKeys.forEach((element) => {
-      element.classList.remove("piano-key-letter");
-    });
-  }
+  pianoKeys.forEach((element) => {
+    element.classList.remove("piano-key-letter");
+  });
 });
 
 let isPressed = false;
 
-piano.addEventListener("mousedown", (event) => {
+function startPlay(event) {
   if (event.target.classList.contains("piano-key")) {
     const note = event.target.dataset.note;
     const src = `assets/audio/${note}.mp3`;
@@ -54,68 +46,52 @@ piano.addEventListener("mousedown", (event) => {
         element.classList.remove("piano-key-active");
       }
     });
-    event.target.classList.add("piano-key-active");
-
-    event.target.classList.remove("piano-key-remove-mouse");
-    event.target.classList.add("piano-key-active-pseudo");
+    event.target.classList.add("piano-key-active", "piano-key-active-pseudo");
     isPressed = true;
   }
-});
+}
+
+piano.addEventListener("mousedown", startPlay);
 
 piano.addEventListener("mouseover", (event) => {
   if (isPressed == false) {
     return;
   }
-  if (event.target.classList.contains("piano-key")) {
-    const note = event.target.dataset.note;
-    const src = `assets/audio/${note}.mp3`;
-    playAudio(src);
-    pianoKeys.forEach((element) => {
-      if (element.classList.contains("piano-key-active")) {
-        element.classList.remove("piano-key-active");
-      }
-    });
-    event.target.classList.add("piano-key-active");
-    event.target.classList.remove("piano-key-remove-mouse");
-    event.target.classList.add("piano-key-active-pseudo");
-  }
+  startPlay(event);
 });
 
-window.addEventListener("mouseup", (event) => {
+function stopPlay(event) {
   if (event.target.classList.contains("piano-key")) {
-    event.target.classList.remove("piano-key-active");
-    event.target.classList.add("piano-key-remove-mouse");
-    event.target.classList.remove("piano-key-active-pseudo");
+    event.target.classList.remove(
+      "piano-key-active",
+      "piano-key-active-pseudo"
+    );
   }
+}
+
+window.addEventListener("mouseup", (event) => {
+  stopPlay(event);
   isPressed = false;
 });
 
-window.addEventListener("mouseout", (event) => {
-  if (event.target.classList.contains("piano-key")) {
-    event.target.classList.remove("piano-key-active");
-    event.target.classList.add("piano-key-remove-mouse");
-    event.target.classList.remove("piano-key-active-pseudo");
-  }
-});
+window.addEventListener("mouseout", stopPlay);
 
 window.addEventListener("keydown", (event) => {
   if (event.repeat) {
     return;
   }
-
   if (event.code in keys) {
     playAudio(`assets/audio/${keys[event.code]}.mp3`);
     document
-      .querySelector(`#${event.code}`)
-      .classList.remove("piano-key-remove-mouse");
-    document.querySelector(`#${event.code}`).classList.add("piano-key-active");
+      .querySelector(`div[data-letter="${event.code[3]}"]`)
+      .classList.add("piano-key-active");
   }
 });
 
 window.addEventListener("keyup", (event) => {
   if (event.code in keys) {
     document
-      .querySelector(`#${event.code}`)
+      .querySelector(`div[data-letter="${event.code[3]}"]`)
       .classList.remove("piano-key-active");
   }
 });
