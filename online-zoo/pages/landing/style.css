@@ -1,0 +1,132 @@
+/*media max-width*/
+
+html {
+  box-sizing: border-box;
+
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  color: var(--black);
+  background-color: var(--white);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+:root {
+  /* Color */
+  --black: #000000;
+  --navy: #20113d;
+  --white: #ffffff;
+  --orange: #f58021;
+  --turquoise: #00a092;
+
+  /* Color Hover/Pressed */
+  --orange-dark: #d26004;
+  --turquoise-dark: #05786e;
+
+  /* Color Not Active */
+  --turquoise-light: #80cfc8;
+
+  /* Color for Social networks*/
+  --pure-red: #ff0000;
+  --moderate-pink: #c13584;
+  --dark-moderate-blue: #3b5998;
+}
+
+/*Sample*/
+header {
+  color: var(--turquoise);
+}
+/*Sample*/
+
+.header-text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 82px;
+  line-height: 100px;
+  /* identical to box height */
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: var(--turquoise);
+}
+
+.header-text-320 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 49px;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: var(--turquoise);
+}
+
+h2 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 66px;
+  /* identical to box height */
+  text-transform: uppercase;
+  color: var(--turquoise);
+}
+
+.h2-320 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 32px;
+  /* identical to box height */
+  text-transform: uppercase;
+  color: var(--turquoise);
+}
+
+h3 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 51px;
+  /* identical to box height */
+  color: var(--turquoise);
+  text-transform: uppercase;
+}
+
+.subheader {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 130%;
+  /* or 34px */
+  color: var(--turquoise);
+}
+
+.body-text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 150%;
+  /* identical to box height, or 27px */
+  color: var(--turquoise);
+}
+
+.btn-text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+  text-transform: uppercase;
+  color: var(--turquoise);
+}
