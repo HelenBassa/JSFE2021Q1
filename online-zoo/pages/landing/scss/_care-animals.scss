@@ -1,0 +1,30 @@
+.care-animals {
+  padding: 136px 0 0;
+
+  &--inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 26%;
+
+    &__title {
+      margin-bottom: 50px;
+    }
+
+    &__description {
+      color: $black;
+      margin: 0 10%;
+    }
+  }
+
+  &--choose {
+    display: flex;
+    justify-content: center;
+  }
+
+  &--hand-touch {
+    margin: 149px 0 145px;
+  }
+}

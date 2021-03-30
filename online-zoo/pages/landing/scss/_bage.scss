@@ -1,0 +1,26 @@
+.bage {
+  display: inline-flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 30px;
+  border-radius: 5px 0;
+  border: none;
+
+  &--navy {
+    color: $white;
+    background-color: $navy;
+  }
+
+  &--orange {
+    color: $white;
+    background-color: $orange;
+  }
+
+  &--transparent {
+    color: $white;
+    background-color: transparent;
+  }
+}

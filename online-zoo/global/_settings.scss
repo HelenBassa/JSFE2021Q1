@@ -1,0 +1,161 @@
+html {
+  box-sizing: border-box;
+
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  color: $navy;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  position: relative;
+  margin: 0;
+  overflow-y: overlay;
+}
+
+ul,
+ol,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+button:focus,
+input:focus {
+  outline: transparent;
+}
+
+// button {
+// 	@include no-btn;
+// }
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+.flex {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.--just-space {
+  justify-content: space-between;
+}
+
+.--just-center {
+  justify-content: center;
+}
+
+.--just-end {
+  justify-content: flex-end;
+}
+
+.--align-str {
+  align-items: stretch;
+}
+
+.--align-center {
+  align-items: center;
+}
+
+.--align-end {
+  align-items: flex-end;
+}
+
+.wrapper {
+  width: 100%;
+  background-color: $white;
+
+  &--header {
+    background-color: $orange;
+  }
+  &--donation,
+  &--footer,
+  &--pay-and-feed,
+  &--users-think {
+    background-color: $navy;
+  }
+}
+
+.container {
+  max-width: 1920px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 260px;
+
+  &--meet-pets {
+    max-width: 2360px;
+    padding: 0;
+  }
+
+  &--users-think {
+    padding: 0;
+    // padding-left: 260px;
+  }
+
+  // @media screen and (max-width: 1199px) {
+  //   padding: 0 50px;
+  // }
+
+  // @media screen and (max-width: 767px) {
+  //   padding: 0 5%;
+  // }
+}
+
+.inner-bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &--watch-animal {
+    background-image: url(/assets/images/landing/panda-background.jpg);
+    background-size: auto;
+    background-position-x: 1px;
+    background-position-y: -40px;
+  }
+
+  &--users-think {
+    background: linear-gradient(
+        177.34deg,
+        #20113d 7.26%,
+        rgba(32, 17, 61, 0) 14.89%
+      ),
+      linear-gradient(144.77deg, #20113d 18.53%, rgba(32, 17, 61, 0) 46.43%),
+      url(/assets/images/landing/gradient-background.jpg);
+    background-size: cover;
+  }
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}

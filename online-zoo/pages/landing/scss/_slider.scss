@@ -1,0 +1,77 @@
+.slider {
+  padding: 104px 0 50px;
+  // background: linear-gradient(270deg, #000 0%, #fff 19%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+
+  &__buttons {
+    display: flex;
+    flex-direction: row;
+
+    &--btn {
+      margin: 0 25px;
+    }
+  }
+
+  &__wrapper {
+    width: 1920px;
+    padding: 50px 0 50px 260px;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 40px;
+  }
+
+  &__card {
+    position: relative;
+    height: 747px;
+    width: 440px;
+    transition: all 0.3s ease-in-out;
+    background-color: $navy;
+    border-radius: 5px;
+    z-index: 2;
+
+    &:hover {
+      transform: scale(1.09, 1.054);
+    }
+
+    &--link {
+      z-index: 3;
+      height: 100%;
+    }
+
+    &--picture {
+      height: 436px;
+      width: 440px;
+
+      /* Сustom figure after normalize.css */
+      margin-inline: 0;
+      margin-block: 0;
+      z-index: 1;
+      border-radius: 5px 5px 0 0;
+      overflow: hidden;
+    }
+
+    p.subheader {
+      color: $white;
+      padding: 30px 45px 20px 45px;
+    }
+
+    .body-text {
+      color: $white;
+      padding: 0 45px 50px 45px;
+    }
+
+    button {
+      position: absolute;
+      top: calc(50% - 73px / 2 + 287px);
+      left: calc(50% - 240px / 2);
+    }
+  }
+}

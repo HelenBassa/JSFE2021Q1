@@ -1,0 +1,26 @@
+.meet-pets {
+  padding: 135px 0 150px;
+
+  &--inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 25%;
+
+    &__title {
+      margin-bottom: 50px;
+    }
+
+    &__description {
+      // margin-bottom: 50px;
+      color: $black;
+    }
+  }
+
+  &--choose {
+    display: flex;
+    justify-content: center;
+  }
+}
