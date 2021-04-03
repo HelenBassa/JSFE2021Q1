@@ -1,0 +1,110 @@
+.get-in-touch {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  // align-items: flex-start;
+
+  &__form {
+    margin: 147px 0;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 40px;
+  }
+
+  // @media screen and (max-width: 767px) {
+  //   display: flex;
+  //   flex-direction: column;
+  //   align-items: center;
+  //   padding: 50px 0 80px;
+
+  &__title {
+    margin-bottom: 50px;
+
+    // @media screen and (max-width: 767px) {
+    //     text-align: center;
+    // }
+  }
+
+  &__description {
+    display: block;
+    margin-right: 20%;
+  }
+
+  form {
+    label {
+      display: block;
+      margin-bottom: 0.5em;
+
+      span {
+        color: $turquoise;
+      }
+    }
+
+    fieldset {
+      border: none;
+      padding: 0;
+      margin: 0 0 30px;
+    }
+
+    input,
+    textarea {
+      display: block;
+      width: 100%;
+      padding: 16px 18px;
+      background-color: transparent;
+      border: 1px solid $black;
+      border-radius: 5px;
+      resize: none;
+      outline: none;
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 150%;
+      /* identical to box height, or 27px */
+      color: #969696;
+
+      &:hover {
+        border: 1px solid $turquoise;
+      }
+
+      &:active,
+      &:focus {
+        border: 1px solid $turquoise;
+        box-shadow: 0px 4px 30px rgba(0, 160, 146, 0.3);
+      }
+
+      &:invalid:not(:placeholder-shown) {
+        background: rgba(245, 128, 33, 0.2);
+        border: 1px solid $orange;
+        & ~ .requirements {
+          max-height: 200px;
+          padding: 0 30px 20px 50px;
+        }
+      }
+
+      &:invalid:focus:not(:placeholder-shown) {
+        & ~ .requirements {
+          max-height: 200px;
+          padding: 12px 0;
+        }
+      }
+    }
+
+    textarea {
+      min-height: 200px;
+    }
+
+    button {
+      margin: 38px 0 4px;
+    }
+
+    .requirements {
+      max-height: 0;
+      transition: 0.28s;
+      overflow: hidden;
+      color: $orange;
+    }
+  }
+}
