@@ -1,0 +1,191 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  transition: 0.5s ease;
+
+  &--width-240 {
+    width: 240px;
+  }
+
+  &--width-360 {
+    width: 360px;
+  }
+
+  &--width-140 {
+    width: 140px;
+  }
+
+  &--width-80 {
+    width: 80px;
+  }
+
+  &--width-65 {
+    width: 65px;
+  }
+
+  &--fill {
+    &-orange {
+      color: $white;
+      background-color: $orange;
+
+      &:hover,
+      &:active {
+        background-color: $orange-dark;
+      }
+    }
+
+    &-turquoise {
+      color: $white;
+      background-color: $turquoise;
+
+      &:hover,
+      &:active {
+        background-color: $turquoise-dark;
+      }
+    }
+
+    &-turquoise-light {
+      color: $white;
+      background-color: $turquoise;
+
+      &:hover,
+      &:active {
+        background-color: $turquoise-light;
+      }
+    }
+  }
+
+  & svg {
+    margin-left: 10px;
+
+    path {
+      fill: $white;
+    }
+  }
+
+  &--border {
+    background-color: transparent;
+    transition: 0.5s ease;
+
+    &-navy {
+      color: $navy;
+      border: 1px solid $navy;
+
+      & svg path {
+        fill: $navy;
+        transition: 0.5s ease;
+      }
+
+      &:hover,
+      &:active {
+        color: $white;
+        border: 1px solid $white;
+        background-color: $navy;
+
+        & svg path {
+          fill: $white;
+          transition: 0.5s ease;
+        }
+      }
+    }
+
+    &-white {
+      color: $white;
+      border: 1px solid $white;
+
+      &:hover,
+      &:active {
+        color: $white;
+        background-color: $turquoise;
+      }
+    }
+  }
+
+  &--transparent {
+    color: $orange;
+    background-color: transparent;
+    transition: 0.5s ease;
+
+    & svg {
+      margin-left: 15px;
+
+      path {
+        fill: $orange;
+        transition: 0.5s ease;
+      }
+    }
+
+    &:hover,
+    &:active {
+      color: $white;
+      background-color: $orange;
+      transition: 0.5s ease;
+
+      & svg {
+        margin-left: 15px;
+
+        path {
+          fill: $white;
+          transition: 0.5s ease;
+        }
+      }
+    }
+  }
+
+  /* Quick Donate */
+  &--quick-donate-btn {
+    padding: 25px 0;
+    border-radius: 4px;
+    & svg {
+      margin-left: 0px;
+    }
+  }
+
+  /* Prev/Next */
+  &--prev,
+  &--next {
+    padding: 18px 18px;
+    border-radius: 5px;
+
+    & svg {
+      margin-left: 0px;
+    }
+
+    &-white {
+      border: 1px solid $white;
+
+      & svg path {
+        fill: $white;
+      }
+
+      &:hover,
+      &:active {
+        background-color: $white;
+        & svg path {
+          fill: $navy;
+        }
+      }
+    }
+
+    &-navy {
+      // border: 1px solid $navy;
+
+      & svg path {
+        fill: $navy;
+      }
+
+      &:hover,
+      &:active {
+        background-color: $navy;
+        & svg path {
+          fill: $white;
+        }
+      }
+    }
+  }
+}

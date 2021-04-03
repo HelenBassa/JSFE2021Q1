@@ -1,0 +1,96 @@
+.donation {
+  padding: 50px 0 48px;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 10fr 2fr;
+  // grid-column-gap: 40px;
+
+  &--inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    text-align: left;
+    color: $white;
+
+    &__title {
+      margin-bottom: 20px;
+      color: $white;
+    }
+
+    &__subheader {
+      margin-bottom: 10px;
+      color: $white;
+    }
+
+    &__description {
+      margin-right: 19%;
+      color: $white;
+    }
+  }
+
+  &--input {
+    &__form {
+      display: flex;
+      width: 100%;
+      box-sizing: border-box;
+
+      // @media screen and (max-width: 767px) {
+      //   width: 100%;
+      // }
+      // @media screen and (max-width: 639px) {
+      //   flex-direction: column;
+      // }
+    }
+
+    //   &__form-text {
+    //     flex-grow: 1;
+    //     padding: 15px 15px 16px;
+    //     border-radius: 3px;
+    //     border-width: 1px;
+    //     border-style: solid;
+    //     border-color: $grey;
+    //     border-bottom-right-radius: 0px;
+    //     border-top-right-radius: 0px;
+    //     border-right: none;
+    //     font-family: "Roboto";
+    //     font-size: 23px;
+    //     line-height: 27px;
+    //     font-weight: normal;
+    //     color: $grey;
+
+    //     &::placeholder {
+    //       font-family: "Roboto";
+    //       font-size: 23px;
+    //       line-height: 27px;
+    //       font-weight: normal;
+    //       color: $grey;
+    //     }
+
+    // @media screen and (max-width: 639px) {
+    //   margin-bottom: 30px;
+    // }
+    //   }
+
+    &__form-submit {
+      flex-grow: 0;
+      padding: 16px 42px 17px 32px;
+      font-family: "Roboto";
+      font-size: 23px;
+      line-height: 27px;
+      color: $white;
+      text-align: center;
+      background-color: $orange;
+      border-radius: 5px;
+      // border-bottom-left-radius: 0px;
+      // border-top-left-radius: 0px;
+      transition: 0.5s ease;
+      border: none;
+      cursor: pointer;
+
+      &:hover,
+      &:active {
+        background-color: $orange-dark;
+      }
+    }
+  }
+}

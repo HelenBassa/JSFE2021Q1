@@ -1,0 +1,31 @@
+.live-cams {
+  padding: 52px 0 0;
+
+  &--inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    // margin: 0 25%;
+
+    &__title {
+      margin: 0 0 53px;
+    }
+
+    &__main-cam {
+      // margin: 0 0 100px;
+      width: 1400px;
+      height: 787px;
+    }
+
+    &__donate {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      justify-content: end;
+    }
+  }
+}
