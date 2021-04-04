@@ -215,7 +215,6 @@ a {
 }
 
 .container--meet-pets {
-  max-width: 2360px;
   padding: 0;
 }
 
@@ -851,6 +850,7 @@ a {
 }
 
 .slider {
+  position: relative;
   padding: 104px 0 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -885,7 +885,41 @@ a {
 
 .slider__wrapper {
   width: 1920px;
-  padding: 50px 0 50px 260px;
+  overflow: hidden;
+}
+
+.slider__wrapper::before, .slider__wrapper::after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 240px;
+  z-index: 9;
+}
+
+.slider__wrapper::before {
+  top: 0;
+  left: 0;
+  background: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0)), to(#fff));
+  background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, #fff 100%);
+}
+
+.slider__wrapper::after {
+  top: 0;
+  right: 0;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), to(#fff));
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #fff 100%);
+}
+
+.slider__container {
+  width: 1500px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.slider__cards {
+  width: 1920px;
+  padding: 50px 50px 50px 50px;
   overflow: hidden;
   display: -ms-grid;
   display: grid;
