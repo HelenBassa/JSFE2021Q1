@@ -12,6 +12,7 @@
   left: 0;
   width: 100%;
   height: 100%;
+  opacity: 0.5; // полупрозрачная заглушка
 }
 
 .video__media {
@@ -61,7 +62,7 @@
 
 .video--enabled {
   cursor: pointer;
-  pointer-events: none; //убрать для воспроизведения видео
+  // pointer-events: none; //закомментировать для воспроизведения видео
 }
 
 .video--enabled .video__button {
