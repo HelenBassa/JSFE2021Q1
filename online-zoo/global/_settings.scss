@@ -131,7 +131,7 @@ a {
   background-size: cover;
 
   &--watch-animal {
-    background-image: url(/assets/images/landing/panda-background.jpg);
+    background-image: url(../../assets/images/landing/panda-background.jpg);
     background-size: auto;
     background-position-x: 1px;
     background-position-y: -40px;
@@ -144,7 +144,7 @@ a {
         rgba(32, 17, 61, 0) 14.89%
       ),
       linear-gradient(144.77deg, #20113d 18.53%, rgba(32, 17, 61, 0) 46.43%),
-      url(/assets/images/landing/gradient-background.jpg);
+      url(../../assets/images/landing/gradient-background.jpg);
     background-size: cover;
   }
 }
