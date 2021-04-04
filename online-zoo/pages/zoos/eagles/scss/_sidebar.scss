@@ -83,7 +83,7 @@
   }
 
   /* tooltip */
-
+  /*
   .tooltip {
     position: relative;
   }
@@ -118,9 +118,10 @@
     text-align: center;
     z-index: 9;
   }
-
+*/
   /* the animations */
   /* expand */
+  /*
   .tooltip.expand:before {
     transform: scale3d(0.2, 0.2, 1);
     transition: all 0.2s ease-in-out;
@@ -137,4 +138,5 @@
   .tooltip.expand:hover:after {
     transition: all 0.2s 0.1s ease-in-out;
   }
+  */
 }
