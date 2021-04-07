@@ -25,6 +25,7 @@
     &--delimiter {
       text-align: start;
       overflow: hidden;
+      color: $white;
 
       &::after {
         content: "";
