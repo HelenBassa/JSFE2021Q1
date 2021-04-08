@@ -525,6 +525,42 @@ a {
   fill: #ffffff;
 }
 
+.sidebar__item:not(.active) .panda:hover,
+.sidebar__item:not(.active) .eagle:hover,
+.sidebar__item:not(.active) .gorilla:hover,
+.sidebar__item:not(.active) .lemur:hover {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.sidebar__item:not(.active) .panda:hover svg,
+.sidebar__item:not(.active) .eagle:hover svg,
+.sidebar__item:not(.active) .gorilla:hover svg,
+.sidebar__item:not(.active) .lemur:hover svg {
+  position: absolute;
+  left: calc(50% - 120px / 2);
+  top: calc(50% - 120px / 2);
+}
+
+.sidebar__item:not(.active) .panda:hover svg circle,
+.sidebar__item:not(.active) .eagle:hover svg circle,
+.sidebar__item:not(.active) .gorilla:hover svg circle,
+.sidebar__item:not(.active) .lemur:hover svg circle {
+  stroke: transparent;
+}
+
+.sidebar__item:not(.active) .panda:hover svg g path,
+.sidebar__item:not(.active) .panda:hover svg g circle,
+.sidebar__item:not(.active) .eagle:hover svg g path,
+.sidebar__item:not(.active) .eagle:hover svg g circle,
+.sidebar__item:not(.active) .gorilla:hover svg g path,
+.sidebar__item:not(.active) .gorilla:hover svg g circle,
+.sidebar__item:not(.active) .lemur:hover svg g path,
+.sidebar__item:not(.active) .lemur:hover svg g circle {
+  fill: #ffffff;
+}
+
 .sidebar__btn--next {
   cursor: pointer;
   padding: 12% 0%;

@@ -59,6 +59,8 @@
       }
     }
 
+
+
     &.active {
       // pointer-events: none;
       cursor: default;
@@ -71,6 +73,33 @@
           path,
           circle {
             fill: $white;
+          }
+        }
+      }
+    }
+
+    &:not(.active) {
+      .panda:hover ,
+      .eagle:hover,
+      .gorilla:hover,
+      .lemur:hover {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        svg {
+          position: absolute;
+          left: calc(50% - 120px / 2);
+          top: calc(50% - 120px / 2);
+  
+          circle {
+            stroke: transparent;
+          }
+  
+          g {
+            path,
+            circle {
+              fill: $white;
+            }
           }
         }
       }
