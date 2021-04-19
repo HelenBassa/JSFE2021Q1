@@ -1,6 +1,14 @@
 .slider {
   padding: 101px 0 50px;
-  // background: linear-gradient(270deg, #000 0%, #fff 19%);
+
+  @media screen and (max-width: 1200px) {
+    padding: 10px 0 50px;
+  }
+
+  @media screen and (max-width: 1200px) {
+    padding: 25px 0 80px;
+    margin-left: 100px;
+  }
 
   display: flex;
   flex-direction: column;
@@ -11,6 +19,15 @@
 
   &__title {
     color: $black;
+
+    @media screen and (max-width: 640px) {
+      font-weight: 500;
+      font-size: 26px;
+      line-height: 130%;
+      text-transform: unset;
+      text-align: left;
+      margin-left: -247px;
+    }
   }
 
   &__buttons {
@@ -19,18 +36,47 @@
 
     &--btn {
       margin: 65px 13px;
+      @media screen and (max-width: 640px) {
+        display: none;
+        height: 0;
+        margin: 0;
+        padding: 0;
+      }
+
+      svg {
+        @media screen and (max-width: 640px) {
+          display: none;
+          height: 0;
+          margin: 0;
+          padding: 0;
+        }
+      }
     }
   }
 
   &__wrapper {
     width: 1400px;
-    padding: 30px 15px 100px 135px;
+    padding: 30px 70px 100px;
+    margin-left: 125px;
     // overflow: hidden;
     display: grid;
 
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 10fr 1fr;
     grid-gap: 0px;
+
+    @media screen and (max-width: 1200px) {
+      width: 1025px;
+      padding: 31px 8px 49px 8px;
+      margin: 0;
+    }
+
+    @media screen and (max-width: 640px) {
+      display: flex;
+      justify-content: flex-end;
+      padding: 20px 0px 0px 0px;
+      width: 440px;
+    }
   }
 
   &__container {
@@ -40,6 +86,14 @@
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 40px;
+
+    @media screen and (max-width: 1200px) {
+      grid-gap: 20px;
+    }
+
+    @media screen and (max-width: 640px) {
+      display: flex;
+    }
   }
 
   &__card {
@@ -49,6 +103,16 @@
     // transition: all 0.3s ease-in-out;
     border-radius: 5px;
     overflow: hidden;
+
+    @media screen and (max-width: 1200px) {
+      height: 209px;
+      width: 265px;
+    }
+
+    @media screen and (max-width: 640px) {
+      height: 106px;
+      width: 135px;
+    }
 
     // z-index: 2;
 
@@ -79,9 +143,18 @@
       width: 46px;
       height: 32px;
 
+      @media screen and (max-width: 640px) {
+        width: 26px;
+        height: 20px;
+      }
+
       svg {
         width: 46px;
         height: 32px;
+        @media screen and (max-width: 640px) {
+          width: 26px;
+          height: 20px;
+        }
       }
     }
 

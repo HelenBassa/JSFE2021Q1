@@ -1,9 +1,25 @@
 .wrapper-sidebar {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1920px;
+
+  @media screen and (max-width: 640px) {
+    padding-top: 109px;
+  }
 
   .main-content {
     display: flex;
     flex-direction: column;
+
+    flex: 0 0 88.55%;
+
+    @media screen and (max-width: 1200px) {
+      flex: 0 0 90.4%;
+    }
+
+    @media screen and (max-width: 640px) {
+      flex: 0 0 87.8%;
+    }
   }
 }

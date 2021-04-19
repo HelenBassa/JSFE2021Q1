@@ -1,0 +1,20 @@
+.hand-touch {
+  margin: 0 auto;
+  height: 652px;
+
+  @media screen and (max-width: 1200px) {
+    height: 668px;
+  }
+
+  @media screen and (max-width: 640px) {
+    height: 379px;
+  }
+
+  @media screen and (max-width: 320px) {
+    height: 189px;
+  }
+
+  img {
+    width: 100%;
+  }
+}

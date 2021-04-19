@@ -1,6 +1,18 @@
 .care-animals {
   padding: 136px 0 0;
 
+  @media screen and (max-width: 1200px) {
+    padding: 150px 95px 0;
+  }
+
+  @media screen and (max-width: 640px) {
+    padding: 79px 0px 0;
+  }
+
+  @media screen and (max-width: 320px) {
+    padding: 50px 0px 0;
+  }
+
   &--inner {
     display: flex;
     flex-direction: column;
@@ -9,22 +21,128 @@
     text-align: center;
     margin: 0 26%;
 
+    @media screen and (max-width: 1200px) {
+      margin: 0px 15%;
+    }
+
+    @media screen and (max-width: 640px) {
+      margin: 0px 0%;
+      padding: 0 3.125%;
+    }
+
     &__title {
       margin-bottom: 50px;
+
+      @media screen and (max-width: 1200px) {
+        margin-bottom: 30px;
+      }
+
+      @media screen and (max-width: 320px) {
+        font-weight: 500;
+        font-size: 26px;
+        line-height: 32px;
+        margin-bottom: 25px;
+      }
     }
 
     &__description {
       color: $black;
       margin: 0 10%;
+
+      @media screen and (max-width: 640px) {
+        margin: 0px 0%;
+      }
+
+      @media screen and (max-width: 320px) {
+        font-size: 18px;
+        line-height: 150%;
+        margin-bottom: -41px;
+      }
     }
   }
+
+  .slide__wrapper > input {
+    display: none;
+  }
+
+  .slide__wrapper .controls {
+    display: none;
+    @media screen and (max-width: 640px) {
+      display: inline-block;
+      margin: 0 auto;
+      left: calc(50% - 101px / 2);
+      margin-top: 30px;
+      position: relative;
+    }
+
+    @media screen and (max-width: 320px) {
+      left: calc(50% - 109px / 2);
+      margin-top: 4px;
+    }
+  }
+
+  .slide__wrapper label {
+    display: none;
+    @media screen and (max-width: 640px) {
+      cursor: pointer;
+      display: inline-block;
+      height: 8px;
+      margin: 25px 7px 0 8px;
+      position: relative;
+      width: 8px;
+      border-radius: 50%;
+      transition: all ease-in-out 0.5s;
+
+      &:nth-of-type(1) {
+        background: $black;
+      }
+
+      &::after {
+        border: 1px solid $black;
+        content: " ";
+        display: block;
+        height: 8px;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 8px;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  // .slide__wrapper label:hover {
+  //   display: none;
+  //   @media screen and (max-width: 640px) {
+  //     #slide1:checked ~ .controls label:nth-of-type(1),
+  //     #slide2:checked ~ .controls label:nth-of-type(2),
+  //     #slide3:checked ~ .controls label:nth-of-type(3),
+  //     #slide4:checked ~ .controls label:nth-of-type(4) {
+  //       background: $black;
+  //     }
+  //   }
+  // }
 
   &--choose {
     display: flex;
     justify-content: center;
-  }
 
-  &--hand-touch {
-    margin: 149px 0 145px;
+    @media screen and (max-width: 1200px) {
+      padding-top: 46px;
+    }
+
+    @media screen and (max-width: 640px) {
+      padding-top: 41px;
+    }
+
+    @media screen and (max-width: 320px) {
+      padding-top: 45px;
+
+      .button {
+        width: 300px;
+        padding: 11px 0;
+        text-transform: capitalize;
+      }
+    }
   }
 }

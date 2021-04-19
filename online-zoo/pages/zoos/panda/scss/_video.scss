@@ -37,6 +37,16 @@
   background-color: transparent;
   transform: translate(-50%, -50%);
   cursor: pointer;
+
+  @media screen and (max-width: 640px) {
+    width: 32px;
+    height: 24px;
+
+    svg {
+      width: 32px;
+      height: 24px;
+    }
+  }
 }
 
 .video__button-shape {
@@ -77,6 +87,12 @@
   font-size: 28.44px;
   line-height: 36.97px;
   color: $white;
+
+  @media screen and (max-width: 640px) {
+    font-weight: 500;
+    font-size: 14.5278px;
+    line-height: 130%;
+  }
 }
 
 .video__logo {
@@ -85,6 +101,15 @@
   right: 2%;
   z-index: 1;
   transform: scale(1.1);
+
+  @media screen and (max-width: 640px) {
+    bottom: 7%;
+    right: 4%;
+    svg {
+      width: 54px;
+      height: 28px;
+    }
+  }
 
   svg path {
     fill: $white;

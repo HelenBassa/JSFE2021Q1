@@ -17,6 +17,17 @@
     grid-row-gap: 50px;
     grid-column-gap: 40px;
 
+    @media screen and (max-width: 1200px) {
+      margin: 102px 0 89px;
+      grid-template-columns: 7fr 5fr;
+      grid-column-gap: 20px;
+    }
+
+    @media screen and (max-width: 640px) {
+      display: block;
+      margin: 80px 0 100px;
+    }
+
     #cardsImage {
       grid-area: cardsImage;
     }
@@ -35,6 +46,28 @@
     width: 440px;
     border-radius: 5px;
     overflow: hidden;
+
+    @media screen and (max-width: 1200px) {
+      height: 455px;
+      width: 455px;
+    }
+
+    @media screen and (max-width: 640px) {
+      height: 600px;
+      width: 600px;
+    }
+
+    img {
+      @media screen and (max-width: 1200px) {
+        height: 455px;
+        width: 455px;
+      }
+
+      @media screen and (max-width: 640px) {
+        height: 600px;
+        width: 600px;
+      }
+    }
   }
 
   &__info {
@@ -42,6 +75,10 @@
     height: 382px;
     width: 479px;
     color: $black;
+
+    @media screen and (max-width: 640px) {
+      margin: 80px 0 50px;
+    }
 
     button {
       position: absolute;
@@ -70,5 +107,9 @@
 
   &__description {
     margin-right: 18%;
+
+    @media screen and (max-width: 1200px) {
+      margin-right: 0%;
+    }
   }
 }

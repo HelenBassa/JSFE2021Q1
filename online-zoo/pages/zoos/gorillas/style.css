@@ -145,54 +145,6 @@ a {
   text-decoration: none;
 }
 
-.flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-
-.--just-space {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.--just-center {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.--just-end {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
-.--align-str {
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-}
-
-.--align-center {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.--align-end {
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
 .wrapper {
   width: 100%;
   background-color: #ffffff;
@@ -200,6 +152,13 @@ a {
 
 .wrapper--header {
   background-color: #f58021;
+}
+
+@media screen and (max-width: 1000px) {
+  .wrapper--header {
+    position: fixed;
+    z-index: 99;
+  }
 }
 
 .wrapper--donation, .wrapper--footer, .wrapper--pay-and-feed, .wrapper--users-think {
@@ -214,12 +173,125 @@ a {
   padding: 0 260px;
 }
 
+@media screen and (max-width: 1800px) {
+  .container {
+    padding: 0 220px;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .container {
+    padding: 0 6.25%;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .container {
+    padding: 0 4.28571%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    padding: 0 3.33333%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .container {
+    padding: 0 3.125%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .container {
+    padding: 0 3.125%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .container--header {
+    position: relative;
+    z-index: 10;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .container--welcome {
+    padding: 0;
+  }
+}
+
 .container--meet-pets {
   padding: 0;
 }
 
+@media screen and (max-width: 640px) {
+  .container--pay-and-feed {
+    padding: 0;
+  }
+}
+
 .container--users-think {
   padding: 0;
+}
+
+@media screen and (max-width: 1200px) {
+  .container--get-in-touch {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .container--care-animals {
+    padding: 0;
+  }
+}
+
+.container--hand-touch {
+  padding: 150px 260px 150px 260px;
+}
+
+@media screen and (max-width: 1200px) {
+  .container--hand-touch {
+    padding: 150px 0 147px 0;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .container--hand-touch {
+    padding: 100px 0 100px 0;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .container--hand-touch {
+    padding: 80px 0 80px 0;
+  }
+}
+
+.container--live-cams {
+  padding: 0;
+  margin-left: -111px;
+}
+
+@media screen and (max-width: 1200px) {
+  .container--live-cams {
+    padding: 0 40px;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .container--live-cams {
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .container--footer {
+    padding: 0;
+  }
 }
 
 .inner-bg {
@@ -229,14 +301,79 @@ a {
 
 .inner-bg--watch-animal {
   background-image: url(../../assets/images/landing/panda-background.jpg);
-  background-size: auto;
-  background-position-x: 1px;
-  background-position-y: -40px;
+  background-size: 97%;
+  background-position-x: -15px;
+  background-position-y: -43px;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 1500px) {
+  .inner-bg--watch-animal {
+    background-size: 110%;
+    background-position-x: -86px;
+    background-position-y: -34px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .inner-bg--watch-animal {
+    background-size: 117%;
+    background-position-x: -86px;
+    background-position-y: -34px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .inner-bg--watch-animal {
+    background-size: 117%;
+    background-position-x: -46px;
+    background-position-y: 368px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .inner-bg--watch-animal {
+    background-size: 160%;
+    background-position-x: -160px;
+    background-position-y: 5108px;
+  }
 }
 
 .inner-bg--users-think {
   background: linear-gradient(177.34deg, #20113d 7.26%, rgba(32, 17, 61, 0) 14.89%), linear-gradient(144.77deg, #20113d 18.53%, rgba(32, 17, 61, 0) 46.43%), url(../../assets/images/landing/gradient-background.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 1200px) {
+  .inner-bg--users-think {
+    background-position-x: 0;
+    background-position-y: 196px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .inner-bg--users-think {
+    background-size: 210%;
+    background-position-x: 0;
+    background-position-y: 550px;
+    background-repeat: no-repeat;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .inner-bg--users-think {
+    background: linear-gradient(177.34deg, #20113d 4.26%, rgba(32, 17, 61, 0) 15.89%), url(../../assets/images/landing/gradient-background.jpg);
+    background-size: 191%;
+    background-position-x: 0px;
+    background-position-y: 935px;
+    background-repeat: no-repeat;
+  }
+}
+
+.inner-bg--hand-touch {
+  background-image: url(../../assets/images/landing/touch-the-animal.jpg);
 }
 
 .visually-hidden {

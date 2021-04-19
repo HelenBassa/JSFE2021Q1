@@ -1,6 +1,18 @@
 .meet-pets {
   padding: 135px 0 150px;
 
+  @media screen and (max-width: 1200px) {
+    padding: 98px 0 150px;
+  }
+
+  @media screen and (max-width: 640px) {
+    padding: 99px 0 100px;
+  }
+
+  @media screen and (max-width: 320px) {
+    padding: 50px 0 14px;
+  }
+
   &--inner {
     display: flex;
     flex-direction: column;
@@ -9,18 +21,57 @@
     text-align: center;
     margin: 0 25%;
 
+    @media screen and (max-width: 1200px) {
+      margin: 0 15.5%;
+    }
+
+    @media screen and (max-width: 640px) {
+      margin: 0 4%;
+    }
+    @media screen and (max-width: 320px) {
+      margin: 0 1%;
+    }
+
     &__title {
       margin-bottom: 50px;
+
+      @media screen and (max-width: 1200px) {
+        margin-bottom: 33px;
+      }
+
+      @media screen and (max-width: 640px) {
+        margin: 0 15% 33px;
+      }
+
+      @media screen and (max-width: 320px) {
+        margin: 0 0 33px;
+        font-weight: 500;
+        font-size: 26px;
+        line-height: 32px;
+      }
     }
 
     &__description {
-      // margin-bottom: 50px;
       color: $black;
+      @media screen and (max-width: 320px) {
+        font-size: 18px;
+        line-height: 150%;
+      }
     }
   }
 
   &--choose {
     display: flex;
     justify-content: center;
+
+    .button {
+      @media screen and (max-width: 640px) {
+        width: 345px;
+      }
+
+      @media screen and (max-width: 320px) {
+        display: none;
+      }
+    }
   }
 }

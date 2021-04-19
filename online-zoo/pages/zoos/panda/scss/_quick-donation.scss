@@ -7,6 +7,10 @@
     top: 26px;
     color: $white;
     content: "$";
+
+    @media screen and (max-width: 640px) {
+      left: 40px;
+    }
   }
 
   &__input {
@@ -19,6 +23,11 @@
     color: $white;
     background-color: transparent;
     border: 1px solid $white;
+
+    @media screen and (max-width: 640px) {
+      width: 363px;
+      padding-left: 55px;
+    }
 
     /* Chrome, Safari, Edge, Opera */
     &::-webkit-outer-spin-button,

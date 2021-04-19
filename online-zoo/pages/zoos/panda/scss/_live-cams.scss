@@ -1,6 +1,10 @@
 .live-cams {
   padding: 52px 0 0;
 
+  @media screen and (max-width: 1200px) {
+    padding: 31px 0 0;
+  }
+
   &--inner {
     position: relative;
     display: flex;
@@ -12,20 +16,62 @@
 
     &__title {
       margin: 0 0 53px;
+
+      @media screen and (max-width: 1200px) {
+        margin: 0 0px 30px -120px;
+      }
+
+      @media screen and (max-width: 640px) {
+        font-weight: 500;
+        font-size: 42px;
+        line-height: 51px;
+        margin: 0px 0px 17px 0px;
+      }
     }
 
     &__main-cam {
       // margin: 0 0 100px;
       width: 1400px;
       height: 787px;
+
+      @media screen and (max-width: 1200px) {
+        width: 1025px;
+        height: 760px;
+      }
+
+      @media screen and (max-width: 640px) {
+        width: 542px;
+        height: 402px;
+      }
     }
 
     &__donate {
       position: absolute;
       top: 0;
-      right: 0;
+      right: 150px;
       display: flex;
       justify-content: end;
+
+      @media screen and (max-width: 1200px) {
+        top: 5px;
+        right: 0;
+
+        .button {
+          width: 240px;
+          padding: 17px 0;
+        }
+      }
+
+      @media screen and (max-width: 640px) {
+        position: relative;
+        align-self: flex-end;
+        margin-top: 15px;
+
+        .button {
+          width: 210px;
+          padding: 13px 0;
+        }
+      }
     }
   }
 }

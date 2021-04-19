@@ -17,9 +17,33 @@
   align-items: center;
   text-align: center;
 
+  flex: 0 0 11.45%;
+  z-index: 10;
+
+  @media screen and (max-width: 1200px) {
+    flex: 0 0 9.6%;
+  }
+
+  @media screen and (max-width: 640px) {
+    flex: 0 0 12.2%;
+    height: 500px;
+  }
+
+  &__show {
+    @media screen and (max-width: 1200px) {
+      .bage {
+        display: none;
+      }
+    }
+  }
+
   &__btn--show {
     cursor: pointer;
     padding: 13% 0% 13% 65%;
+
+    @media screen and (max-width: 1200px) {
+      padding: 13% 0% 13% 0%;
+    }
   }
 
   &__item {
@@ -46,6 +70,20 @@
         left: calc(50% - 120px / 2);
         top: calc(50% - 120px / 2);
 
+        @media screen and (max-width: 1200px) {
+          width: 80px;
+          height: 80px;
+          left: calc(50% - 80px / 2);
+          top: calc(50% - 80px / 2);
+        }
+
+        @media screen and (max-width: 640px) {
+          width: 60px;
+          height: 60px;
+          left: calc(50% - 60px / 2);
+          top: calc(50% - 60px / 2);
+        }
+
         circle {
           stroke: transparent;
         }
@@ -54,12 +92,20 @@
           path,
           circle {
             fill: $orange;
+
+            @media screen and (max-width: 1200px) {
+              fill: transparent;
+            }
+          }
+        }
+
+        path {
+          @media screen and (max-width: 1200px) {
+            fill: $orange;
           }
         }
       }
     }
-
-
 
     &.active {
       // pointer-events: none;
@@ -67,11 +113,25 @@
       svg {
         circle {
           stroke: $white;
+
+          @media screen and (max-width: 1200px) {
+            stroke: transparent;
+          }
         }
 
         g {
           path,
           circle {
+            fill: $white;
+
+            @media screen and (max-width: 1200px) {
+              fill: transparent;
+            }
+          }
+        }
+
+        path {
+          @media screen and (max-width: 1200px) {
             fill: $white;
           }
         }
@@ -79,7 +139,7 @@
     }
 
     &:not(.active) {
-      .panda:hover ,
+      .panda:hover,
       .eagle:hover,
       .gorilla:hover,
       .lemur:hover {
@@ -90,15 +150,33 @@
           position: absolute;
           left: calc(50% - 120px / 2);
           top: calc(50% - 120px / 2);
-  
+
+          @media screen and (max-width: 1200px) {
+            width: 80px;
+            height: 80px;
+            left: calc(50% - 80px / 2);
+            top: calc(50% - 80px / 2);
+          }
+
+          @media screen and (max-width: 640px) {
+            width: 60px;
+            height: 60px;
+            left: calc(50% - 60px / 2);
+            top: calc(50% - 60px / 2);
+          }
+
           circle {
             stroke: transparent;
           }
-  
+
           g {
             path,
             circle {
               fill: $white;
+
+              @media screen and (max-width: 1200px) {
+                fill: transparent;
+              }
             }
           }
         }
