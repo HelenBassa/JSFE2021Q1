@@ -16,6 +16,10 @@
     padding: 51px 0 51px;
   }
 
+  @media screen and (max-width: 320px) {
+    padding: 20px 0 50px;
+  }
+
   &--inner {
     display: flex;
     flex-direction: column;
@@ -33,6 +37,13 @@
 
       @media screen and (max-width: 640px) {
         margin-bottom: 30px;
+      }
+
+      @media screen and (max-width: 320px) {
+        font-weight: 500;
+        font-size: 26px;
+        line-height: 32px;
+        margin-bottom: 25px;
       }
     }
 
@@ -52,6 +63,10 @@
       @media screen and (max-width: 640px) {
         margin: 0;
         margin-bottom: 30px;
+      }
+
+      @media screen and (max-width: 320px) {
+        margin-bottom: 22px;
       }
     }
   }

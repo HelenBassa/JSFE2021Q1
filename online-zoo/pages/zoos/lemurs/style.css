@@ -288,6 +288,18 @@ a {
   }
 }
 
+@media screen and (max-width: 320px) {
+  .container--live-cams {
+    padding: 0 0 0 20px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .container--did-you-know {
+    padding: 0;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .container--footer {
     padding: 0;

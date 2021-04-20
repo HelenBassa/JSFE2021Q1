@@ -1,8 +1,21 @@
 .live-cams {
   padding: 52px 0 0;
+  margin: 0 143px;
+  position: relative;
 
   @media screen and (max-width: 1200px) {
+    margin: 0px 0 0 200px;
     padding: 31px 0 0;
+  }
+
+  @media screen and (max-width: 640px) {
+    margin: 0px 0 0 200px;
+    padding: 31px 0 0;
+  }
+
+  @media screen and (max-width: 320px) {
+    margin: 0px 0 0 0px;
+    padding: 21px 0 0;
   }
 
   &--inner {
@@ -27,6 +40,14 @@
         line-height: 51px;
         margin: 0px 0px 17px 0px;
       }
+
+      @media screen and (max-width: 320px) {
+        font-weight: 500;
+        font-size: 26px;
+        line-height: 32px;
+        text-transform: uppercase;
+        margin: 0px 0px 14px 203px;
+      }
     }
 
     &__main-cam {
@@ -43,18 +64,23 @@
         width: 542px;
         height: 402px;
       }
+
+      @media screen and (max-width: 320px) {
+        width: 270px;
+        height: 200px;
+        margin-left: 200px;
+      }
     }
 
     &__donate {
       position: absolute;
-      top: 0;
-      right: 150px;
+      top: 52px;
+      right: 0;
       display: flex;
       justify-content: end;
 
       @media screen and (max-width: 1200px) {
-        top: 5px;
-        right: 0;
+        top: 37px;
 
         .button {
           width: 240px;
@@ -63,13 +89,28 @@
       }
 
       @media screen and (max-width: 640px) {
-        position: relative;
-        align-self: flex-end;
-        margin-top: 15px;
+        top: 520px;
+        right: 0;
+        position: absolute;
 
         .button {
           width: 210px;
           padding: 13px 0;
+        }
+      }
+
+      @media screen and (max-width: 320px) {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-bottom: 50px;
+        justify-content: center;
+        margin-top: 20px;
+        margin-left: 152px;
+
+        .button {
+          width: 300px;
+          padding: 11px 0;
         }
       }
     }
