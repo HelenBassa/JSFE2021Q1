@@ -272,25 +272,24 @@ a {
 
 .container--live-cams {
   padding: 0;
-  margin-left: -111px;
 }
 
 @media screen and (max-width: 1200px) {
   .container--live-cams {
-    padding: 0 40px;
+    padding: 0;
     margin: 0;
   }
 }
 
 @media screen and (max-width: 640px) {
   .container--live-cams {
-    padding: 0 20px;
+    padding: 0;
   }
 }
 
 @media screen and (max-width: 320px) {
   .container--live-cams {
-    padding: 0 0 0 20px;
+    padding: 0;
   }
 }
 
@@ -348,7 +347,7 @@ a {
   .inner-bg--watch-animal {
     background-size: 160%;
     background-position-x: -160px;
-    background-position-y: 5108px;
+    background-position-y: 510px;
   }
 }
 
@@ -1150,8 +1149,8 @@ a {
 
 @media screen and (max-width: 1200px) {
   .find-animal__map .panda {
-    left: 65.7%;
-    top: 35.2%;
+    left: 69.6%;
+    top: 33.5%;
   }
 }
 
@@ -1159,8 +1158,8 @@ a {
   .find-animal__map .panda {
     -webkit-transform: scale(0.8);
             transform: scale(0.8);
-    left: 64.7%;
-    top: 35.2%;
+    left: 69.6%;
+    top: 33.5%;
   }
 }
 
@@ -1168,8 +1167,8 @@ a {
   .find-animal__map .panda {
     -webkit-transform: scale(0.6);
             transform: scale(0.6);
-    left: 62.7%;
-    top: 37.2%;
+    left: 64.7%;
+    top: 35.2%;
   }
 }
 
@@ -1177,8 +1176,8 @@ a {
   .find-animal__map .panda {
     -webkit-transform: scale(0.4);
             transform: scale(0.4);
-    left: 60%;
-    top: 47%;
+    left: 64.5%;
+    top: 46.5%;
   }
 }
 

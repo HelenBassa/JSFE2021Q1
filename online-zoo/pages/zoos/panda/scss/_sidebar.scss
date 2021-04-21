@@ -4,7 +4,7 @@
   width: 220px;
   height: 846px;
   background-color: $navy;
-  margin-right: -220px;
+  //margin-right: -220px;
   overflow: auto;
 
   display: grid;
@@ -20,23 +20,27 @@
   flex: 0 0 11.45%;
   z-index: 10;
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (min-width: 1200px) and (max-width: 1420px) {
     flex: 0 0 9.6%;
   }
 
-  @media screen and (max-width: 640px) {
+  @media screen and (min-width: 980px) and (max-width: 1199px) {
+    flex: 0 0 12.2%;
+  }
+
+  @media screen and (min-width: 640px) and (max-width: 979px) {
     flex: 0 0 12.2%;
     height: 500px;
   }
 
-  @media screen and (max-width: 320px) {
+  @media screen and (min-width: 320px) and (max-width: 639px) {
     flex: 0 0 15.2%;
     height: 300px;
     grid-template-rows: 2.15fr 2.15fr 2.15fr 2.15fr 2.15fr 2.15fr;
   }
 
   &__show {
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1420px) {
       .bage {
         display: none;
       }
@@ -47,7 +51,7 @@
     cursor: pointer;
     padding: 13% 0% 13% 65%;
 
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1420px) {
       padding: 13% 0% 13% 0%;
     }
   }
@@ -76,7 +80,7 @@
         left: calc(50% - 120px / 2);
         top: calc(50% - 120px / 2);
 
-        @media screen and (max-width: 1200px) {
+        @media screen and (max-width: 1420px) {
           width: 80px;
           height: 80px;
           left: calc(50% - 80px / 2);
@@ -90,7 +94,7 @@
           top: calc(50% - 60px / 2);
         }
 
-        @media screen and (max-width: 320px) {
+        @media screen and (min-width: 320px) and (max-width: 640px) {
           width: 40px;
           height: 40px;
           left: calc(50% - 40px / 2);
@@ -106,14 +110,14 @@
           circle {
             fill: $orange;
 
-            @media screen and (max-width: 1200px) {
+            @media screen and (max-width: 1420px) {
               fill: transparent;
             }
           }
         }
 
         path {
-          @media screen and (max-width: 1200px) {
+          @media screen and (max-width: 1420px) {
             fill: $orange;
           }
         }
@@ -127,7 +131,7 @@
         circle {
           stroke: $white;
 
-          @media screen and (max-width: 1200px) {
+          @media screen and (max-width: 1420px) {
             stroke: transparent;
           }
         }
@@ -137,14 +141,14 @@
           circle {
             fill: $white;
 
-            @media screen and (max-width: 1200px) {
+            @media screen and (max-width: 1420px) {
               fill: transparent;
             }
           }
         }
 
         path {
-          @media screen and (max-width: 1200px) {
+          @media screen and (max-width: 1420px) {
             fill: $white;
           }
         }
@@ -164,7 +168,7 @@
           left: calc(50% - 120px / 2);
           top: calc(50% - 120px / 2);
 
-          @media screen and (max-width: 1200px) {
+          @media screen and (max-width: 1420px) {
             width: 80px;
             height: 80px;
             left: calc(50% - 80px / 2);
@@ -178,7 +182,7 @@
             top: calc(50% - 60px / 2);
           }
 
-          @media screen and (max-width: 320px) {
+          @media screen and (min-width: 320px) and (max-width: 640px) {
             width: 40px;
             height: 40px;
             left: calc(50% - 40px / 2);
@@ -194,7 +198,7 @@
             circle {
               fill: $white;
 
-              @media screen and (max-width: 1200px) {
+              @media screen and (max-width: 1420px) {
                 fill: transparent;
               }
             }

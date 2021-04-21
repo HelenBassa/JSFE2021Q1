@@ -4,6 +4,10 @@
   height: inherit;
   padding-bottom: 56.25%;
   background-color: $black;
+
+  @media screen and (min-width: 1200px) and (max-width: 1420px) {
+    padding-bottom: 74%;
+  }
 }
 
 .video__link {

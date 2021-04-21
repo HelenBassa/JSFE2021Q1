@@ -7,7 +7,7 @@
   align-items: center;
 
   &__wrapper {
-    margin: 148px 0;
+    margin: 147px 0;
     display: grid;
     grid-template-areas:
       "cardsInfo cardsImage"
@@ -17,13 +17,13 @@
     grid-row-gap: 50px;
     grid-column-gap: 40px;
 
-    @media screen and (max-width: 1200px) {
+    @media screen and (min-width: 1200px) and (max-width: 1919px) {
       margin: 102px 0 89px;
       grid-template-columns: 7fr 5fr;
       grid-column-gap: 20px;
     }
 
-    @media screen and (max-width: 640px) {
+    @media screen and (min-width: 320px) and (max-width: 1199px) {
       display: block;
       margin: 80px 0 100px;
     }
@@ -51,33 +51,33 @@
     border-radius: 5px;
     overflow: hidden;
 
-    @media screen and (max-width: 1200px) {
+    @media screen and (min-width: 1200px) and (max-width: 1919px) {
       height: 455px;
       width: 455px;
     }
 
-    @media screen and (max-width: 640px) {
+    @media screen and (min-width: 640px) and (max-width: 1199px) {
       height: 600px;
       width: 600px;
     }
 
-    @media screen and (max-width: 320px) {
+    @media screen and (max-width: 639px) {
       height: 320px;
       width: 320px;
     }
 
     img {
-      @media screen and (max-width: 1200px) {
+      @media screen and (min-width: 1200px) and (max-width: 1919px) {
         height: 455px;
         width: 455px;
       }
 
-      @media screen and (max-width: 640px) {
+      @media screen and (min-width: 640px) and (max-width: 1199px) {
         height: 600px;
         width: 600px;
       }
 
-      @media screen and (max-width: 320px) {
+      @media screen and (max-width: 639px) {
         height: 320px;
         width: 320px;
       }
@@ -94,7 +94,7 @@
       margin: 80px 0 50px;
     }
 
-    @media screen and (max-width: 320px) {
+    @media screen and (min-width: 320px) and (max-width: 639px) {
       height: auto;
       width: auto;
       margin: 51px 0 20px;
@@ -108,14 +108,14 @@
       font-size: 20.27px;
       line-height: 24.71px;
 
-      @media screen and (max-width: 320px) {
+      @media screen and (max-width: 639px) {
         position: static;
         padding: 30px 0;
       }
     }
 
     a {
-      @media screen and (max-width: 320px) {
+      @media screen and (max-width: 639px) {
         text-align: center;
       }
     }
@@ -126,7 +126,7 @@
       padding-bottom: 25px;
       color: $black;
 
-      @media screen and (max-width: 320px) {
+      @media screen and (max-width: 639px) {
         padding-bottom: 19px;
 
         span {
@@ -139,7 +139,7 @@
       padding-bottom: 19px;
       color: $black;
 
-      @media screen and (max-width: 320px) {
+      @media screen and (max-width: 639px) {
         padding-bottom: 20px;
       }
     }
@@ -147,7 +147,7 @@
     span {
       margin-left: 20px;
 
-      @media screen and (max-width: 320px) {
+      @media screen and (max-width: 639px) {
         display: block;
         margin-left: 0;
         padding-top: 2px;

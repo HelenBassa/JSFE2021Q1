@@ -272,25 +272,24 @@ a {
 
 .container--live-cams {
   padding: 0;
-  margin-left: -111px;
 }
 
 @media screen and (max-width: 1200px) {
   .container--live-cams {
-    padding: 0 40px;
+    padding: 0;
     margin: 0;
   }
 }
 
 @media screen and (max-width: 640px) {
   .container--live-cams {
-    padding: 0 20px;
+    padding: 0;
   }
 }
 
 @media screen and (max-width: 320px) {
   .container--live-cams {
-    padding: 0 0 0 20px;
+    padding: 0;
   }
 }
 
@@ -348,7 +347,7 @@ a {
   .inner-bg--watch-animal {
     background-size: 160%;
     background-position-x: -160px;
-    background-position-y: 5108px;
+    background-position-y: 510px;
   }
 }
 
@@ -1554,6 +1553,7 @@ a {
 @media screen and (max-width: 1200px) {
   .meet-pets--inner__title {
     margin-bottom: 33px;
+    margin-left: 100px;
   }
 }
 
@@ -2766,6 +2766,13 @@ a {
 @media screen and (max-width: 1200px) {
   .care-animals--inner__title {
     margin-bottom: 30px;
+    margin-left: 46px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .care-animals--inner__title {
+    margin-left: 0;
   }
 }
 

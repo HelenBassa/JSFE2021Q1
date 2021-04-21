@@ -35,6 +35,11 @@
 
       @media screen and (max-width: 1200px) {
         margin-bottom: 30px;
+        margin-left: 46px;
+      }
+
+      @media screen and (max-width: 640px) {
+        margin-left: 0;
       }
 
       @media screen and (max-width: 320px) {
