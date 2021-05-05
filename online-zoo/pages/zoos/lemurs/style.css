@@ -80,6 +80,10 @@ h3 {
   color: #000000;
 }
 
+.body-text--disable {
+  color: #a4a8ae;
+}
+
 .btn-text {
   font-family: "Montserrat";
   font-style: normal;
@@ -89,6 +93,12 @@ h3 {
   /* identical to box height */
   text-transform: uppercase;
   color: #00a092;
+}
+
+.btn-text--back {
+  text-transform: capitalize;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
 }
 
 html {
@@ -114,6 +124,10 @@ body {
   position: relative;
   margin: 0;
   overflow-y: overlay;
+}
+
+body.lock {
+  overflow: hidden;
 }
 
 ul,

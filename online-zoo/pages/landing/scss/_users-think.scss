@@ -76,6 +76,16 @@
       }
     }
 
+    .slide__wrapper {
+      width: 100%;
+      max-width: 1060px;
+      position: relative;
+
+      @media screen and (max-width: 1200px) {
+        margin-left: 100px;
+      }
+    }
+
     .slide__wrapper > input {
       display: none;
     }
@@ -133,6 +143,16 @@
     //   }
     // }
 
+    &--carousel {
+      overflow: auto;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+    }
+
+    &--carousel::-webkit-scrollbar {
+      height: 0;
+    }
+
     &--slider {
       display: grid;
       grid-template-rows: 1fr 1fr;
@@ -140,9 +160,11 @@
       grid-row-gap: 30px;
       grid-column-gap: 30px;
 
-      @media screen and (max-width: 1200px) {
-        margin-left: 102px;
-      }
+      grid-auto-flow: column;
+
+      // @media screen and (max-width: 1200px) {
+      //   margin-left: 102px;
+      // }
 
       @media screen and (max-width: 640px) {
         margin-left: 0px;
@@ -159,6 +181,7 @@
       &__card {
         position: relative;
         height: 463px;
+        width: 515px;
         background-color: $white;
         box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.5);
         border-radius: 5px;

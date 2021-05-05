@@ -80,6 +80,10 @@ h3 {
   color: #000000;
 }
 
+.body-text--disable {
+  color: #a4a8ae;
+}
+
 .btn-text {
   font-family: "Montserrat";
   font-style: normal;
@@ -89,6 +93,12 @@ h3 {
   /* identical to box height */
   text-transform: uppercase;
   color: #00a092;
+}
+
+.btn-text--back {
+  text-transform: capitalize;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
 }
 
 html {
@@ -114,6 +124,10 @@ body {
   position: relative;
   margin: 0;
   overflow-y: overlay;
+}
+
+body.lock {
+  overflow: hidden;
 }
 
 ul,
@@ -748,8 +762,8 @@ a {
   overflow: auto;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 1fr 2.15fr 2.15fr 2.15fr 2.15fr 1fr;
-      grid-template-rows: 1fr 2.15fr 2.15fr 2.15fr 2.15fr 1fr;
+  -ms-grid-rows: 1fr 8.6fr 1fr;
+      grid-template-rows: 1fr 8.6fr 1fr;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
   grid-gap: 1px;
@@ -843,7 +857,6 @@ a {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 12.2%;
             flex: 0 0 12.2%;
-    height: 500px;
   }
 }
 
@@ -858,6 +871,11 @@ a {
   }
 }
 
+.sidebar__show {
+  position: relative;
+  height: 100%;
+}
+
 @media screen and (max-width: 1420px) {
   .sidebar__show .bage {
     display: none;
@@ -866,13 +884,29 @@ a {
 
 .sidebar__btn--show {
   cursor: pointer;
-  padding: 13% 0% 13% 65%;
+  position: absolute;
+  right: 30px;
+  top: calc(50% - 16px / 2);
+  padding: 0;
+}
+
+.sidebar__btn--show svg {
+  -webkit-transform: rotatez(0deg);
+          transform: rotatez(0deg);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
 @media screen and (max-width: 1420px) {
   .sidebar__btn--show {
-    padding: 13% 0% 13% 0%;
+    right: calc(50% - 16px / 2);
   }
+}
+
+.sidebar__btn--show:hover svg path {
+  fill: #f58021;
 }
 
 .sidebar__item {
@@ -884,19 +918,40 @@ a {
   border-bottom: 1px solid #ffffff;
 }
 
+.sidebar__item p {
+  text-align: center;
+  margin: 0 17px 0 114px;
+  color: white;
+  display: none;
+}
+
 .sidebar__item .panda,
 .sidebar__item .eagle,
 .sidebar__item .gorilla,
-.sidebar__item .lemur {
+.sidebar__item .lemur,
+.sidebar__item .alligator,
+.sidebar__item .lion,
+.sidebar__item .tiger,
+.sidebar__item .coala {
   position: relative;
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .sidebar__item .panda svg,
 .sidebar__item .eagle svg,
 .sidebar__item .gorilla svg,
-.sidebar__item .lemur svg {
+.sidebar__item .lemur svg,
+.sidebar__item .alligator svg,
+.sidebar__item .lion svg,
+.sidebar__item .tiger svg,
+.sidebar__item .coala svg {
   position: absolute;
   left: calc(50% - 120px / 2);
   top: calc(50% - 120px / 2);
@@ -906,7 +961,11 @@ a {
   .sidebar__item .panda svg,
   .sidebar__item .eagle svg,
   .sidebar__item .gorilla svg,
-  .sidebar__item .lemur svg {
+  .sidebar__item .lemur svg,
+  .sidebar__item .alligator svg,
+  .sidebar__item .lion svg,
+  .sidebar__item .tiger svg,
+  .sidebar__item .coala svg {
     width: 80px;
     height: 80px;
     left: calc(50% - 80px / 2);
@@ -918,7 +977,11 @@ a {
   .sidebar__item .panda svg,
   .sidebar__item .eagle svg,
   .sidebar__item .gorilla svg,
-  .sidebar__item .lemur svg {
+  .sidebar__item .lemur svg,
+  .sidebar__item .alligator svg,
+  .sidebar__item .lion svg,
+  .sidebar__item .tiger svg,
+  .sidebar__item .coala svg {
     width: 60px;
     height: 60px;
     left: calc(50% - 60px / 2);
@@ -930,7 +993,11 @@ a {
   .sidebar__item .panda svg,
   .sidebar__item .eagle svg,
   .sidebar__item .gorilla svg,
-  .sidebar__item .lemur svg {
+  .sidebar__item .lemur svg,
+  .sidebar__item .alligator svg,
+  .sidebar__item .lion svg,
+  .sidebar__item .tiger svg,
+  .sidebar__item .coala svg {
     width: 40px;
     height: 40px;
     left: calc(50% - 40px / 2);
@@ -941,7 +1008,11 @@ a {
 .sidebar__item .panda svg circle,
 .sidebar__item .eagle svg circle,
 .sidebar__item .gorilla svg circle,
-.sidebar__item .lemur svg circle {
+.sidebar__item .lemur svg circle,
+.sidebar__item .alligator svg circle,
+.sidebar__item .lion svg circle,
+.sidebar__item .tiger svg circle,
+.sidebar__item .coala svg circle {
   stroke: transparent;
 }
 
@@ -952,7 +1023,15 @@ a {
 .sidebar__item .gorilla svg g path,
 .sidebar__item .gorilla svg g circle,
 .sidebar__item .lemur svg g path,
-.sidebar__item .lemur svg g circle {
+.sidebar__item .lemur svg g circle,
+.sidebar__item .alligator svg g path,
+.sidebar__item .alligator svg g circle,
+.sidebar__item .lion svg g path,
+.sidebar__item .lion svg g circle,
+.sidebar__item .tiger svg g path,
+.sidebar__item .tiger svg g circle,
+.sidebar__item .coala svg g path,
+.sidebar__item .coala svg g circle {
   fill: #f58021;
 }
 
@@ -964,7 +1043,15 @@ a {
   .sidebar__item .gorilla svg g path,
   .sidebar__item .gorilla svg g circle,
   .sidebar__item .lemur svg g path,
-  .sidebar__item .lemur svg g circle {
+  .sidebar__item .lemur svg g circle,
+  .sidebar__item .alligator svg g path,
+  .sidebar__item .alligator svg g circle,
+  .sidebar__item .lion svg g path,
+  .sidebar__item .lion svg g circle,
+  .sidebar__item .tiger svg g path,
+  .sidebar__item .tiger svg g circle,
+  .sidebar__item .coala svg g path,
+  .sidebar__item .coala svg g circle {
     fill: transparent;
   }
 }
@@ -973,9 +1060,21 @@ a {
   .sidebar__item .panda svg path,
   .sidebar__item .eagle svg path,
   .sidebar__item .gorilla svg path,
-  .sidebar__item .lemur svg path {
+  .sidebar__item .lemur svg path,
+  .sidebar__item .alligator svg path,
+  .sidebar__item .lion svg path,
+  .sidebar__item .tiger svg path,
+  .sidebar__item .coala svg path {
     fill: #f58021;
   }
+}
+
+.sidebar__item .alligator svg path,
+.sidebar__item .lion svg path,
+.sidebar__item .tiger svg path,
+.sidebar__item .coala svg path {
+  -webkit-transform: translate(30px, 30px);
+          transform: translate(30px, 30px);
 }
 
 .sidebar__item.active {
@@ -1013,7 +1112,11 @@ a {
 .sidebar__item:not(.active) .panda:hover,
 .sidebar__item:not(.active) .eagle:hover,
 .sidebar__item:not(.active) .gorilla:hover,
-.sidebar__item:not(.active) .lemur:hover {
+.sidebar__item:not(.active) .lemur:hover,
+.sidebar__item:not(.active) .alligator:hover,
+.sidebar__item:not(.active) .lion:hover,
+.sidebar__item:not(.active) .tiger:hover,
+.sidebar__item:not(.active) .coala:hover {
   position: relative;
   width: 100%;
   height: 100%;
@@ -1022,7 +1125,11 @@ a {
 .sidebar__item:not(.active) .panda:hover svg,
 .sidebar__item:not(.active) .eagle:hover svg,
 .sidebar__item:not(.active) .gorilla:hover svg,
-.sidebar__item:not(.active) .lemur:hover svg {
+.sidebar__item:not(.active) .lemur:hover svg,
+.sidebar__item:not(.active) .alligator:hover svg,
+.sidebar__item:not(.active) .lion:hover svg,
+.sidebar__item:not(.active) .tiger:hover svg,
+.sidebar__item:not(.active) .coala:hover svg {
   position: absolute;
   left: calc(50% - 120px / 2);
   top: calc(50% - 120px / 2);
@@ -1032,7 +1139,11 @@ a {
   .sidebar__item:not(.active) .panda:hover svg,
   .sidebar__item:not(.active) .eagle:hover svg,
   .sidebar__item:not(.active) .gorilla:hover svg,
-  .sidebar__item:not(.active) .lemur:hover svg {
+  .sidebar__item:not(.active) .lemur:hover svg,
+  .sidebar__item:not(.active) .alligator:hover svg,
+  .sidebar__item:not(.active) .lion:hover svg,
+  .sidebar__item:not(.active) .tiger:hover svg,
+  .sidebar__item:not(.active) .coala:hover svg {
     width: 80px;
     height: 80px;
     left: calc(50% - 80px / 2);
@@ -1044,7 +1155,11 @@ a {
   .sidebar__item:not(.active) .panda:hover svg,
   .sidebar__item:not(.active) .eagle:hover svg,
   .sidebar__item:not(.active) .gorilla:hover svg,
-  .sidebar__item:not(.active) .lemur:hover svg {
+  .sidebar__item:not(.active) .lemur:hover svg,
+  .sidebar__item:not(.active) .alligator:hover svg,
+  .sidebar__item:not(.active) .lion:hover svg,
+  .sidebar__item:not(.active) .tiger:hover svg,
+  .sidebar__item:not(.active) .coala:hover svg {
     width: 60px;
     height: 60px;
     left: calc(50% - 60px / 2);
@@ -1056,7 +1171,11 @@ a {
   .sidebar__item:not(.active) .panda:hover svg,
   .sidebar__item:not(.active) .eagle:hover svg,
   .sidebar__item:not(.active) .gorilla:hover svg,
-  .sidebar__item:not(.active) .lemur:hover svg {
+  .sidebar__item:not(.active) .lemur:hover svg,
+  .sidebar__item:not(.active) .alligator:hover svg,
+  .sidebar__item:not(.active) .lion:hover svg,
+  .sidebar__item:not(.active) .tiger:hover svg,
+  .sidebar__item:not(.active) .coala:hover svg {
     width: 40px;
     height: 40px;
     left: calc(50% - 40px / 2);
@@ -1067,7 +1186,11 @@ a {
 .sidebar__item:not(.active) .panda:hover svg circle,
 .sidebar__item:not(.active) .eagle:hover svg circle,
 .sidebar__item:not(.active) .gorilla:hover svg circle,
-.sidebar__item:not(.active) .lemur:hover svg circle {
+.sidebar__item:not(.active) .lemur:hover svg circle,
+.sidebar__item:not(.active) .alligator:hover svg circle,
+.sidebar__item:not(.active) .lion:hover svg circle,
+.sidebar__item:not(.active) .tiger:hover svg circle,
+.sidebar__item:not(.active) .coala:hover svg circle {
   stroke: transparent;
 }
 
@@ -1078,7 +1201,15 @@ a {
 .sidebar__item:not(.active) .gorilla:hover svg g path,
 .sidebar__item:not(.active) .gorilla:hover svg g circle,
 .sidebar__item:not(.active) .lemur:hover svg g path,
-.sidebar__item:not(.active) .lemur:hover svg g circle {
+.sidebar__item:not(.active) .lemur:hover svg g circle,
+.sidebar__item:not(.active) .alligator:hover svg g path,
+.sidebar__item:not(.active) .alligator:hover svg g circle,
+.sidebar__item:not(.active) .lion:hover svg g path,
+.sidebar__item:not(.active) .lion:hover svg g circle,
+.sidebar__item:not(.active) .tiger:hover svg g path,
+.sidebar__item:not(.active) .tiger:hover svg g circle,
+.sidebar__item:not(.active) .coala:hover svg g path,
+.sidebar__item:not(.active) .coala:hover svg g circle {
   fill: #ffffff;
 }
 
@@ -1090,14 +1221,210 @@ a {
   .sidebar__item:not(.active) .gorilla:hover svg g path,
   .sidebar__item:not(.active) .gorilla:hover svg g circle,
   .sidebar__item:not(.active) .lemur:hover svg g path,
-  .sidebar__item:not(.active) .lemur:hover svg g circle {
+  .sidebar__item:not(.active) .lemur:hover svg g circle,
+  .sidebar__item:not(.active) .alligator:hover svg g path,
+  .sidebar__item:not(.active) .alligator:hover svg g circle,
+  .sidebar__item:not(.active) .lion:hover svg g path,
+  .sidebar__item:not(.active) .lion:hover svg g circle,
+  .sidebar__item:not(.active) .tiger:hover svg g path,
+  .sidebar__item:not(.active) .tiger:hover svg g circle,
+  .sidebar__item:not(.active) .coala:hover svg g path,
+  .sidebar__item:not(.active) .coala:hover svg g circle {
     fill: transparent;
   }
+}
+
+.sidebar.opened {
+  width: 300px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 19.525%;
+          flex: 0 0 19.525%;
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1420px) {
+  .sidebar.opened {
+    width: 300px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 31.25%;
+            flex: 0 0 31.25%;
+  }
+}
+
+.sidebar.opened .sidebar__btn--show svg {
+  -webkit-transform: rotatez(-180deg);
+          transform: rotatez(-180deg);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.sidebar.opened p {
+  display: block;
+}
+
+.sidebar.opened .panda,
+.sidebar.opened .eagle,
+.sidebar.opened .gorilla,
+.sidebar.opened .lemur,
+.sidebar.opened .alligator,
+.sidebar.opened .lion,
+.sidebar.opened .tiger,
+.sidebar.opened .coala {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.sidebar.opened .panda svg,
+.sidebar.opened .eagle svg,
+.sidebar.opened .gorilla svg,
+.sidebar.opened .lemur svg,
+.sidebar.opened .alligator svg,
+.sidebar.opened .lion svg,
+.sidebar.opened .tiger svg,
+.sidebar.opened .coala svg {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  left: 26.67px;
+  top: calc(50% - 80px / 2);
+}
+
+.sidebar.opened .panda svg circle,
+.sidebar.opened .eagle svg circle,
+.sidebar.opened .gorilla svg circle,
+.sidebar.opened .lemur svg circle,
+.sidebar.opened .alligator svg circle,
+.sidebar.opened .lion svg circle,
+.sidebar.opened .tiger svg circle,
+.sidebar.opened .coala svg circle {
+  stroke: transparent;
+}
+
+.sidebar.opened .panda svg g path,
+.sidebar.opened .panda svg g circle,
+.sidebar.opened .eagle svg g path,
+.sidebar.opened .eagle svg g circle,
+.sidebar.opened .gorilla svg g path,
+.sidebar.opened .gorilla svg g circle,
+.sidebar.opened .lemur svg g path,
+.sidebar.opened .lemur svg g circle,
+.sidebar.opened .alligator svg g path,
+.sidebar.opened .alligator svg g circle,
+.sidebar.opened .lion svg g path,
+.sidebar.opened .lion svg g circle,
+.sidebar.opened .tiger svg g path,
+.sidebar.opened .tiger svg g circle,
+.sidebar.opened .coala svg g path,
+.sidebar.opened .coala svg g circle {
+  fill: transparent;
+}
+
+.sidebar.opened .panda svg path,
+.sidebar.opened .eagle svg path,
+.sidebar.opened .gorilla svg path,
+.sidebar.opened .lemur svg path,
+.sidebar.opened .alligator svg path,
+.sidebar.opened .lion svg path,
+.sidebar.opened .tiger svg path,
+.sidebar.opened .coala svg path {
+  fill: #f58021;
+}
+
+.sidebar.opened .panda:hover svg,
+.sidebar.opened .eagle:hover svg,
+.sidebar.opened .gorilla:hover svg,
+.sidebar.opened .lemur:hover svg,
+.sidebar.opened .alligator:hover svg,
+.sidebar.opened .lion:hover svg,
+.sidebar.opened .tiger:hover svg,
+.sidebar.opened .coala:hover svg {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  left: 26.67px;
+  top: calc(50% - 80px / 2);
+}
+
+.sidebar.opened .panda:hover svg circle,
+.sidebar.opened .eagle:hover svg circle,
+.sidebar.opened .gorilla:hover svg circle,
+.sidebar.opened .lemur:hover svg circle,
+.sidebar.opened .alligator:hover svg circle,
+.sidebar.opened .lion:hover svg circle,
+.sidebar.opened .tiger:hover svg circle,
+.sidebar.opened .coala:hover svg circle {
+  stroke: transparent;
+}
+
+.sidebar.opened .panda:hover svg g path,
+.sidebar.opened .panda:hover svg g circle,
+.sidebar.opened .eagle:hover svg g path,
+.sidebar.opened .eagle:hover svg g circle,
+.sidebar.opened .gorilla:hover svg g path,
+.sidebar.opened .gorilla:hover svg g circle,
+.sidebar.opened .lemur:hover svg g path,
+.sidebar.opened .lemur:hover svg g circle,
+.sidebar.opened .alligator:hover svg g path,
+.sidebar.opened .alligator:hover svg g circle,
+.sidebar.opened .lion:hover svg g path,
+.sidebar.opened .lion:hover svg g circle,
+.sidebar.opened .tiger:hover svg g path,
+.sidebar.opened .tiger:hover svg g circle,
+.sidebar.opened .coala:hover svg g path,
+.sidebar.opened .coala:hover svg g circle {
+  fill: transparent;
+}
+
+.sidebar.opened .panda:hover svg path,
+.sidebar.opened .eagle:hover svg path,
+.sidebar.opened .gorilla:hover svg path,
+.sidebar.opened .lemur:hover svg path,
+.sidebar.opened .alligator:hover svg path,
+.sidebar.opened .lion:hover svg path,
+.sidebar.opened .tiger:hover svg path,
+.sidebar.opened .coala:hover svg path {
+  fill: #ffffff;
+}
+
+.sidebar.opened .active {
+  cursor: default;
+}
+
+.sidebar.opened .active svg path {
+  fill: #ffffff;
 }
 
 .sidebar__btn--next {
   cursor: pointer;
   padding: 12% 0%;
+}
+
+.sidebar__btn--next:hover svg path {
+  fill: #f58021;
+}
+
+.nav-slider {
+  max-height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-slider__wrapper {
+  height: 100%;
+  max-height: 686px;
+}
+
+.nav-slider__content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-gap: 1px;
+  height: 1368px;
 }
 
 .live-cams {
@@ -1232,9 +1559,17 @@ a {
 .video {
   position: relative;
   width: 100%;
-  height: inherit;
+  height: 0;
   padding-bottom: 56.25%;
   background-color: #000000;
+}
+
+.video__item {
+  padding-bottom: 65.25%;
+}
+
+.video iframe {
+  position: absolute;
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1420px) {
@@ -1266,15 +1601,20 @@ a {
   top: 50%;
   left: 50%;
   z-index: 1;
-  display: none;
+  display: block;
   padding: 0;
-  width: 68px;
-  height: 48px;
+  width: 100%;
+  height: 100%;
   border: none;
   background-color: transparent;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   cursor: pointer;
+}
+
+.video__button.active {
+  display: none;
+  border: 3px solid #f58021;
 }
 
 @media screen and (max-width: 640px) {
@@ -1765,6 +2105,7 @@ a {
   width: 320px;
   border-radius: 5px;
   overflow: hidden;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1200px) {
@@ -1786,24 +2127,6 @@ a {
     height: 110px;
     min-width: 140px;
   }
-}
-
-.slider__card:nth-child(1) {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border: 3px solid #f58021;
-}
-
-.slider__card:nth-child(1) .bage {
-  top: -3px;
-}
-
-.slider__card:nth-child(1) .video__button {
-  top: calc(50% - 3px);
-}
-
-.slider__card:nth-child(1) .slider__card--picture:first-of-type {
-  border-radius: 0;
 }
 
 .slider__card .video__button {

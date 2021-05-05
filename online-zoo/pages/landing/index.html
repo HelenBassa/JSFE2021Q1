@@ -19,7 +19,7 @@
     <title>Online ZOO</title>
   </head>
   <body>
-    <header class="wrapper wrapper--header" id="up">
+    <header class="wrapper wrapper--header lock-padding" id="up">
       <div class="container container--header">
         <div class="header">
           <div class="logo">
@@ -282,29 +282,32 @@
                 class="quick-donation__input btn-text"
                 type="number"
                 placeholder="Donation Amount"
+                value=""
                 min="1"
                 max="9999"
                 step="1"
                 onKeyPress="if(this.value.length==4) return false;"
               />
-              <button
-                class="quick-donation__button button button--quick-donate-btn button--width-80 button--fill-orange"
-              >
-                <svg
-                  width="25"
-                  height="22"
-                  viewBox="0 0 25 22"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
+              <a href="#popup-step-1" class="popup-link">
+                <button
+                  class="quick-donation__button button button--quick-donate-btn button--width-80 button--fill-orange"
                 >
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M13.5687 0.119971C13.3866 0.199174 13.2211 0.315255 13.0818 0.461565C12.9422 0.607505 12.8314 0.780876 12.7558 0.971748C12.6803 1.16262 12.6414 1.36724 12.6414 1.57389C12.6414 1.78055 12.6803 1.98517 12.7558 2.17604C12.8314 2.36691 12.9422 2.54028 13.0818 2.68622L19.1095 9H1.95889C1.53454 9 1.12757 9.21071 0.827516 9.58579C0.527458 9.96086 0.358887 10.4696 0.358887 11C0.358887 11.5304 0.527458 12.0391 0.827516 12.4142C1.12757 12.7893 1.53454 13 1.95889 13H19.1103L13.0818 19.3146C12.8003 19.6096 12.6421 20.0097 12.6421 20.4269C12.6421 20.8441 12.8003 21.2443 13.0818 21.5393C13.3634 21.8343 13.7452 22 14.1434 22C14.5415 22 14.9234 21.8343 15.2049 21.5393L24.2009 12.1127C24.3405 11.9668 24.4513 11.7934 24.5269 11.6026C24.6024 11.4117 24.6414 11.2071 24.6414 11.0004C24.6414 10.7938 24.6024 10.5891 24.5269 10.3983C24.4513 10.2074 24.3405 10.034 24.2009 9.88808L15.2049 0.461565C15.0656 0.315255 14.9002 0.199174 14.718 0.119971C14.5359 0.0407677 14.3406 0 14.1434 0C13.9461 0 13.7509 0.0407677 13.5687 0.119971Z"
-                    fill="#20113D"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    width="25"
+                    height="22"
+                    viewBox="0 0 25 22"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M13.5687 0.119971C13.3866 0.199174 13.2211 0.315255 13.0818 0.461565C12.9422 0.607505 12.8314 0.780876 12.7558 0.971748C12.6803 1.16262 12.6414 1.36724 12.6414 1.57389C12.6414 1.78055 12.6803 1.98517 12.7558 2.17604C12.8314 2.36691 12.9422 2.54028 13.0818 2.68622L19.1095 9H1.95889C1.53454 9 1.12757 9.21071 0.827516 9.58579C0.527458 9.96086 0.358887 10.4696 0.358887 11C0.358887 11.5304 0.527458 12.0391 0.827516 12.4142C1.12757 12.7893 1.53454 13 1.95889 13H19.1103L13.0818 19.3146C12.8003 19.6096 12.6421 20.0097 12.6421 20.4269C12.6421 20.8441 12.8003 21.2443 13.0818 21.5393C13.3634 21.8343 13.7452 22 14.1434 22C14.5415 22 14.9234 21.8343 15.2049 21.5393L24.2009 12.1127C24.3405 11.9668 24.4513 11.7934 24.5269 11.6026C24.6024 11.4117 24.6414 11.2071 24.6414 11.0004C24.6414 10.7938 24.6024 10.5891 24.5269 10.3983C24.4513 10.2074 24.3405 10.034 24.2009 9.88808L15.2049 0.461565C15.0656 0.315255 14.9002 0.199174 14.718 0.119971C14.5359 0.0407677 14.3406 0 14.1434 0C13.9461 0 13.7509 0.0407677 13.5687 0.119971Z"
+                      fill="#20113D"
+                    />
+                  </svg>
+                </button>
+              </a>
             </form>
           </div>
         </div>
@@ -688,6 +691,333 @@
                       </a>
                     </a>
                   </div>
+                  <div class="slider__card">
+                    <a
+                      class="slider__card--link"
+                      href="../zoos/panda/index.html"
+                    >
+                      <figure class="slider__card--picture">
+                        <figcaption class="bage bage--navy subheader">
+                          Lucas
+                        </figcaption>
+                        <img
+                          src="../../assets/images/landing/panda-lucas.jpg"
+                          alt="Lucas"
+                        />
+                      </figure>
+                      <p class="subheader">Giant Panda</p>
+                      <p class="body-text">
+                        Native to central China, giant pandas have come to
+                        symbolize vulnerable species.
+                      </p>
+                      <a href="../zoos/panda/index.html">
+                        <button
+                          class="button button--width-240 button--transparent btn-text"
+                        >
+                          <span>view live cam</span>
+                          <svg
+                            width="25"
+                            height="22"
+                            viewBox="0 0 25 22"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M13.5687 0.119971C13.3866 0.199174 13.2211 0.315255 13.0818 0.461565C12.9422 0.607505 12.8314 0.780876 12.7558 0.971748C12.6803 1.16262 12.6414 1.36724 12.6414 1.57389C12.6414 1.78055 12.6803 1.98517 12.7558 2.17604C12.8314 2.36691 12.9422 2.54028 13.0818 2.68622L19.1095 9H1.95889C1.53454 9 1.12757 9.21071 0.827516 9.58579C0.527458 9.96086 0.358887 10.4696 0.358887 11C0.358887 11.5304 0.527458 12.0391 0.827516 12.4142C1.12757 12.7893 1.53454 13 1.95889 13H19.1103L13.0818 19.3146C12.8003 19.6096 12.6421 20.0097 12.6421 20.4269C12.6421 20.8441 12.8003 21.2443 13.0818 21.5393C13.3634 21.8343 13.7452 22 14.1434 22C14.5415 22 14.9234 21.8343 15.2049 21.5393L24.2009 12.1127C24.3405 11.9668 24.4513 11.7934 24.5269 11.6026C24.6024 11.4117 24.6414 11.2071 24.6414 11.0004C24.6414 10.7938 24.6024 10.5891 24.5269 10.3983C24.4513 10.2074 24.3405 10.034 24.2009 9.88808L15.2049 0.461565C15.0656 0.315255 14.9002 0.199174 14.718 0.119971C14.5359 0.0407677 14.3406 0 14.1434 0C13.9461 0 13.7509 0.0407677 13.5687 0.119971Z"
+                              fill="#20113D"
+                            />
+                          </svg>
+                        </button>
+                      </a>
+                    </a>
+                  </div>
+                  <div class="slider__card">
+                    <a
+                      class="slider__card--link"
+                      href="../zoos/lemurs/index.html"
+                    >
+                      <figure class="slider__card--picture">
+                        <figcaption class="bage bage--navy subheader">
+                          Andy
+                        </figcaption>
+                        <img
+                          src="../../assets/images/landing/lemur-andy.jpg"
+                          alt="Andy"
+                        />
+                      </figure>
+                      <p class="subheader">Madagascarian Lemur</p>
+                      <p class="body-text">
+                        Lemurs are considered the world’s most endangered group
+                        of mammals.
+                      </p>
+                      <a href="../zoos/lemurs/index.html">
+                        <button
+                          class="button button--width-240 button--transparent btn-text"
+                        >
+                          <span>view live cam</span>
+                          <svg
+                            width="25"
+                            height="22"
+                            viewBox="0 0 25 22"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M13.5687 0.119971C13.3866 0.199174 13.2211 0.315255 13.0818 0.461565C12.9422 0.607505 12.8314 0.780876 12.7558 0.971748C12.6803 1.16262 12.6414 1.36724 12.6414 1.57389C12.6414 1.78055 12.6803 1.98517 12.7558 2.17604C12.8314 2.36691 12.9422 2.54028 13.0818 2.68622L19.1095 9H1.95889C1.53454 9 1.12757 9.21071 0.827516 9.58579C0.527458 9.96086 0.358887 10.4696 0.358887 11C0.358887 11.5304 0.527458 12.0391 0.827516 12.4142C1.12757 12.7893 1.53454 13 1.95889 13H19.1103L13.0818 19.3146C12.8003 19.6096 12.6421 20.0097 12.6421 20.4269C12.6421 20.8441 12.8003 21.2443 13.0818 21.5393C13.3634 21.8343 13.7452 22 14.1434 22C14.5415 22 14.9234 21.8343 15.2049 21.5393L24.2009 12.1127C24.3405 11.9668 24.4513 11.7934 24.5269 11.6026C24.6024 11.4117 24.6414 11.2071 24.6414 11.0004C24.6414 10.7938 24.6024 10.5891 24.5269 10.3983C24.4513 10.2074 24.3405 10.034 24.2009 9.88808L15.2049 0.461565C15.0656 0.315255 14.9002 0.199174 14.718 0.119971C14.5359 0.0407677 14.3406 0 14.1434 0C13.9461 0 13.7509 0.0407677 13.5687 0.119971Z"
+                              fill="#20113D"
+                            />
+                          </svg>
+                        </button>
+                      </a>
+                    </a>
+                  </div>
+                  <div class="slider__card">
+                    <a
+                      class="slider__card--link"
+                      href="../zoos/gorillas/index.html"
+                    >
+                      <figure class="slider__card--picture">
+                        <figcaption class="bage bage--navy subheader">
+                          Glen
+                        </figcaption>
+                        <img
+                          src="../../assets/images/landing/glen-gorilla.jpg"
+                          alt="Glen"
+                        />
+                      </figure>
+                      <p class="subheader">Gorilla in Congo</p>
+                      <p class="body-text">
+                        Variety of snacks very important for the healthy life of
+                        gorillas and his plenty of babies.
+                      </p>
+                      <a href="../zoos/gorillas/index.html">
+                        <button
+                          class="button button--width-240 button--transparent btn-text"
+                        >
+                          <span>view live cam</span>
+                          <svg
+                            width="25"
+                            height="22"
+                            viewBox="0 0 25 22"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M13.5687 0.119971C13.3866 0.199174 13.2211 0.315255 13.0818 0.461565C12.9422 0.607505 12.8314 0.780876 12.7558 0.971748C12.6803 1.16262 12.6414 1.36724 12.6414 1.57389C12.6414 1.78055 12.6803 1.98517 12.7558 2.17604C12.8314 2.36691 12.9422 2.54028 13.0818 2.68622L19.1095 9H1.95889C1.53454 9 1.12757 9.21071 0.827516 9.58579C0.527458 9.96086 0.358887 10.4696 0.358887 11C0.358887 11.5304 0.527458 12.0391 0.827516 12.4142C1.12757 12.7893 1.53454 13 1.95889 13H19.1103L13.0818 19.3146C12.8003 19.6096 12.6421 20.0097 12.6421 20.4269C12.6421 20.8441 12.8003 21.2443 13.0818 21.5393C13.3634 21.8343 13.7452 22 14.1434 22C14.5415 22 14.9234 21.8343 15.2049 21.5393L24.2009 12.1127C24.3405 11.9668 24.4513 11.7934 24.5269 11.6026C24.6024 11.4117 24.6414 11.2071 24.6414 11.0004C24.6414 10.7938 24.6024 10.5891 24.5269 10.3983C24.4513 10.2074 24.3405 10.034 24.2009 9.88808L15.2049 0.461565C15.0656 0.315255 14.9002 0.199174 14.718 0.119971C14.5359 0.0407677 14.3406 0 14.1434 0C13.9461 0 13.7509 0.0407677 13.5687 0.119971Z"
+                              fill="#20113D"
+                            />
+                          </svg>
+                        </button>
+                      </a>
+                    </a>
+                  </div>
+                  <div class="slider__card">
+                    <a class="slider__card--link" href="#">
+                      <figure class="slider__card--picture">
+                        <figcaption class="bage bage--navy subheader">
+                          Mike
+                        </figcaption>
+                        <img
+                          src="../../assets/images/landing/mike-alligator.jpg"
+                          alt="Mike"
+                        />
+                      </figure>
+                      <p class="subheader">Chinese Alligator</p>
+                      <p class="body-text">
+                        From nose to tail, belly to back, hard scales protect
+                        this petite alligator.
+                      </p>
+                      <a href="#">
+                        <button
+                          class="button button--width-240 button--transparent btn-text"
+                        >
+                          <span>view live cam</span>
+                          <svg
+                            width="25"
+                            height="22"
+                            viewBox="0 0 25 22"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M13.5687 0.119971C13.3866 0.199174 13.2211 0.315255 13.0818 0.461565C12.9422 0.607505 12.8314 0.780876 12.7558 0.971748C12.6803 1.16262 12.6414 1.36724 12.6414 1.57389C12.6414 1.78055 12.6803 1.98517 12.7558 2.17604C12.8314 2.36691 12.9422 2.54028 13.0818 2.68622L19.1095 9H1.95889C1.53454 9 1.12757 9.21071 0.827516 9.58579C0.527458 9.96086 0.358887 10.4696 0.358887 11C0.358887 11.5304 0.527458 12.0391 0.827516 12.4142C1.12757 12.7893 1.53454 13 1.95889 13H19.1103L13.0818 19.3146C12.8003 19.6096 12.6421 20.0097 12.6421 20.4269C12.6421 20.8441 12.8003 21.2443 13.0818 21.5393C13.3634 21.8343 13.7452 22 14.1434 22C14.5415 22 14.9234 21.8343 15.2049 21.5393L24.2009 12.1127C24.3405 11.9668 24.4513 11.7934 24.5269 11.6026C24.6024 11.4117 24.6414 11.2071 24.6414 11.0004C24.6414 10.7938 24.6024 10.5891 24.5269 10.3983C24.4513 10.2074 24.3405 10.034 24.2009 9.88808L15.2049 0.461565C15.0656 0.315255 14.9002 0.199174 14.718 0.119971C14.5359 0.0407677 14.3406 0 14.1434 0C13.9461 0 13.7509 0.0407677 13.5687 0.119971Z"
+                              fill="#20113D"
+                            />
+                          </svg>
+                        </button>
+                      </a>
+                    </a>
+                  </div>
+                  <div class="slider__card">
+                    <a
+                      class="slider__card--link"
+                      href="../zoos/eagles/index.html"
+                    >
+                      <figure class="slider__card--picture">
+                        <figcaption class="bage bage--navy subheader">
+                          Sam & Lora
+                        </figcaption>
+                        <img
+                          src="../../assets/images/landing/sam-lora-eagles.jpg"
+                          alt="Sam & Lora"
+                        />
+                      </figure>
+                      <p class="subheader">West End Bald Eagles</p>
+                      <p class="body-text">
+                        Pair of eagle parents lay and protect eggs, feed their
+                        chicks and teach them to hunt and fly.
+                      </p>
+                      <a href="../zoos/eagles/index.html">
+                        <button
+                          class="button button--width-240 button--transparent btn-text"
+                        >
+                          <span>view live cam</span>
+                          <svg
+                            width="25"
+                            height="22"
+                            viewBox="0 0 25 22"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M13.5687 0.119971C13.3866 0.199174 13.2211 0.315255 13.0818 0.461565C12.9422 0.607505 12.8314 0.780876 12.7558 0.971748C12.6803 1.16262 12.6414 1.36724 12.6414 1.57389C12.6414 1.78055 12.6803 1.98517 12.7558 2.17604C12.8314 2.36691 12.9422 2.54028 13.0818 2.68622L19.1095 9H1.95889C1.53454 9 1.12757 9.21071 0.827516 9.58579C0.527458 9.96086 0.358887 10.4696 0.358887 11C0.358887 11.5304 0.527458 12.0391 0.827516 12.4142C1.12757 12.7893 1.53454 13 1.95889 13H19.1103L13.0818 19.3146C12.8003 19.6096 12.6421 20.0097 12.6421 20.4269C12.6421 20.8441 12.8003 21.2443 13.0818 21.5393C13.3634 21.8343 13.7452 22 14.1434 22C14.5415 22 14.9234 21.8343 15.2049 21.5393L24.2009 12.1127C24.3405 11.9668 24.4513 11.7934 24.5269 11.6026C24.6024 11.4117 24.6414 11.2071 24.6414 11.0004C24.6414 10.7938 24.6024 10.5891 24.5269 10.3983C24.4513 10.2074 24.3405 10.034 24.2009 9.88808L15.2049 0.461565C15.0656 0.315255 14.9002 0.199174 14.718 0.119971C14.5359 0.0407677 14.3406 0 14.1434 0C13.9461 0 13.7509 0.0407677 13.5687 0.119971Z"
+                              fill="#20113D"
+                            />
+                          </svg>
+                        </button>
+                      </a>
+                    </a>
+                  </div>
+                  <div class="slider__card">
+                    <a class="slider__card--link" href="#">
+                      <figure class="slider__card--picture">
+                        <figcaption class="bage bage--navy subheader">
+                          Liz
+                        </figcaption>
+                        <img
+                          src="../../assets/images/landing/liz-koala.jpg"
+                          alt="Liz"
+                        />
+                      </figure>
+                      <p class="subheader">Australian Koala</p>
+                      <p class="body-text">
+                        The elevated walkways bring you to eye level with the
+                        koalas as they perch in their forest.
+                      </p>
+                      <a href="#">
+                        <button
+                          class="button button--width-240 button--transparent btn-text"
+                        >
+                          <span>view live cam</span>
+                          <svg
+                            width="25"
+                            height="22"
+                            viewBox="0 0 25 22"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M13.5687 0.119971C13.3866 0.199174 13.2211 0.315255 13.0818 0.461565C12.9422 0.607505 12.8314 0.780876 12.7558 0.971748C12.6803 1.16262 12.6414 1.36724 12.6414 1.57389C12.6414 1.78055 12.6803 1.98517 12.7558 2.17604C12.8314 2.36691 12.9422 2.54028 13.0818 2.68622L19.1095 9H1.95889C1.53454 9 1.12757 9.21071 0.827516 9.58579C0.527458 9.96086 0.358887 10.4696 0.358887 11C0.358887 11.5304 0.527458 12.0391 0.827516 12.4142C1.12757 12.7893 1.53454 13 1.95889 13H19.1103L13.0818 19.3146C12.8003 19.6096 12.6421 20.0097 12.6421 20.4269C12.6421 20.8441 12.8003 21.2443 13.0818 21.5393C13.3634 21.8343 13.7452 22 14.1434 22C14.5415 22 14.9234 21.8343 15.2049 21.5393L24.2009 12.1127C24.3405 11.9668 24.4513 11.7934 24.5269 11.6026C24.6024 11.4117 24.6414 11.2071 24.6414 11.0004C24.6414 10.7938 24.6024 10.5891 24.5269 10.3983C24.4513 10.2074 24.3405 10.034 24.2009 9.88808L15.2049 0.461565C15.0656 0.315255 14.9002 0.199174 14.718 0.119971C14.5359 0.0407677 14.3406 0 14.1434 0C13.9461 0 13.7509 0.0407677 13.5687 0.119971Z"
+                              fill="#20113D"
+                            />
+                          </svg>
+                        </button>
+                      </a>
+                    </a>
+                  </div>
+                  <div class="slider__card">
+                    <a class="slider__card--link" href="#">
+                      <figure class="slider__card--picture">
+                        <figcaption class="bage bage--navy subheader">
+                          Shake
+                        </figcaption>
+                        <img
+                          src="../../assets/images/landing/shake-lion.jpg"
+                          alt="Shake"
+                        />
+                      </figure>
+                      <p class="subheader">African Lion</p>
+                      <p class="body-text">
+                        Lions roam the savannas and grasslands of Africa,
+                        hunting and raising cubs in the pride.
+                      </p>
+                      <a href="#">
+                        <button
+                          class="button button--width-240 button--transparent btn-text"
+                        >
+                          <span>view live cam</span>
+                          <svg
+                            width="25"
+                            height="22"
+                            viewBox="0 0 25 22"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M13.5687 0.119971C13.3866 0.199174 13.2211 0.315255 13.0818 0.461565C12.9422 0.607505 12.8314 0.780876 12.7558 0.971748C12.6803 1.16262 12.6414 1.36724 12.6414 1.57389C12.6414 1.78055 12.6803 1.98517 12.7558 2.17604C12.8314 2.36691 12.9422 2.54028 13.0818 2.68622L19.1095 9H1.95889C1.53454 9 1.12757 9.21071 0.827516 9.58579C0.527458 9.96086 0.358887 10.4696 0.358887 11C0.358887 11.5304 0.527458 12.0391 0.827516 12.4142C1.12757 12.7893 1.53454 13 1.95889 13H19.1103L13.0818 19.3146C12.8003 19.6096 12.6421 20.0097 12.6421 20.4269C12.6421 20.8441 12.8003 21.2443 13.0818 21.5393C13.3634 21.8343 13.7452 22 14.1434 22C14.5415 22 14.9234 21.8343 15.2049 21.5393L24.2009 12.1127C24.3405 11.9668 24.4513 11.7934 24.5269 11.6026C24.6024 11.4117 24.6414 11.2071 24.6414 11.0004C24.6414 10.7938 24.6024 10.5891 24.5269 10.3983C24.4513 10.2074 24.3405 10.034 24.2009 9.88808L15.2049 0.461565C15.0656 0.315255 14.9002 0.199174 14.718 0.119971C14.5359 0.0407677 14.3406 0 14.1434 0C13.9461 0 13.7509 0.0407677 13.5687 0.119971Z"
+                              fill="#20113D"
+                            />
+                          </svg>
+                        </button>
+                      </a>
+                    </a>
+                  </div>
+
+                  <div class="slider__card">
+                    <a class="slider__card--link" href="#">
+                      <figure class="slider__card--picture">
+                        <figcaption class="bage bage--navy subheader">
+                          Senja
+                        </figcaption>
+                        <img
+                          src="../../assets/images/landing/senja-tiger.jpg"
+                          alt="Senja"
+                        />
+                      </figure>
+                      <p class="subheader">Sumatran Tiger</p>
+                      <p class="body-text">
+                        Sumatran Tigers are the smallest of the five
+                        sub-species, and are found in Indonesia.
+                      </p>
+                      <a href="#">
+                        <button
+                          class="button button--width-240 button--transparent btn-text"
+                        >
+                          <span>view live cam</span>
+                          <svg
+                            width="25"
+                            height="22"
+                            viewBox="0 0 25 22"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M13.5687 0.119971C13.3866 0.199174 13.2211 0.315255 13.0818 0.461565C12.9422 0.607505 12.8314 0.780876 12.7558 0.971748C12.6803 1.16262 12.6414 1.36724 12.6414 1.57389C12.6414 1.78055 12.6803 1.98517 12.7558 2.17604C12.8314 2.36691 12.9422 2.54028 13.0818 2.68622L19.1095 9H1.95889C1.53454 9 1.12757 9.21071 0.827516 9.58579C0.527458 9.96086 0.358887 10.4696 0.358887 11C0.358887 11.5304 0.527458 12.0391 0.827516 12.4142C1.12757 12.7893 1.53454 13 1.95889 13H19.1103L13.0818 19.3146C12.8003 19.6096 12.6421 20.0097 12.6421 20.4269C12.6421 20.8441 12.8003 21.2443 13.0818 21.5393C13.3634 21.8343 13.7452 22 14.1434 22C14.5415 22 14.9234 21.8343 15.2049 21.5393L24.2009 12.1127C24.3405 11.9668 24.4513 11.7934 24.5269 11.6026C24.6024 11.4117 24.6414 11.2071 24.6414 11.0004C24.6414 10.7938 24.6024 10.5891 24.5269 10.3983C24.4513 10.2074 24.3405 10.034 24.2009 9.88808L15.2049 0.461565C15.0656 0.315255 14.9002 0.199174 14.718 0.119971C14.5359 0.0407677 14.3406 0 14.1434 0C13.9461 0 13.7509 0.0407677 13.5687 0.119971Z"
+                              fill="#20113D"
+                            />
+                          </svg>
+                        </button>
+                      </a>
+                    </a>
+                  </div>
+                  <div></div>
+                  <div></div>
                 </div>
               </div>
             </div>
@@ -905,7 +1235,7 @@
             </div>
           </div>
           <div class="pay-and-feed__donate">
-            <a href="#">
+            <a href="#popup" class="popup-link">
               <button
                 class="button button--width-240 button--fill button--fill-orange btn-text"
               >
@@ -947,165 +1277,466 @@
               <input type="radio" name="point" id="slide2" />
               <input type="radio" name="point" id="slide3" />
               <input type="radio" name="point" id="slide4" />
-            <div class="users-think--inner--slider">
-              <figure class="users-think--inner--slider__card">
-                <figcaption class="quotes">
-                  <svg
-                    width="60"
-                    height="46"
-                    viewBox="0 0 60 46"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M20.8247 20.52C23.0647 21.56 24.7847 23.12 25.9847 25.2C27.2647 27.2 27.9047 29.56 27.9047 32.28C27.9047 36.28 26.6247 39.52 24.0647 42C21.5047 44.48 18.2247 45.72 14.2247 45.72C10.2247 45.72 6.94469 44.48 4.38469 42C1.82469 39.52 0.544688 36.28 0.544688 32.28C0.544688 30.44 0.784688 28.6 1.26469 26.76C1.74469 24.92 2.82469 22.2 4.50469 18.6L12.1847 0.959995H26.4647L20.8247 20.52ZM52.2647 20.52C54.5047 21.56 56.2247 23.12 57.4247 25.2C58.7047 27.2 59.3447 29.56 59.3447 32.28C59.3447 36.28 58.0647 39.52 55.5047 42C52.9447 44.48 49.6647 45.72 45.6647 45.72C41.6647 45.72 38.3847 44.48 35.8247 42C33.2647 39.52 31.9847 36.28 31.9847 32.28C31.9847 30.44 32.2247 28.6 32.7047 26.76C33.1847 24.92 34.2647 22.2 35.9447 18.6L43.6247 0.959995H57.9047L52.2647 20.52Z"
-                      fill="#00A092"
-                    />
-                  </svg>
-                </figcaption>
-                <p class="subheader">New Jersey, June 2020</p>
-                <blockquote>
-                  <p class="body-text">
-                    I am writing to thank you for your mission is to bring
-                    people closer to nature! Like myself, children were very
-                    impressed by the opportunity to explore the life of
-                    incredible animals in real-time.
-                  </p>
-                </blockquote>
-                <p class="btn-text">Karen Maithlan</p>
-              </figure>
-              <figure class="users-think--inner--slider__card">
-                <figcaption class="quotes">
-                  <svg
-                    width="60"
-                    height="46"
-                    viewBox="0 0 60 46"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M20.8247 20.52C23.0647 21.56 24.7847 23.12 25.9847 25.2C27.2647 27.2 27.9047 29.56 27.9047 32.28C27.9047 36.28 26.6247 39.52 24.0647 42C21.5047 44.48 18.2247 45.72 14.2247 45.72C10.2247 45.72 6.94469 44.48 4.38469 42C1.82469 39.52 0.544688 36.28 0.544688 32.28C0.544688 30.44 0.784688 28.6 1.26469 26.76C1.74469 24.92 2.82469 22.2 4.50469 18.6L12.1847 0.959995H26.4647L20.8247 20.52ZM52.2647 20.52C54.5047 21.56 56.2247 23.12 57.4247 25.2C58.7047 27.2 59.3447 29.56 59.3447 32.28C59.3447 36.28 58.0647 39.52 55.5047 42C52.9447 44.48 49.6647 45.72 45.6647 45.72C41.6647 45.72 38.3847 44.48 35.8247 42C33.2647 39.52 31.9847 36.28 31.9847 32.28C31.9847 30.44 32.2247 28.6 32.7047 26.76C33.1847 24.92 34.2647 22.2 35.9447 18.6L43.6247 0.959995H57.9047L52.2647 20.52Z"
-                      fill="#00A092"
-                    />
-                  </svg>
-                </figcaption>
-                <p class="subheader">Toronto, November 2020</p>
-                <blockquote>
-                  <p class="body-text">
-                    We so enjoy the ever-evolving selection of animals from
-                    around the globe. THANK YOU for sharing these fascinating
-                    animal friends with us so that we may learn and increase our
-                    understanding of the animal kingdom.
-                  </p>
-                </blockquote>
-                <p class="btn-text">Carol Larsen</p>
-              </figure>
-              <figure class="users-think--inner--slider__card">
-                <figcaption class="quotes">
-                  <svg
-                    width="60"
-                    height="46"
-                    viewBox="0 0 60 46"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M20.8247 20.52C23.0647 21.56 24.7847 23.12 25.9847 25.2C27.2647 27.2 27.9047 29.56 27.9047 32.28C27.9047 36.28 26.6247 39.52 24.0647 42C21.5047 44.48 18.2247 45.72 14.2247 45.72C10.2247 45.72 6.94469 44.48 4.38469 42C1.82469 39.52 0.544688 36.28 0.544688 32.28C0.544688 30.44 0.784688 28.6 1.26469 26.76C1.74469 24.92 2.82469 22.2 4.50469 18.6L12.1847 0.959995H26.4647L20.8247 20.52ZM52.2647 20.52C54.5047 21.56 56.2247 23.12 57.4247 25.2C58.7047 27.2 59.3447 29.56 59.3447 32.28C59.3447 36.28 58.0647 39.52 55.5047 42C52.9447 44.48 49.6647 45.72 45.6647 45.72C41.6647 45.72 38.3847 44.48 35.8247 42C33.2647 39.52 31.9847 36.28 31.9847 32.28C31.9847 30.44 32.2247 28.6 32.7047 26.76C33.1847 24.92 34.2647 22.2 35.9447 18.6L43.6247 0.959995H57.9047L52.2647 20.52Z"
-                      fill="#00A092"
-                    />
-                  </svg>
-                </figcaption>
-                <p class="subheader">London, February 2020</p>
-                <blockquote>
-                  <p class="body-text">
-                    A fantastic experience for kids and adults alike! If anyone
-                    is looking for an attraction that educates people on wild
-                    animals – <br />
-                    it's for you! I highly recommend seeing for yourself the
-                    variety of animals on your screen.
-                  </p>
-                </blockquote>
-                <p class="btn-text">C. Stockman</p>
-              </figure>
-              <figure class="users-think--inner--slider__card">
-                <figcaption class="quotes">
-                  <svg
-                    width="60"
-                    height="46"
-                    viewBox="0 0 60 46"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M20.8247 20.52C23.0647 21.56 24.7847 23.12 25.9847 25.2C27.2647 27.2 27.9047 29.56 27.9047 32.28C27.9047 36.28 26.6247 39.52 24.0647 42C21.5047 44.48 18.2247 45.72 14.2247 45.72C10.2247 45.72 6.94469 44.48 4.38469 42C1.82469 39.52 0.544688 36.28 0.544688 32.28C0.544688 30.44 0.784688 28.6 1.26469 26.76C1.74469 24.92 2.82469 22.2 4.50469 18.6L12.1847 0.959995H26.4647L20.8247 20.52ZM52.2647 20.52C54.5047 21.56 56.2247 23.12 57.4247 25.2C58.7047 27.2 59.3447 29.56 59.3447 32.28C59.3447 36.28 58.0647 39.52 55.5047 42C52.9447 44.48 49.6647 45.72 45.6647 45.72C41.6647 45.72 38.3847 44.48 35.8247 42C33.2647 39.52 31.9847 36.28 31.9847 32.28C31.9847 30.44 32.2247 28.6 32.7047 26.76C33.1847 24.92 34.2647 22.2 35.9447 18.6L43.6247 0.959995H57.9047L52.2647 20.52Z"
-                      fill="#00A092"
-                    />
-                  </svg>
-                </figcaption>
-                <p class="subheader">Amsterdam, June 2020</p>
-                <blockquote>
-                  <p class="body-text">
-                    I want to thank you for the amazing sites you find to put
-                    your cameras to let each of us see things that we would
-                    probably never see on our own. There are so many positives
-                    on Zoo Online and I'm grateful for it. Thank you so much!
-                  </p>
-                </blockquote>
-                <p class="btn-text">Tomas Ray</p>
-              </figure>
+              <div class="users-think--inner--carousel">
+                <div class="users-think--inner--slider">
+                  <figure class="users-think--inner--slider__card">
+                    <figcaption class="quotes">
+                      <svg
+                        width="60"
+                        height="46"
+                        viewBox="0 0 60 46"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M20.8247 20.52C23.0647 21.56 24.7847 23.12 25.9847 25.2C27.2647 27.2 27.9047 29.56 27.9047 32.28C27.9047 36.28 26.6247 39.52 24.0647 42C21.5047 44.48 18.2247 45.72 14.2247 45.72C10.2247 45.72 6.94469 44.48 4.38469 42C1.82469 39.52 0.544688 36.28 0.544688 32.28C0.544688 30.44 0.784688 28.6 1.26469 26.76C1.74469 24.92 2.82469 22.2 4.50469 18.6L12.1847 0.959995H26.4647L20.8247 20.52ZM52.2647 20.52C54.5047 21.56 56.2247 23.12 57.4247 25.2C58.7047 27.2 59.3447 29.56 59.3447 32.28C59.3447 36.28 58.0647 39.52 55.5047 42C52.9447 44.48 49.6647 45.72 45.6647 45.72C41.6647 45.72 38.3847 44.48 35.8247 42C33.2647 39.52 31.9847 36.28 31.9847 32.28C31.9847 30.44 32.2247 28.6 32.7047 26.76C33.1847 24.92 34.2647 22.2 35.9447 18.6L43.6247 0.959995H57.9047L52.2647 20.52Z"
+                          fill="#00A092"
+                        />
+                      </svg>
+                    </figcaption>
+                    <p class="subheader">New Jersey, June 2020</p>
+                    <blockquote>
+                      <p class="body-text">
+                        I am writing to thank you for your mission is to bring
+                        people closer to nature! Like myself, children were very
+                        impressed by the opportunity to explore the life of
+                        incredible animals in real-time.
+                      </p>
+                    </blockquote>
+                    <p class="btn-text">Karen Maithlan</p>
+                  </figure>
+                  <figure class="users-think--inner--slider__card">
+                    <figcaption class="quotes">
+                      <svg
+                        width="60"
+                        height="46"
+                        viewBox="0 0 60 46"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M20.8247 20.52C23.0647 21.56 24.7847 23.12 25.9847 25.2C27.2647 27.2 27.9047 29.56 27.9047 32.28C27.9047 36.28 26.6247 39.52 24.0647 42C21.5047 44.48 18.2247 45.72 14.2247 45.72C10.2247 45.72 6.94469 44.48 4.38469 42C1.82469 39.52 0.544688 36.28 0.544688 32.28C0.544688 30.44 0.784688 28.6 1.26469 26.76C1.74469 24.92 2.82469 22.2 4.50469 18.6L12.1847 0.959995H26.4647L20.8247 20.52ZM52.2647 20.52C54.5047 21.56 56.2247 23.12 57.4247 25.2C58.7047 27.2 59.3447 29.56 59.3447 32.28C59.3447 36.28 58.0647 39.52 55.5047 42C52.9447 44.48 49.6647 45.72 45.6647 45.72C41.6647 45.72 38.3847 44.48 35.8247 42C33.2647 39.52 31.9847 36.28 31.9847 32.28C31.9847 30.44 32.2247 28.6 32.7047 26.76C33.1847 24.92 34.2647 22.2 35.9447 18.6L43.6247 0.959995H57.9047L52.2647 20.52Z"
+                          fill="#00A092"
+                        />
+                      </svg>
+                    </figcaption>
+                    <p class="subheader">Toronto, November 2020</p>
+                    <blockquote>
+                      <p class="body-text">
+                        We so enjoy the ever-evolving selection of animals from
+                        around the globe. THANK YOU for sharing these
+                        fascinating animal friends with us so that we may learn
+                        and increase our understanding of the animal kingdom.
+                      </p>
+                    </blockquote>
+                    <p class="btn-text">Carol Larsen</p>
+                  </figure>
+                  <figure class="users-think--inner--slider__card">
+                    <figcaption class="quotes">
+                      <svg
+                        width="60"
+                        height="46"
+                        viewBox="0 0 60 46"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M20.8247 20.52C23.0647 21.56 24.7847 23.12 25.9847 25.2C27.2647 27.2 27.9047 29.56 27.9047 32.28C27.9047 36.28 26.6247 39.52 24.0647 42C21.5047 44.48 18.2247 45.72 14.2247 45.72C10.2247 45.72 6.94469 44.48 4.38469 42C1.82469 39.52 0.544688 36.28 0.544688 32.28C0.544688 30.44 0.784688 28.6 1.26469 26.76C1.74469 24.92 2.82469 22.2 4.50469 18.6L12.1847 0.959995H26.4647L20.8247 20.52ZM52.2647 20.52C54.5047 21.56 56.2247 23.12 57.4247 25.2C58.7047 27.2 59.3447 29.56 59.3447 32.28C59.3447 36.28 58.0647 39.52 55.5047 42C52.9447 44.48 49.6647 45.72 45.6647 45.72C41.6647 45.72 38.3847 44.48 35.8247 42C33.2647 39.52 31.9847 36.28 31.9847 32.28C31.9847 30.44 32.2247 28.6 32.7047 26.76C33.1847 24.92 34.2647 22.2 35.9447 18.6L43.6247 0.959995H57.9047L52.2647 20.52Z"
+                          fill="#00A092"
+                        />
+                      </svg>
+                    </figcaption>
+                    <p class="subheader">London, February 2020</p>
+                    <blockquote>
+                      <p class="body-text">
+                        A fantastic experience for kids and adults alike! If
+                        anyone is looking for an attraction that educates people
+                        on wild animals – <br />
+                        it's for you! I highly recommend seeing for yourself the
+                        variety of animals on your screen.
+                      </p>
+                    </blockquote>
+                    <p class="btn-text">C. Stockman</p>
+                  </figure>
+                  <figure class="users-think--inner--slider__card">
+                    <figcaption class="quotes">
+                      <svg
+                        width="60"
+                        height="46"
+                        viewBox="0 0 60 46"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M20.8247 20.52C23.0647 21.56 24.7847 23.12 25.9847 25.2C27.2647 27.2 27.9047 29.56 27.9047 32.28C27.9047 36.28 26.6247 39.52 24.0647 42C21.5047 44.48 18.2247 45.72 14.2247 45.72C10.2247 45.72 6.94469 44.48 4.38469 42C1.82469 39.52 0.544688 36.28 0.544688 32.28C0.544688 30.44 0.784688 28.6 1.26469 26.76C1.74469 24.92 2.82469 22.2 4.50469 18.6L12.1847 0.959995H26.4647L20.8247 20.52ZM52.2647 20.52C54.5047 21.56 56.2247 23.12 57.4247 25.2C58.7047 27.2 59.3447 29.56 59.3447 32.28C59.3447 36.28 58.0647 39.52 55.5047 42C52.9447 44.48 49.6647 45.72 45.6647 45.72C41.6647 45.72 38.3847 44.48 35.8247 42C33.2647 39.52 31.9847 36.28 31.9847 32.28C31.9847 30.44 32.2247 28.6 32.7047 26.76C33.1847 24.92 34.2647 22.2 35.9447 18.6L43.6247 0.959995H57.9047L52.2647 20.52Z"
+                          fill="#00A092"
+                        />
+                      </svg>
+                    </figcaption>
+                    <p class="subheader">Amsterdam, June 2020</p>
+                    <blockquote>
+                      <p class="body-text">
+                        I want to thank you for the amazing sites you find to
+                        put your cameras to let each of us see things that we
+                        would probably never see on our own. There are so many
+                        positives on Zoo Online and I'm grateful for it. Thank
+                        you so much!
+                      </p>
+                    </blockquote>
+                    <p class="btn-text">Tomas Ray</p>
+                  </figure>
+                  <figure class="users-think--inner--slider__card">
+                    <figcaption class="quotes">
+                      <svg
+                        width="60"
+                        height="46"
+                        viewBox="0 0 60 46"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M20.8247 20.52C23.0647 21.56 24.7847 23.12 25.9847 25.2C27.2647 27.2 27.9047 29.56 27.9047 32.28C27.9047 36.28 26.6247 39.52 24.0647 42C21.5047 44.48 18.2247 45.72 14.2247 45.72C10.2247 45.72 6.94469 44.48 4.38469 42C1.82469 39.52 0.544688 36.28 0.544688 32.28C0.544688 30.44 0.784688 28.6 1.26469 26.76C1.74469 24.92 2.82469 22.2 4.50469 18.6L12.1847 0.959995H26.4647L20.8247 20.52ZM52.2647 20.52C54.5047 21.56 56.2247 23.12 57.4247 25.2C58.7047 27.2 59.3447 29.56 59.3447 32.28C59.3447 36.28 58.0647 39.52 55.5047 42C52.9447 44.48 49.6647 45.72 45.6647 45.72C41.6647 45.72 38.3847 44.48 35.8247 42C33.2647 39.52 31.9847 36.28 31.9847 32.28C31.9847 30.44 32.2247 28.6 32.7047 26.76C33.1847 24.92 34.2647 22.2 35.9447 18.6L43.6247 0.959995H57.9047L52.2647 20.52Z"
+                          fill="#00A092"
+                        />
+                      </svg>
+                    </figcaption>
+                    <p class="subheader">Toronto, November 2020</p>
+                    <blockquote>
+                      <p class="body-text">
+                        We so enjoy the ever-evolving selection of animals from
+                        around the globe. THANK YOU for sharing these
+                        fascinating animal friends with us so that we may learn
+                        and increase our understanding of the animal kingdom.
+                      </p>
+                    </blockquote>
+                    <p class="btn-text">Carol Larsen</p>
+                  </figure>
+                  <figure class="users-think--inner--slider__card">
+                    <figcaption class="quotes">
+                      <svg
+                        width="60"
+                        height="46"
+                        viewBox="0 0 60 46"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M20.8247 20.52C23.0647 21.56 24.7847 23.12 25.9847 25.2C27.2647 27.2 27.9047 29.56 27.9047 32.28C27.9047 36.28 26.6247 39.52 24.0647 42C21.5047 44.48 18.2247 45.72 14.2247 45.72C10.2247 45.72 6.94469 44.48 4.38469 42C1.82469 39.52 0.544688 36.28 0.544688 32.28C0.544688 30.44 0.784688 28.6 1.26469 26.76C1.74469 24.92 2.82469 22.2 4.50469 18.6L12.1847 0.959995H26.4647L20.8247 20.52ZM52.2647 20.52C54.5047 21.56 56.2247 23.12 57.4247 25.2C58.7047 27.2 59.3447 29.56 59.3447 32.28C59.3447 36.28 58.0647 39.52 55.5047 42C52.9447 44.48 49.6647 45.72 45.6647 45.72C41.6647 45.72 38.3847 44.48 35.8247 42C33.2647 39.52 31.9847 36.28 31.9847 32.28C31.9847 30.44 32.2247 28.6 32.7047 26.76C33.1847 24.92 34.2647 22.2 35.9447 18.6L43.6247 0.959995H57.9047L52.2647 20.52Z"
+                          fill="#00A092"
+                        />
+                      </svg>
+                    </figcaption>
+                    <p class="subheader">London, February 2020</p>
+                    <blockquote>
+                      <p class="body-text">
+                        A fantastic experience for kids and adults alike! If
+                        anyone is looking for an attraction that educates people
+                        on wild animals – <br />
+                        it's for you! I highly recommend seeing for yourself the
+                        variety of animals on your screen.
+                      </p>
+                    </blockquote>
+                    <p class="btn-text">C. Stockman</p>
+                  </figure>
+                  <figure class="users-think--inner--slider__card">
+                    <figcaption class="quotes">
+                      <svg
+                        width="60"
+                        height="46"
+                        viewBox="0 0 60 46"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M20.8247 20.52C23.0647 21.56 24.7847 23.12 25.9847 25.2C27.2647 27.2 27.9047 29.56 27.9047 32.28C27.9047 36.28 26.6247 39.52 24.0647 42C21.5047 44.48 18.2247 45.72 14.2247 45.72C10.2247 45.72 6.94469 44.48 4.38469 42C1.82469 39.52 0.544688 36.28 0.544688 32.28C0.544688 30.44 0.784688 28.6 1.26469 26.76C1.74469 24.92 2.82469 22.2 4.50469 18.6L12.1847 0.959995H26.4647L20.8247 20.52ZM52.2647 20.52C54.5047 21.56 56.2247 23.12 57.4247 25.2C58.7047 27.2 59.3447 29.56 59.3447 32.28C59.3447 36.28 58.0647 39.52 55.5047 42C52.9447 44.48 49.6647 45.72 45.6647 45.72C41.6647 45.72 38.3847 44.48 35.8247 42C33.2647 39.52 31.9847 36.28 31.9847 32.28C31.9847 30.44 32.2247 28.6 32.7047 26.76C33.1847 24.92 34.2647 22.2 35.9447 18.6L43.6247 0.959995H57.9047L52.2647 20.52Z"
+                          fill="#00A092"
+                        />
+                      </svg>
+                    </figcaption>
+                    <p class="subheader">Amsterdam, June 2020</p>
+                    <blockquote>
+                      <p class="body-text">
+                        I want to thank you for the amazing sites you find to
+                        put your cameras to let each of us see things that we
+                        would probably never see on our own. There are so many
+                        positives on Zoo Online and I'm grateful for it. Thank
+                        you so much!
+                      </p>
+                    </blockquote>
+                    <p class="btn-text">Tomas Ray</p>
+                  </figure>
+                  <figure class="users-think--inner--slider__card">
+                    <figcaption class="quotes">
+                      <svg
+                        width="60"
+                        height="46"
+                        viewBox="0 0 60 46"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M20.8247 20.52C23.0647 21.56 24.7847 23.12 25.9847 25.2C27.2647 27.2 27.9047 29.56 27.9047 32.28C27.9047 36.28 26.6247 39.52 24.0647 42C21.5047 44.48 18.2247 45.72 14.2247 45.72C10.2247 45.72 6.94469 44.48 4.38469 42C1.82469 39.52 0.544688 36.28 0.544688 32.28C0.544688 30.44 0.784688 28.6 1.26469 26.76C1.74469 24.92 2.82469 22.2 4.50469 18.6L12.1847 0.959995H26.4647L20.8247 20.52ZM52.2647 20.52C54.5047 21.56 56.2247 23.12 57.4247 25.2C58.7047 27.2 59.3447 29.56 59.3447 32.28C59.3447 36.28 58.0647 39.52 55.5047 42C52.9447 44.48 49.6647 45.72 45.6647 45.72C41.6647 45.72 38.3847 44.48 35.8247 42C33.2647 39.52 31.9847 36.28 31.9847 32.28C31.9847 30.44 32.2247 28.6 32.7047 26.76C33.1847 24.92 34.2647 22.2 35.9447 18.6L43.6247 0.959995H57.9047L52.2647 20.52Z"
+                          fill="#00A092"
+                        />
+                      </svg>
+                    </figcaption>
+                    <p class="subheader">New Jersey, June 2020</p>
+                    <blockquote>
+                      <p class="body-text">
+                        I am writing to thank you for your mission is to bring
+                        people closer to nature! Like myself, children were very
+                        impressed by the opportunity to explore the life of
+                        incredible animals in real-time.
+                      </p>
+                    </blockquote>
+                    <p class="btn-text">Karen Maithlan</p>
+                  </figure>
+                  <figure class="users-think--inner--slider__card">
+                    <figcaption class="quotes">
+                      <svg
+                        width="60"
+                        height="46"
+                        viewBox="0 0 60 46"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M20.8247 20.52C23.0647 21.56 24.7847 23.12 25.9847 25.2C27.2647 27.2 27.9047 29.56 27.9047 32.28C27.9047 36.28 26.6247 39.52 24.0647 42C21.5047 44.48 18.2247 45.72 14.2247 45.72C10.2247 45.72 6.94469 44.48 4.38469 42C1.82469 39.52 0.544688 36.28 0.544688 32.28C0.544688 30.44 0.784688 28.6 1.26469 26.76C1.74469 24.92 2.82469 22.2 4.50469 18.6L12.1847 0.959995H26.4647L20.8247 20.52ZM52.2647 20.52C54.5047 21.56 56.2247 23.12 57.4247 25.2C58.7047 27.2 59.3447 29.56 59.3447 32.28C59.3447 36.28 58.0647 39.52 55.5047 42C52.9447 44.48 49.6647 45.72 45.6647 45.72C41.6647 45.72 38.3847 44.48 35.8247 42C33.2647 39.52 31.9847 36.28 31.9847 32.28C31.9847 30.44 32.2247 28.6 32.7047 26.76C33.1847 24.92 34.2647 22.2 35.9447 18.6L43.6247 0.959995H57.9047L52.2647 20.52Z"
+                          fill="#00A092"
+                        />
+                      </svg>
+                    </figcaption>
+                    <p class="subheader">Amsterdam, June 2020</p>
+                    <blockquote>
+                      <p class="body-text">
+                        I want to thank you for the amazing sites you find to
+                        put your cameras to let each of us see things that we
+                        would probably never see on our own. There are so many
+                        positives on Zoo Online and I'm grateful for it. Thank
+                        you so much!
+                      </p>
+                    </blockquote>
+                    <p class="btn-text">Tomas Ray</p>
+                  </figure>
+                  <figure class="users-think--inner--slider__card">
+                    <figcaption class="quotes">
+                      <svg
+                        width="60"
+                        height="46"
+                        viewBox="0 0 60 46"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M20.8247 20.52C23.0647 21.56 24.7847 23.12 25.9847 25.2C27.2647 27.2 27.9047 29.56 27.9047 32.28C27.9047 36.28 26.6247 39.52 24.0647 42C21.5047 44.48 18.2247 45.72 14.2247 45.72C10.2247 45.72 6.94469 44.48 4.38469 42C1.82469 39.52 0.544688 36.28 0.544688 32.28C0.544688 30.44 0.784688 28.6 1.26469 26.76C1.74469 24.92 2.82469 22.2 4.50469 18.6L12.1847 0.959995H26.4647L20.8247 20.52ZM52.2647 20.52C54.5047 21.56 56.2247 23.12 57.4247 25.2C58.7047 27.2 59.3447 29.56 59.3447 32.28C59.3447 36.28 58.0647 39.52 55.5047 42C52.9447 44.48 49.6647 45.72 45.6647 45.72C41.6647 45.72 38.3847 44.48 35.8247 42C33.2647 39.52 31.9847 36.28 31.9847 32.28C31.9847 30.44 32.2247 28.6 32.7047 26.76C33.1847 24.92 34.2647 22.2 35.9447 18.6L43.6247 0.959995H57.9047L52.2647 20.52Z"
+                          fill="#00A092"
+                        />
+                      </svg>
+                    </figcaption>
+                    <p class="subheader">Toronto, November 2020</p>
+                    <blockquote>
+                      <p class="body-text">
+                        We so enjoy the ever-evolving selection of animals from
+                        around the globe. THANK YOU for sharing these
+                        fascinating animal friends with us so that we may learn
+                        and increase our understanding of the animal kingdom.
+                      </p>
+                    </blockquote>
+                    <p class="btn-text">Carol Larsen</p>
+                  </figure>
+                  <figure class="users-think--inner--slider__card">
+                    <figcaption class="quotes">
+                      <svg
+                        width="60"
+                        height="46"
+                        viewBox="0 0 60 46"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M20.8247 20.52C23.0647 21.56 24.7847 23.12 25.9847 25.2C27.2647 27.2 27.9047 29.56 27.9047 32.28C27.9047 36.28 26.6247 39.52 24.0647 42C21.5047 44.48 18.2247 45.72 14.2247 45.72C10.2247 45.72 6.94469 44.48 4.38469 42C1.82469 39.52 0.544688 36.28 0.544688 32.28C0.544688 30.44 0.784688 28.6 1.26469 26.76C1.74469 24.92 2.82469 22.2 4.50469 18.6L12.1847 0.959995H26.4647L20.8247 20.52ZM52.2647 20.52C54.5047 21.56 56.2247 23.12 57.4247 25.2C58.7047 27.2 59.3447 29.56 59.3447 32.28C59.3447 36.28 58.0647 39.52 55.5047 42C52.9447 44.48 49.6647 45.72 45.6647 45.72C41.6647 45.72 38.3847 44.48 35.8247 42C33.2647 39.52 31.9847 36.28 31.9847 32.28C31.9847 30.44 32.2247 28.6 32.7047 26.76C33.1847 24.92 34.2647 22.2 35.9447 18.6L43.6247 0.959995H57.9047L52.2647 20.52Z"
+                          fill="#00A092"
+                        />
+                      </svg>
+                    </figcaption>
+                    <p class="subheader">London, February 2020</p>
+                    <blockquote>
+                      <p class="body-text">
+                        A fantastic experience for kids and adults alike! If
+                        anyone is looking for an attraction that educates people
+                        on wild animals – <br />
+                        it's for you! I highly recommend seeing for yourself the
+                        variety of animals on your screen.
+                      </p>
+                    </blockquote>
+                    <p class="btn-text">C. Stockman</p>
+                  </figure>
+                  <figure class="users-think--inner--slider__card">
+                    <figcaption class="quotes">
+                      <svg
+                        width="60"
+                        height="46"
+                        viewBox="0 0 60 46"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M20.8247 20.52C23.0647 21.56 24.7847 23.12 25.9847 25.2C27.2647 27.2 27.9047 29.56 27.9047 32.28C27.9047 36.28 26.6247 39.52 24.0647 42C21.5047 44.48 18.2247 45.72 14.2247 45.72C10.2247 45.72 6.94469 44.48 4.38469 42C1.82469 39.52 0.544688 36.28 0.544688 32.28C0.544688 30.44 0.784688 28.6 1.26469 26.76C1.74469 24.92 2.82469 22.2 4.50469 18.6L12.1847 0.959995H26.4647L20.8247 20.52ZM52.2647 20.52C54.5047 21.56 56.2247 23.12 57.4247 25.2C58.7047 27.2 59.3447 29.56 59.3447 32.28C59.3447 36.28 58.0647 39.52 55.5047 42C52.9447 44.48 49.6647 45.72 45.6647 45.72C41.6647 45.72 38.3847 44.48 35.8247 42C33.2647 39.52 31.9847 36.28 31.9847 32.28C31.9847 30.44 32.2247 28.6 32.7047 26.76C33.1847 24.92 34.2647 22.2 35.9447 18.6L43.6247 0.959995H57.9047L52.2647 20.52Z"
+                          fill="#00A092"
+                        />
+                      </svg>
+                    </figcaption>
+                    <p class="subheader">Amsterdam, June 2020</p>
+                    <blockquote>
+                      <p class="body-text">
+                        I want to thank you for the amazing sites you find to
+                        put your cameras to let each of us see things that we
+                        would probably never see on our own. There are so many
+                        positives on Zoo Online and I'm grateful for it. Thank
+                        you so much!
+                      </p>
+                    </blockquote>
+                    <p class="btn-text">Tomas Ray</p>
+                  </figure>
+                  <figure class="users-think--inner--slider__card">
+                    <figcaption class="quotes">
+                      <svg
+                        width="60"
+                        height="46"
+                        viewBox="0 0 60 46"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M20.8247 20.52C23.0647 21.56 24.7847 23.12 25.9847 25.2C27.2647 27.2 27.9047 29.56 27.9047 32.28C27.9047 36.28 26.6247 39.52 24.0647 42C21.5047 44.48 18.2247 45.72 14.2247 45.72C10.2247 45.72 6.94469 44.48 4.38469 42C1.82469 39.52 0.544688 36.28 0.544688 32.28C0.544688 30.44 0.784688 28.6 1.26469 26.76C1.74469 24.92 2.82469 22.2 4.50469 18.6L12.1847 0.959995H26.4647L20.8247 20.52ZM52.2647 20.52C54.5047 21.56 56.2247 23.12 57.4247 25.2C58.7047 27.2 59.3447 29.56 59.3447 32.28C59.3447 36.28 58.0647 39.52 55.5047 42C52.9447 44.48 49.6647 45.72 45.6647 45.72C41.6647 45.72 38.3847 44.48 35.8247 42C33.2647 39.52 31.9847 36.28 31.9847 32.28C31.9847 30.44 32.2247 28.6 32.7047 26.76C33.1847 24.92 34.2647 22.2 35.9447 18.6L43.6247 0.959995H57.9047L52.2647 20.52Z"
+                          fill="#00A092"
+                        />
+                      </svg>
+                    </figcaption>
+                    <p class="subheader">London, February 2020</p>
+                    <blockquote>
+                      <p class="body-text">
+                        A fantastic experience for kids and adults alike! If
+                        anyone is looking for an attraction that educates people
+                        on wild animals – <br />
+                        it's for you! I highly recommend seeing for yourself the
+                        variety of animals on your screen.
+                      </p>
+                    </blockquote>
+                    <p class="btn-text">C. Stockman</p>
+                  </figure>
+                  <figure class="users-think--inner--slider__card">
+                    <figcaption class="quotes">
+                      <svg
+                        width="60"
+                        height="46"
+                        viewBox="0 0 60 46"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M20.8247 20.52C23.0647 21.56 24.7847 23.12 25.9847 25.2C27.2647 27.2 27.9047 29.56 27.9047 32.28C27.9047 36.28 26.6247 39.52 24.0647 42C21.5047 44.48 18.2247 45.72 14.2247 45.72C10.2247 45.72 6.94469 44.48 4.38469 42C1.82469 39.52 0.544688 36.28 0.544688 32.28C0.544688 30.44 0.784688 28.6 1.26469 26.76C1.74469 24.92 2.82469 22.2 4.50469 18.6L12.1847 0.959995H26.4647L20.8247 20.52ZM52.2647 20.52C54.5047 21.56 56.2247 23.12 57.4247 25.2C58.7047 27.2 59.3447 29.56 59.3447 32.28C59.3447 36.28 58.0647 39.52 55.5047 42C52.9447 44.48 49.6647 45.72 45.6647 45.72C41.6647 45.72 38.3847 44.48 35.8247 42C33.2647 39.52 31.9847 36.28 31.9847 32.28C31.9847 30.44 32.2247 28.6 32.7047 26.76C33.1847 24.92 34.2647 22.2 35.9447 18.6L43.6247 0.959995H57.9047L52.2647 20.52Z"
+                          fill="#00A092"
+                        />
+                      </svg>
+                    </figcaption>
+                    <p class="subheader">Amsterdam, June 2020</p>
+                    <blockquote>
+                      <p class="body-text">
+                        I want to thank you for the amazing sites you find to
+                        put your cameras to let each of us see things that we
+                        would probably never see on our own. There are so many
+                        positives on Zoo Online and I'm grateful for it. Thank
+                        you so much!
+                      </p>
+                    </blockquote>
+                    <p class="btn-text">Tomas Ray</p>
+                  </figure>
+                  <figure class="users-think--inner--slider__card">
+                    <figcaption class="quotes">
+                      <svg
+                        width="60"
+                        height="46"
+                        viewBox="0 0 60 46"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M20.8247 20.52C23.0647 21.56 24.7847 23.12 25.9847 25.2C27.2647 27.2 27.9047 29.56 27.9047 32.28C27.9047 36.28 26.6247 39.52 24.0647 42C21.5047 44.48 18.2247 45.72 14.2247 45.72C10.2247 45.72 6.94469 44.48 4.38469 42C1.82469 39.52 0.544688 36.28 0.544688 32.28C0.544688 30.44 0.784688 28.6 1.26469 26.76C1.74469 24.92 2.82469 22.2 4.50469 18.6L12.1847 0.959995H26.4647L20.8247 20.52ZM52.2647 20.52C54.5047 21.56 56.2247 23.12 57.4247 25.2C58.7047 27.2 59.3447 29.56 59.3447 32.28C59.3447 36.28 58.0647 39.52 55.5047 42C52.9447 44.48 49.6647 45.72 45.6647 45.72C41.6647 45.72 38.3847 44.48 35.8247 42C33.2647 39.52 31.9847 36.28 31.9847 32.28C31.9847 30.44 32.2247 28.6 32.7047 26.76C33.1847 24.92 34.2647 22.2 35.9447 18.6L43.6247 0.959995H57.9047L52.2647 20.52Z"
+                          fill="#00A092"
+                        />
+                      </svg>
+                    </figcaption>
+                    <p class="subheader">Toronto, November 2020</p>
+                    <blockquote>
+                      <p class="body-text">
+                        We so enjoy the ever-evolving selection of animals from
+                        around the globe. THANK YOU for sharing these
+                        fascinating animal friends with us so that we may learn
+                        and increase our understanding of the animal kingdom.
+                      </p>
+                    </blockquote>
+                    <p class="btn-text">Carol Larsen</p>
+                  </figure>
+                  <figure class="users-think--inner--slider__card">
+                    <figcaption class="quotes">
+                      <svg
+                        width="60"
+                        height="46"
+                        viewBox="0 0 60 46"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M20.8247 20.52C23.0647 21.56 24.7847 23.12 25.9847 25.2C27.2647 27.2 27.9047 29.56 27.9047 32.28C27.9047 36.28 26.6247 39.52 24.0647 42C21.5047 44.48 18.2247 45.72 14.2247 45.72C10.2247 45.72 6.94469 44.48 4.38469 42C1.82469 39.52 0.544688 36.28 0.544688 32.28C0.544688 30.44 0.784688 28.6 1.26469 26.76C1.74469 24.92 2.82469 22.2 4.50469 18.6L12.1847 0.959995H26.4647L20.8247 20.52ZM52.2647 20.52C54.5047 21.56 56.2247 23.12 57.4247 25.2C58.7047 27.2 59.3447 29.56 59.3447 32.28C59.3447 36.28 58.0647 39.52 55.5047 42C52.9447 44.48 49.6647 45.72 45.6647 45.72C41.6647 45.72 38.3847 44.48 35.8247 42C33.2647 39.52 31.9847 36.28 31.9847 32.28C31.9847 30.44 32.2247 28.6 32.7047 26.76C33.1847 24.92 34.2647 22.2 35.9447 18.6L43.6247 0.959995H57.9047L52.2647 20.52Z"
+                          fill="#00A092"
+                        />
+                      </svg>
+                    </figcaption>
+                    <p class="subheader">London, February 2020</p>
+                    <blockquote>
+                      <p class="body-text">
+                        A fantastic experience for kids and adults alike! If
+                        anyone is looking for an attraction that educates people
+                        on wild animals – <br />
+                        it's for you! I highly recommend seeing for yourself the
+                        variety of animals on your screen.
+                      </p>
+                    </blockquote>
+                    <p class="btn-text">C. Stockman</p>
+                  </figure>
+                </div>
+              </div>
+              <div class="controls">
+                <label for="slide1"></label>
+                <label for="slide2"></label>
+                <label for="slide3"></label>
+                <label for="slide4"></label>
+              </div>
             </div>
-            <div class="controls">
-              <label for="slide1"></label>
-              <label for="slide2"></label>
-              <label for="slide3"></label>
-              <label for="slide4"></label>
+          </div>
+          <div class="users-think__buttons">
+            <div
+              class="users-think__buttons--btn button button--prev button--prev-white"
+            >
+              <svg
+                width="25"
+                height="22"
+                viewBox="0 0 25 22"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M11.4313 0.119971C11.6134 0.199174 11.7789 0.315255 11.9182 0.461565C12.0578 0.607505 12.1686 0.780876 12.2442 0.971748C12.3197 1.16262 12.3586 1.36724 12.3586 1.57389C12.3586 1.78055 12.3197 1.98517 12.2442 2.17604C12.1686 2.36691 12.0578 2.54028 11.9182 2.68622L5.89048 9H23.0411C23.4655 9 23.8724 9.21071 24.1725 9.58579C24.4725 9.96086 24.6411 10.4696 24.6411 11C24.6411 11.5304 24.4725 12.0391 24.1725 12.4142C23.8724 12.7893 23.4655 13 23.0411 13H5.88969L11.9182 19.3146C12.1997 19.6096 12.3579 20.0097 12.3579 20.4269C12.3579 20.8441 12.1997 21.2443 11.9182 21.5393C11.6366 21.8343 11.2548 22 10.8566 22C10.4585 22 10.0766 21.8343 9.79511 21.5393L0.799131 12.1127C0.659504 11.9668 0.548725 11.7934 0.473139 11.6026C0.397554 11.4117 0.358646 11.2071 0.358646 11.0004C0.358646 10.7938 0.397554 10.5891 0.473139 10.3983C0.548725 10.2074 0.659504 10.034 0.799131 9.88808L9.79511 0.461565C9.93439 0.315255 10.0998 0.199174 10.282 0.119971C10.4641 0.0407677 10.6594 0 10.8566 0C11.0539 0 11.2491 0.0407677 11.4313 0.119971Z"
+                  fill="#20113D"
+                />
+              </svg>
             </div>
-          </div>
-        </div>
-        <div class="users-think__buttons">
-          <div
-            class="users-think__buttons--btn button button--prev button--prev-white"
-          >
-            <svg
-              width="25"
-              height="22"
-              viewBox="0 0 25 22"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
+            <div
+              class="users-think__buttons--btn button button--next button--next-white"
             >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M11.4313 0.119971C11.6134 0.199174 11.7789 0.315255 11.9182 0.461565C12.0578 0.607505 12.1686 0.780876 12.2442 0.971748C12.3197 1.16262 12.3586 1.36724 12.3586 1.57389C12.3586 1.78055 12.3197 1.98517 12.2442 2.17604C12.1686 2.36691 12.0578 2.54028 11.9182 2.68622L5.89048 9H23.0411C23.4655 9 23.8724 9.21071 24.1725 9.58579C24.4725 9.96086 24.6411 10.4696 24.6411 11C24.6411 11.5304 24.4725 12.0391 24.1725 12.4142C23.8724 12.7893 23.4655 13 23.0411 13H5.88969L11.9182 19.3146C12.1997 19.6096 12.3579 20.0097 12.3579 20.4269C12.3579 20.8441 12.1997 21.2443 11.9182 21.5393C11.6366 21.8343 11.2548 22 10.8566 22C10.4585 22 10.0766 21.8343 9.79511 21.5393L0.799131 12.1127C0.659504 11.9668 0.548725 11.7934 0.473139 11.6026C0.397554 11.4117 0.358646 11.2071 0.358646 11.0004C0.358646 10.7938 0.397554 10.5891 0.473139 10.3983C0.548725 10.2074 0.659504 10.034 0.799131 9.88808L9.79511 0.461565C9.93439 0.315255 10.0998 0.199174 10.282 0.119971C10.4641 0.0407677 10.6594 0 10.8566 0C11.0539 0 11.2491 0.0407677 11.4313 0.119971Z"
-                fill="#20113D"
-              />
-            </svg>
-          </div>
-          <div
-            class="users-think__buttons--btn button button--next button--next-white"
-          >
-            <svg
-              width="25"
-              height="22"
-              viewBox="0 0 25 22"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M13.5687 0.119971C13.3866 0.199174 13.2211 0.315255 13.0818 0.461565C12.9422 0.607505 12.8314 0.780876 12.7558 0.971748C12.6803 1.16262 12.6414 1.36724 12.6414 1.57389C12.6414 1.78055 12.6803 1.98517 12.7558 2.17604C12.8314 2.36691 12.9422 2.54028 13.0818 2.68622L19.1095 9H1.95889C1.53454 9 1.12757 9.21071 0.827516 9.58579C0.527458 9.96086 0.358887 10.4696 0.358887 11C0.358887 11.5304 0.527458 12.0391 0.827516 12.4142C1.12757 12.7893 1.53454 13 1.95889 13H19.1103L13.0818 19.3146C12.8003 19.6096 12.6421 20.0097 12.6421 20.4269C12.6421 20.8441 12.8003 21.2443 13.0818 21.5393C13.3634 21.8343 13.7452 22 14.1434 22C14.5415 22 14.9234 21.8343 15.2049 21.5393L24.2009 12.1127C24.3405 11.9668 24.4513 11.7934 24.5269 11.6026C24.6024 11.4117 24.6414 11.2071 24.6414 11.0004C24.6414 10.7938 24.6024 10.5891 24.5269 10.3983C24.4513 10.2074 24.3405 10.034 24.2009 9.88808L15.2049 0.461565C15.0656 0.315255 14.9002 0.199174 14.718 0.119971C14.5359 0.0407677 14.3406 0 14.1434 0C13.9461 0 13.7509 0.0407677 13.5687 0.119971Z"
-                fill="#20113D"
-              />
-            </svg>
-          </div>
-        </div>
-        <div class="users-think__feedback">
-          <a href="#">
-            <button
-              class="button button--width-360 button--border button--border-white btn-text"
-            >
-              <span>leave feedback</span>
               <svg
                 width="25"
                 height="22"
@@ -1120,8 +1751,31 @@
                   fill="#20113D"
                 />
               </svg>
-            </button>
-          </a>
+            </div>
+          </div>
+          <div class="users-think__feedback">
+            <a href="#">
+              <button
+                class="button button--width-360 button--border button--border-white btn-text"
+              >
+                <span>leave feedback</span>
+                <svg
+                  width="25"
+                  height="22"
+                  viewBox="0 0 25 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M13.5687 0.119971C13.3866 0.199174 13.2211 0.315255 13.0818 0.461565C12.9422 0.607505 12.8314 0.780876 12.7558 0.971748C12.6803 1.16262 12.6414 1.36724 12.6414 1.57389C12.6414 1.78055 12.6803 1.98517 12.7558 2.17604C12.8314 2.36691 12.9422 2.54028 13.0818 2.68622L19.1095 9H1.95889C1.53454 9 1.12757 9.21071 0.827516 9.58579C0.527458 9.96086 0.358887 10.4696 0.358887 11C0.358887 11.5304 0.527458 12.0391 0.827516 12.4142C1.12757 12.7893 1.53454 13 1.95889 13H19.1103L13.0818 19.3146C12.8003 19.6096 12.6421 20.0097 12.6421 20.4269C12.6421 20.8441 12.8003 21.2443 13.0818 21.5393C13.3634 21.8343 13.7452 22 14.1434 22C14.5415 22 14.9234 21.8343 15.2049 21.5393L24.2009 12.1127C24.3405 11.9668 24.4513 11.7934 24.5269 11.6026C24.6024 11.4117 24.6414 11.2071 24.6414 11.0004C24.6414 10.7938 24.6024 10.5891 24.5269 10.3983C24.4513 10.2074 24.3405 10.034 24.2009 9.88808L15.2049 0.461565C15.0656 0.315255 14.9002 0.199174 14.718 0.119971C14.5359 0.0407677 14.3406 0 14.1434 0C13.9461 0 13.7509 0.0407677 13.5687 0.119971Z"
+                    fill="#20113D"
+                  />
+                </svg>
+              </button>
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -1459,7 +2113,7 @@
               </nav>
             </div>
             <div class="footer__up--btn">
-              <a href="#">
+              <a href="#popup" class="popup-link">
                 <button
                   class="button button--width-360 button--border button--border-white btn-text"
                 >
@@ -1565,6 +2219,534 @@
         </div>
       </div>
     </footer>
-    <script src="script.js"></script>
+    <div id="popup" class="popup popup--start">
+      <div class="popup__body">
+        <div class="popup__content">
+          <a href="#" class="popup__close close-popup">
+            <svg
+              width="30"
+              height="30"
+              viewBox="0 0 30 30"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M29.5599 2.56066C30.1457 1.97487 30.1457 1.02512 29.5599 0.439337C28.9741 -0.146448 28.0243 -0.146445 27.4386 0.439343L14.9997 12.8783L2.56112 0.439648C1.97534 -0.14614 1.02559 -0.146143 0.4398 0.439642C-0.145987 1.02543 -0.14599 1.97517 0.439795 2.56096L12.8784 14.9996L0.439337 27.4387C-0.146448 28.0245 -0.146445 28.9743 0.439343 29.56C1.02513 30.1458 1.97488 30.1458 2.56066 29.56L14.9997 17.1209L27.439 29.5603C28.0248 30.1461 28.9745 30.1461 29.5603 29.5604C30.1461 28.9746 30.1461 28.0248 29.5603 27.439L17.121 14.9996L29.5599 2.56066Z"
+                fill="white"
+              />
+            </svg>
+          </a>
+          <div class="popup__image"></div>
+          <div class="popup__inner">
+            <h2 class="popup__title">together we care, save and protect!</h2>
+            <p class="popup__description body-text">
+              Your most generous gift not only cares for countless animals, but
+              it also offers hope and a vital lifeline to the world’s most
+              endangered wildlife relying on us to survive.
+            </p>
+            <div class="popup__buttons">
+              <a href="#popup-step-1" class="popup-link">
+                <button
+                  value="20"
+                  class="popup__button button button--width-120 button--fill-turquoise btn-text"
+                >
+                  $20
+                </button></a
+              >
+              <a href="#popup-step-1" class="popup-link">
+                <button
+                  value="30"
+                  class="popup__button button button--width-120 button--fill-turquoise btn-text"
+                >
+                  $30
+                </button></a
+              >
+              <a href="#popup-step-1" class="popup-link">
+                <button
+                  value="50"
+                  class="popup__button button button--width-120 button--fill-turquoise btn-text"
+                >
+                  $50
+                </button></a
+              >
+              <a href="#popup-step-1" class="popup-link">
+                <button
+                  value="80"
+                  class="popup__button button button--width-120 button--fill-turquoise btn-text"
+                >
+                  $80
+                </button></a
+              >
+              <a href="#popup-step-1" class="popup-link">
+                <button
+                  value="100"
+                  class="popup__button button button--width-120 button--fill-turquoise btn-text"
+                >
+                  $100
+                </button></a
+              >
+              <a href="#popup-step-1" class="popup-link">
+                <button
+                  class="popup__button button button--width-200 button--fill-turquoise btn-text"
+                >
+                  Other amount
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="popup-step-1" class="popup popup--step-1">
+      <div class="popup__body">
+        <div class="popup__content popup__content--steps">
+          <div class="popup__header">
+            <h3 class="popup__title--steps">make your donation</h3>
+          </div>
+          <div class="popup__subheader">
+            <p class="popup__description--steps body-text">
+              Donation Information:
+            </p>
+          </div>
+          <div class="popup__main">
+            <form
+              id="donation"
+              class="popup__form body-text"
+              action=""
+              method="post"
+            >
+              <fieldset>
+                <label for="amount"
+                  ><p><span>*</span> Choose your donation amount:</p>
+                </label>
+                <div class="popup__buttons buttons-donate">
+                  <button
+                    value="10"
+                    disabled
+                    class="popup__button button button--width-80 button--fill-turquoise-light btn-text"
+                  >
+                    $10
+                  </button>
+                  <button
+                    value="20"
+                    disabled
+                    class="popup__button button button--width-80 button--fill-turquoise-light btn-text"
+                  >
+                    $20
+                  </button>
+                  <button
+                    value="30"
+                    disabled
+                    class="popup__button button button--width-80 button--fill-turquoise-light btn-text"
+                  >
+                    $30
+                  </button>
+                  <button
+                    value="80"
+                    disabled
+                    class="popup__button button button--width-80 button--fill-turquoise-light btn-text"
+                  >
+                    $50
+                  </button>
+                  <button
+                    value="80"
+                    disabled
+                    class="popup__button button button--width-80 button--fill-turquoise-light btn-text"
+                  >
+                    $80
+                  </button>
+                  <button
+                    value="100"
+                    disabled
+                    class="popup__button button button--width-80 button--fill-turquoise-light btn-text"
+                  >
+                    $100
+                  </button>
+                </div>
+              </fieldset>
+              <fieldset class="amount">
+                <label for="amount"
+                  ><button
+                    disabled
+                    class="popup__button button button--width-200 button--fill-turquoise btn-text"
+                  >
+                    Other amount
+                  </button></label
+                >
+                <input
+                  class="popup__input btn-text"
+                  id="amount"
+                  name="amount"
+                  type="tel"
+                  maxlength="4"
+                  tabindex="1"
+                  required
+                />
+              </fieldset>
+              <fieldset class="amount">
+                <label for="special"
+                  ><button
+                    disabled
+                    class="popup__button button button--width-200 button--fill-turquoise-light btn-text"
+                  >
+                    for special pet
+                  </button></label
+                >
+                <div class="select">
+                  <select id="special" name="special" class="body-text">
+                    <option
+                      value=""
+                      disabled
+                      selected
+                      hidden
+                      class="body-text--disable"
+                    >
+                      Choose your favourite
+                    </option>
+                    <option value="panda">Lukas the Panda</option>
+                    <option value="lemur">Andy the Lemur</option>
+                    <option value="gorilla">Glen the Gorilla</option>
+                    <option value="alligator">Mike the Alligator</option>
+                    <option value="eagle">Sam & Lora the eagles family</option>
+                    <option value="koala">Liz the Koala</option>
+                    <option value="lion">Shake the Lion</option>
+                    <option value="tiger">Senja the Tiger</option>
+                  </select>
+                </div>
+              </fieldset>
+              <fieldset class="mounthly">
+                <input
+                  type="checkbox"
+                  id="monthly"
+                  name="monthly"
+                  value="monthly"
+                />
+                <label for="monthly">Make this a monthly recurring gift</label>
+              </fieldset>
+              <div class="popup__footer">
+                <div class="wrapper-steps">
+                  <input type="radio" name="point" id="step11" checked />
+                  <input type="radio" name="point" id="step12" />
+                  <input type="radio" name="point" id="step13" />
+                  <div class="steps">
+                    <label for="step11" class="done"></label>
+                    <label for="step12"></label>
+                    <label for="step13"></label>
+                  </div>
+                </div>
+                <div class="footer__buttons">
+                  <a href="#popup-step-1" class="hidden popup-link back">
+                    <button
+                      class="popup__button button button--width-200 button--transparent-turquoise btn-text btn-text--back popup__back"
+                    >
+                      <span>back</span>
+                    </button>
+                  </a>
+                  <a href="#popup-step-2" class="popup-link next">
+                    <button
+                      id="next-1"
+                      class="invalid popup__button button button--width-200 button--fill-turquoise btn-text popup__next"
+                    >
+                      <span>next</span>
+                      <svg
+                        width="25"
+                        height="22"
+                        viewBox="0 0 25 22"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M13.5687 0.119971C13.3866 0.199174 13.2211 0.315255 13.0818 0.461565C12.9422 0.607505 12.8314 0.780876 12.7558 0.971748C12.6803 1.16262 12.6414 1.36724 12.6414 1.57389C12.6414 1.78055 12.6803 1.98517 12.7558 2.17604C12.8314 2.36691 12.9422 2.54028 13.0818 2.68622L19.1095 9H1.95889C1.53454 9 1.12757 9.21071 0.827516 9.58579C0.527458 9.96086 0.358887 10.4696 0.358887 11C0.358887 11.5304 0.527458 12.0391 0.827516 12.4142C1.12757 12.7893 1.53454 13 1.95889 13H19.1103L13.0818 19.3146C12.8003 19.6096 12.6421 20.0097 12.6421 20.4269C12.6421 20.8441 12.8003 21.2443 13.0818 21.5393C13.3634 21.8343 13.7452 22 14.1434 22C14.5415 22 14.9234 21.8343 15.2049 21.5393L24.2009 12.1127C24.3405 11.9668 24.4513 11.7934 24.5269 11.6026C24.6024 11.4117 24.6414 11.2071 24.6414 11.0004C24.6414 10.7938 24.6024 10.5891 24.5269 10.3983C24.4513 10.2074 24.3405 10.034 24.2009 9.88808L15.2049 0.461565C15.0656 0.315255 14.9002 0.199174 14.718 0.119971C14.5359 0.0407677 14.3406 0 14.1434 0C13.9461 0 13.7509 0.0407677 13.5687 0.119971Z"
+                          fill="#20113D"
+                        />
+                      </svg>
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="popup-step-2" class="popup popup--step-2">
+      <div class="popup__body">
+        <div class="popup__content popup__content--steps">
+          <div class="popup__header">
+            <h3 class="popup__title--steps">make your donation</h3>
+          </div>
+          <div class="popup__subheader">
+            <p class="popup__description--steps body-text">
+              Billing Information:
+            </p>
+          </div>
+          <div class="popup__main">
+            <form
+              id="billing"
+              class="popup__form body-text"
+              action=""
+              method="post"
+            >
+              <fieldset>
+                <label for="name"
+                  ><p class="p-billing"><span>*</span> Your Name</p></label
+                >
+                <input
+                  id="name"
+                  class="popup__input popup__input--billing body-text"
+                  name="name"
+                  placeholder="First and last name"
+                  type="text"
+                  tabindex="1"
+                  required
+                />
+                <div class="requirements body-text">
+                  Please, enter your name.
+                </div>
+              </fieldset>
+              <fieldset>
+                <label for="email"
+                  ><p class="p-billing">
+                    <span>*</span> Your Email Address
+                  </p></label
+                >
+                <input
+                  id="email"
+                  class="popup__input popup__input--billing body-text"
+                  name="email"
+                  placeholder="Enter your email"
+                  type="email"
+                  tabindex="2"
+                  required
+                />
+                <div class="requirements body-text">
+                  Please, enter your e-mail address.
+                </div>
+              </fieldset>
+              <p class="popup__note body-text">
+                You will receive emails from the Online Zoo, including updates
+                and news on the latest discoveries and translations. You can
+                unsubscribe at any time.
+              </p>
+              <div class="popup__footer">
+                <div class="wrapper-steps">
+                  <input type="radio" name="point" id="step21" checked />
+                  <input type="radio" name="point" id="step22" />
+                  <input type="radio" name="point" id="step23" />
+                  <div class="steps">
+                    <label for="step21" class="done"></label>
+                    <label for="step22" class="done"></label>
+                    <label for="step23"></label>
+                  </div>
+                </div>
+                <div class="footer__buttons">
+                  <a href="#popup-step-1" class="popup-link back">
+                    <button
+                      class="popup__button button button--width-200 button--transparent-turquoise btn-text btn-text--back popup__back"
+                    >
+                      <span>back</span>
+                    </button>
+                  </a>
+                  <a href="#popup-step-3" class="popup-link">
+                    <button
+                      id="next-2"
+                      class="invalid popup__button button button--width-200 button--fill-turquoise btn-text popup__next"
+                    >
+                      <span>next</span>
+                      <svg
+                        width="25"
+                        height="22"
+                        viewBox="0 0 25 22"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M13.5687 0.119971C13.3866 0.199174 13.2211 0.315255 13.0818 0.461565C12.9422 0.607505 12.8314 0.780876 12.7558 0.971748C12.6803 1.16262 12.6414 1.36724 12.6414 1.57389C12.6414 1.78055 12.6803 1.98517 12.7558 2.17604C12.8314 2.36691 12.9422 2.54028 13.0818 2.68622L19.1095 9H1.95889C1.53454 9 1.12757 9.21071 0.827516 9.58579C0.527458 9.96086 0.358887 10.4696 0.358887 11C0.358887 11.5304 0.527458 12.0391 0.827516 12.4142C1.12757 12.7893 1.53454 13 1.95889 13H19.1103L13.0818 19.3146C12.8003 19.6096 12.6421 20.0097 12.6421 20.4269C12.6421 20.8441 12.8003 21.2443 13.0818 21.5393C13.3634 21.8343 13.7452 22 14.1434 22C14.5415 22 14.9234 21.8343 15.2049 21.5393L24.2009 12.1127C24.3405 11.9668 24.4513 11.7934 24.5269 11.6026C24.6024 11.4117 24.6414 11.2071 24.6414 11.0004C24.6414 10.7938 24.6024 10.5891 24.5269 10.3983C24.4513 10.2074 24.3405 10.034 24.2009 9.88808L15.2049 0.461565C15.0656 0.315255 14.9002 0.199174 14.718 0.119971C14.5359 0.0407677 14.3406 0 14.1434 0C13.9461 0 13.7509 0.0407677 13.5687 0.119971Z"
+                          fill="#20113D"
+                        />
+                      </svg>
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="popup-step-3" class="popup popup--step-3">
+      <div class="popup__body">
+        <div class="popup__content popup__content--steps">
+          <div class="popup__header">
+            <h3 class="popup__title--steps">make your donation</h3>
+          </div>
+          <div class="popup__subheader">
+            <p class="popup__description--steps body-text">
+              Payment Information:
+            </p>
+          </div>
+          <div class="popup__main">
+            <form
+              id="payment"
+              class="popup__form body-text"
+              action=""
+              method="post"
+            >
+              <fieldset class="card">
+                <fieldset>
+                  <label for="ccn"
+                    ><p class="p-payment">
+                      <span>*</span> Credit Card Number
+                    </p></label
+                  >
+                  <input
+                    id="ccn"
+                    class="popup__input popup__input--ccn body-text"
+                    name="ccn"
+                    type="tel"
+                    inputmode="numeric"
+                    pattern="[0-9]{16}"
+                    maxlength="16"
+                    placeholder="XXXX XXXX XXXX XXXX"
+                    tabindex="1"
+                    required
+                  />
+                  <div class="requirements body-text">
+                    Please, enter your credit card number.
+                  </div>
+                </fieldset>
+                <fieldset>
+                  <label for="cvv"
+                    ><p class="p-payment"><span>*</span> CVV Number</p></label
+                  >
+                  <input
+                    id="cvv"
+                    class="popup__input popup__input--cvv body-text"
+                    name="cvv"
+                    placeholder="XXX"
+                    type="tel"
+                    inputmode="numeric"
+                    pattern="[0-9]{3}"
+                    maxlength="3"
+                    tabindex="2"
+                    required
+                  />
+                  <div class="requirements body-text">
+                    Please, enter your CVV number.
+                  </div>
+                </fieldset>
+              </fieldset>
+              <fieldset>
+                <label for="month"
+                  ><p class="p-billing">
+                    <span>*</span> Expiration Date
+                  </p></label
+                >
+                <fieldset class="date">
+                  <div class="select month">
+                    <select id="month" name="month" class="body-text" required>
+                      <option
+                        value=""
+                        disabled
+                        selected
+                        hidden
+                        class="body-text--disable"
+                      >
+                        Month
+                      </option>
+                      <option value="01">01</option>
+                      <option value="02">02</option>
+                      <option value="03">03</option>
+                      <option value="04">04</option>
+                      <option value="05">05</option>
+                      <option value="06">06</option>
+                      <option value="07">07</option>
+                      <option value="08">08</option>
+                      <option value="09">09</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                    </select>
+                  </div>
+                  <div class="select year">
+                    <select id="year" name="year" class="body-text" required>
+                      <option
+                        value=""
+                        disabled
+                        selected
+                        hidden
+                        class="body-text--disable"
+                      >
+                        Year
+                      </option>
+                      <option value="21">21</option>
+                      <option value="22">22</option>
+                      <option value="23">23</option>
+                      <option value="24">24</option>
+                      <option value="25">25</option>
+                      <option value="26">26</option>
+                    </select>
+                  </div>
+                </fieldset>
+              </fieldset>
+              <div class="popup__footer">
+                <div class="wrapper-steps">
+                  <input type="radio" name="point" id="step31" checked />
+                  <input type="radio" name="point" id="step32" />
+                  <input type="radio" name="point" id="step33" />
+                  <div class="steps">
+                    <label for="step31" class="done"></label>
+                    <label for="step32" class="done"></label>
+                    <label for="step33" class="done"></label>
+                  </div>
+                </div>
+                <div class="footer__buttons">
+                  <a href="#popup-step-2" class="popup-link back-end">
+                    <button
+                      class="popup__button button button--width-200 button--transparent-turquoise btn-text btn-text--back popup__back"
+                    >
+                      <span>back</span>
+                    </button>
+                  </a>
+                  <a href="#popup-complete" class="popup-link">
+                    <button
+                      id="complete"
+                      class="invalid close-popup popup__button button button--width-360 button--fill-orange btn-text popup__next"
+                    >
+                      <span>complete donation</span>
+                      <svg
+                        width="25"
+                        height="22"
+                        viewBox="0 0 25 22"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M13.5687 0.119971C13.3866 0.199174 13.2211 0.315255 13.0818 0.461565C12.9422 0.607505 12.8314 0.780876 12.7558 0.971748C12.6803 1.16262 12.6414 1.36724 12.6414 1.57389C12.6414 1.78055 12.6803 1.98517 12.7558 2.17604C12.8314 2.36691 12.9422 2.54028 13.0818 2.68622L19.1095 9H1.95889C1.53454 9 1.12757 9.21071 0.827516 9.58579C0.527458 9.96086 0.358887 10.4696 0.358887 11C0.358887 11.5304 0.527458 12.0391 0.827516 12.4142C1.12757 12.7893 1.53454 13 1.95889 13H19.1103L13.0818 19.3146C12.8003 19.6096 12.6421 20.0097 12.6421 20.4269C12.6421 20.8441 12.8003 21.2443 13.0818 21.5393C13.3634 21.8343 13.7452 22 14.1434 22C14.5415 22 14.9234 21.8343 15.2049 21.5393L24.2009 12.1127C24.3405 11.9668 24.4513 11.7934 24.5269 11.6026C24.6024 11.4117 24.6414 11.2071 24.6414 11.0004C24.6414 10.7938 24.6024 10.5891 24.5269 10.3983C24.4513 10.2074 24.3405 10.034 24.2009 9.88808L15.2049 0.461565C15.0656 0.315255 14.9002 0.199174 14.718 0.119971C14.5359 0.0407677 14.3406 0 14.1434 0C13.9461 0 13.7509 0.0407677 13.5687 0.119971Z"
+                          fill="#20113D"
+                        />
+                      </svg>
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="burger.js"></script>
+    <script src="popup.js"></script>
+    <script src="carousel.js"></script>
+    <script src="autocarousel.js"></script>
   </body>
 </html>

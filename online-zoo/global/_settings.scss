@@ -22,6 +22,10 @@ body {
   overflow-y: overlay;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 ul,
 ol,
 li,

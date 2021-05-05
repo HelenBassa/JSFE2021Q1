@@ -1,61 +1,29 @@
-function findVideos() {
-  let videos = document.querySelectorAll(".video");
+const smallCams = document.querySelectorAll(".video__item");
 
-  for (let i = 0; i < videos.length; i++) {
-    setupVideo(videos[i]);
+document.addEventListener("DOMContentLoaded", function () {
+  for (let i = 0; i < smallCams.length; i++) {
+    const smallCam = smallCams[i];
+    smallCam.addEventListener("click", function () {
+      let youtubeID = this.firstChild.nextElementSibling.getAttribute(
+        "data-id"
+      );
+
+      for (let sibling of this.parentElement.parentElement.children) {
+        if (
+          sibling.firstChild.nextElementSibling !==
+          this.parentElement.parentElement.children
+        ) {
+          sibling.firstChild.nextElementSibling.lastChild.previousElementSibling.classList.remove(
+            "active"
+          );
+        }
+
+        this.lastChild.previousElementSibling.classList.add("active");
+      }
+
+      let newURL = `https://www.youtube.com/embed/${youtubeID}?rel=0&controls=1&autoplay=1`;
+      let videoID = document.querySelector("#video_id");
+      videoID.setAttribute("src", newURL);
+    });
   }
-}
-
-function setupVideo(video) {
-  let link = video.querySelector(".video__link");
-  let media = video.querySelector(".video__media");
-  let button = video.querySelector(".video__button");
-  // let id = parseMediaURL(media);
-  let id = parseMediaURL(link);
-
-  video.addEventListener("click", () => {
-    let iframe = createIframe(id);
-
-    link.remove();
-    button.remove();
-    video.appendChild(iframe);
-  });
-
-  link.removeAttribute("href");
-  video.classList.add("video--enabled");
-}
-
-// function parseMediaURL(media) {
-//   let regexp = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/maxresdefault\.jpg/i;
-//   let url = media.src;
-//   let match = url.match(regexp);
-
-//   return match[1];
-// }
-
-function parseMediaURL(link) {
-  let regexp = /https:\/\/www\.youtube\.com\/([a-zA-Z0-9_-]+)/i;
-  let url = link.href;
-  let match = url.match(regexp);
-
-  return match[1];
-}
-
-function createIframe(id) {
-  let iframe = document.createElement("iframe");
-
-  iframe.setAttribute("allowfullscreen", "");
-  iframe.setAttribute("allow", "autoplay");
-  iframe.setAttribute("src", generateURL(id));
-  iframe.classList.add("video__media");
-
-  return iframe;
-}
-
-function generateURL(id) {
-  let query = "?rel=0&showinfo=0&autoplay=1&start=35";
-
-  return "https://www.youtube.com/embed/" + id + query;
-}
-
-findVideos();
+});

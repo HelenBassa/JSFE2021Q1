@@ -30,6 +30,7 @@
   }
 
   &__wrapper {
+    width: 100%;
     max-width: 1920px;
     overflow: hidden;
 
@@ -70,11 +71,13 @@
     max-width: 1920px;
     padding: 50px 50px 50px 50px;
     padding-left: 260px;
-    overflow: hidden;
+    // overflow: hidden;
     display: grid;
     grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 40px;
+
+    grid-auto-flow: column;
 
     @media screen and (max-width: 1600px) {
       padding-left: 100 / 1600 * 100%;

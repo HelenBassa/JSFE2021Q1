@@ -8,16 +8,24 @@
   border: none;
   transition: 0.5s ease;
 
-  &--width-240 {
-    width: 240px;
-  }
-
   &--width-360 {
     width: 360px;
   }
 
+  &--width-240 {
+    width: 240px;
+  }
+
+  &--width-200 {
+    width: 200px;
+  }
+
   &--width-140 {
     width: 140px;
+  }
+
+  &--width-120 {
+    width: 120px;
   }
 
   &--width-80 {
@@ -51,11 +59,11 @@
 
     &-turquoise-light {
       color: $white;
-      background-color: $turquoise;
+      background-color: $turquoise-light;
 
       &:hover,
       &:active {
-        background-color: $turquoise-light;
+        background-color: $turquoise;
       }
     }
   }
@@ -133,6 +141,16 @@
           fill: $white;
           transition: 0.5s ease;
         }
+      }
+    }
+
+    &-turquoise {
+      color: $turquoise;
+      background: $white;
+
+      &:hover,
+      &:active {
+        color: $turquoise-dark;
       }
     }
   }

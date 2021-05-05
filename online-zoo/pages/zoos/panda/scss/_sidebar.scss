@@ -9,7 +9,7 @@
 
   display: grid;
 
-  grid-template-rows: 1fr 2.15fr 2.15fr 2.15fr 2.15fr 1fr;
+  grid-template-rows: 1fr 8.6fr 1fr;
   grid-template-columns: 1fr;
   grid-gap: 1px;
 
@@ -30,7 +30,7 @@
 
   @media screen and (min-width: 640px) and (max-width: 979px) {
     flex: 0 0 12.2%;
-    height: 500px;
+    // height: 500px;
   }
 
   @media screen and (min-width: 320px) and (max-width: 639px) {
@@ -40,6 +40,9 @@
   }
 
   &__show {
+    position: relative;
+    height: 100%;
+
     @media screen and (max-width: 1420px) {
       .bage {
         display: none;
@@ -49,10 +52,24 @@
 
   &__btn--show {
     cursor: pointer;
-    padding: 13% 0% 13% 65%;
+    position: absolute;
+    right: 30px;
+    top: calc(50% - 16px / 2);
+    padding: 0;
+
+    svg {
+      transform: rotatez(0deg);
+      transition: transform 0.3s ease-in-out;
+    }
 
     @media screen and (max-width: 1420px) {
-      padding: 13% 0% 13% 0%;
+      right: calc(50% - 16px / 2);
+    }
+
+    &:hover {
+      svg path {
+        fill: $orange;
+      }
     }
   }
 
@@ -64,6 +81,13 @@
       border-bottom: 1px solid $white;
     }
 
+    p {
+      text-align: center;
+      margin: 0 17px 0 114px;
+      color: white;
+      display: none;
+    }
+
     // .active {
 
     // }
@@ -71,10 +95,18 @@
     .panda,
     .eagle,
     .gorilla,
-    .lemur {
+    .lemur,
+    .alligator,
+    .lion,
+    .tiger,
+    .coala {
       position: relative;
       width: 100%;
       height: 100%;
+
+      display: flex;
+      align-items: center;
+
       svg {
         position: absolute;
         left: calc(50% - 120px / 2);
@@ -124,6 +156,15 @@
       }
     }
 
+    .alligator,
+    .lion,
+    .tiger,
+    .coala {
+      svg path {
+        transform: translate(30px, 30px);
+      }
+    }
+
     &.active {
       // pointer-events: none;
       cursor: default;
@@ -159,7 +200,11 @@
       .panda:hover,
       .eagle:hover,
       .gorilla:hover,
-      .lemur:hover {
+      .lemur:hover,
+      .alligator:hover,
+      .lion:hover,
+      .tiger:hover,
+      .coala:hover {
         position: relative;
         width: 100%;
         height: 100%;
@@ -208,9 +253,111 @@
     }
   }
 
+  &.opened {
+    width: 300px;
+    flex: 0 0 19.525%;
+
+    @media screen and (min-width: 1200px) and (max-width: 1420px) {
+      width: 300px;
+      flex: 0 0 31.25%;
+    }
+
+    .sidebar__btn--show {
+      svg {
+        transform: rotatez(-180deg);
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+
+    p {
+      display: block;
+    }
+
+    .panda,
+    .eagle,
+    .gorilla,
+    .lemur,
+    .alligator,
+    .lion,
+    .tiger,
+    .coala {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      svg {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        left: 26.67px;
+        top: calc(50% - 80px / 2);
+
+        circle {
+          stroke: transparent;
+        }
+
+        g {
+          path,
+          circle {
+            fill: transparent;
+          }
+        }
+
+        path {
+          fill: $orange;
+        }
+      }
+    }
+
+    .panda:hover,
+    .eagle:hover,
+    .gorilla:hover,
+    .lemur:hover,
+    .alligator:hover,
+    .lion:hover,
+    .tiger:hover,
+    .coala:hover {
+      svg {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        left: 26.67px;
+        top: calc(50% - 80px / 2);
+
+        circle {
+          stroke: transparent;
+        }
+
+        g {
+          path,
+          circle {
+            fill: transparent;
+          }
+        }
+
+        path {
+          fill: $white;
+        }
+      }
+    }
+
+    .active {
+      // pointer-events: none;
+      cursor: default;
+      svg path {
+        fill: $white;
+      }
+    }
+  }
+
   &__btn--next {
     cursor: pointer;
     padding: 12% 0%;
+
+    &:hover {
+      svg path {
+        fill: $orange;
+      }
+    }
   }
 
   /* tooltip */

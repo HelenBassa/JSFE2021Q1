@@ -72,6 +72,10 @@ h3 {
   line-height: 150%;
   /* identical to box height, or 27px */
   color: $black;
+
+  &--disable {
+    color: #a4a8ae;
+  }
 }
 
 .btn-text {
@@ -83,4 +87,9 @@ h3 {
   /* identical to box height */
   text-transform: uppercase;
   color: $turquoise;
+
+  &--back {
+    text-transform: capitalize;
+    text-decoration-line: underline;
+  }
 }

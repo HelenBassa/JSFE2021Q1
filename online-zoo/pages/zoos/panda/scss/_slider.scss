@@ -138,6 +138,7 @@
     // transition: all 0.3s ease-in-out;
     border-radius: 5px;
     overflow: hidden;
+    cursor: pointer;
 
     @media screen and (max-width: 1200px) {
       height: 209px;
@@ -160,24 +161,24 @@
     //   transform: scale(1.09, 1.054);
     // }
 
-    &:nth-child(1) {
-      box-sizing: border-box;
-      border: 3px solid $orange;
+    // &:nth-child(1) {
+    //   box-sizing: border-box;
+    //   border: 3px solid $orange;
 
-      .bage {
-        top: -3px;
-      }
+    //   .bage {
+    //     top: -3px;
+    //   }
 
-      .video__button {
-        top: calc(50% - 3px);
-      }
+    //   .video__button {
+    //     top: calc(50% - 3px);
+    //   }
 
-      .slider__card--picture {
-        &:first-of-type {
-          border-radius: 0;
-        }
-      }
-    }
+    //   .slider__card--picture {
+    //     &:first-of-type {
+    //       border-radius: 0;
+    //     }
+    //   }
+    // }
 
     .video__button {
       width: 46px;
