@@ -1,0 +1,51 @@
+[
+    {
+        "category": "animal",
+        "images": [
+            "butterfly.jpg",
+            "cat.jpg",
+            "deer.jpg",
+            "dog.jpg",
+            "eagle.jpg",
+            "elephant.jpg",
+            "flamingo.jpg",
+            "fox.jpg",
+            "frog.jpg",
+            "humster.jpg",
+            "husky.jpg",
+            "lion.jpg",
+            "panda.jpg",
+            "parrot.jpg",
+            "raccoon.jpg",
+            "sheep.jpg",
+            "tiger.jpg",
+            "toucan.jpg"
+        ]
+
+    },
+
+    {
+        "category": "car",
+        "images": [
+            "audi.jpg",
+            "beetle.jpg",
+            "bmw.jpg",
+            "citroen.jpg",
+            "ferrari.jpg",
+            "ford.jpg",
+            "honda.jpg",
+            "hundai.jpg",
+            "jeep.jpg",
+            "kia.jpg",
+            "lamborgini.jpg",
+            "mazda.jpg",
+            "mersedes.jpg",
+            "mitsubishi.jpg",
+            "mustang.jpg",
+            "nissan.jpg",
+            "porsche.jpg",
+            "toyota.jpg"
+        ]
+
+    }
+]

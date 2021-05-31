@@ -19,6 +19,7 @@
     "prettier"
   ],
   "rules": {
+    "eqeqeq": "off",
     "no-plusplus": "off",
     "no-console": "warn",
     "max-len": ["warn", { "code": 120 }],
@@ -31,6 +32,14 @@
     "import/prefer-default-export": "off",
     "no-param-reassign": ["error", {
       "props": false
-    }]
+    }],
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
+    "lines-between-class-members": ["error", "always", { "exceptAfterSingleLine": true }],
+    "import/no-cycle": [2, { "ignoreExternal": true }]
   }
 }
