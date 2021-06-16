@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="style.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+    <title>Async Game</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Raleway|Sacramento');
+      body {
+        background: #cbe5f1;
+        color: #709107;
+        font: 400 13.3333px 'Roboto';
+      }
+      h1,
+      h2 {
+        text-align: center;
+        color: #fff6a9;
+        font-family: 'Sacramento', cursive;
+        font-size: 60px;
+        font-weight: 600;
+        text-align: center;
+        text-transform: capitalize;
+        margin: 20px auto 0;
+        text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000,
+          0 0 10px #ff8d00, 0 0 98px #ff0000;
+        position: relative;
+      }
+      h2 {
+        font-size: 40px;
+      }
+      .garage {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 100px;
+      }
+      .table {
+        margin-bottom: 100px;
+      }
+      .table td,
+      .table th {
+        font-size: 20px;
+        padding: 8px;
+      }
+      .table th {
+        background: #dfd5cd;
+      }
+      .table-button {
+        cursor: pointer;
+        user-select: none;
+      }
+      .table-button.asc::after {
+        content: '\2B06';
+      }
+      .table-button.desc::after {
+        content: '\2B07';
+      }
+      .garage .car {
+        width: 100px;
+      }
+      .race-controls {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+      }
+      .menu {
+        margin-bottom: 50px;
+        display: flex;
+        justify-content: center;
+      }
+      .icon {
+        cursor: pointer;
+        background: white;
+        border: 3px solid;
+        border-radius: 15px;
+        font-size: 17px;
+        color: red;
+        padding: 2px 10px 2px 10px;
+      }
+      .icon:hover {
+        color: rgb(16, 110, 101);
+      }
+      .icon:disabled {
+        color: rgb(120, 139, 138);
+        cursor: auto;
+      }
+      .icon.enabling {
+        color: turquoise;
+      }
+      .start-engine-button {
+        color: yellowgreen;
+      }
+      .stop-engine-button {
+        color: tomato;
+      }
+      .control-panel {
+        padding: 10px 20px 10px 0;
+      }
+      .car {
+        padding: 0;
+      }
+      .road {
+        display: flex;
+        margin-bottom: 20px;
+        border-bottom: 5px;
+        border-bottom-style: solid;
+        justify-content: space-between;
+        align-items: baseline;
+      }
+      .launch-pad {
+        display: flex;
+        flex-direction: column;
+      }
+      .flag {
+        color: tomato;
+        margin-top: -80px;
+        transform: skewX(10deg) translateY(70px) translateX(-140px);
+      }
+      .button {
+        cursor: pointer;
+        font-family: 'Roboto';
+        font-size: 14px;
+        line-height: 21px;
+        font-weight: 700;
+        background: #dfd5cd;
+        border-radius: 4px;
+        border: none;
+        border-bottom: 6px solid #a78b74;
+        padding: 4px;
+        width: 120px;
+        text-transform: uppercase;
+        box-sizing: border-box;
+        margin: 0px 5px 0px 5px;
+      }
+      .button.primary {
+        background: #e0ef8c;
+        border-bottom: 6px solid #98a551;
+      }
+      .button:active {
+        transform: translateY(4px);
+        border-bottom: 6px solid lightblue;
+      }
+      .button:disabled {
+        background: #76807f;
+        border-bottom: 6px solid rgb(64, 71, 71);
+      }
+      .generator {
+        margin-bottom: 50px;
+      }
+      .button.generator-button {
+        width: 160px;
+      }
+      .form-wrapper {
+        display: flex;
+        justify-content: center;
+      }
+      .form {
+        height: 50px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 370px;
+      }
+      .input {
+        border: 0;
+        border-radius: 5px 0 0 5px;
+        background: floralwhite;
+        font-size: 14px;
+        padding: 4px;
+        height: 26px;
+        width: 200px;
+      }
+      .input:disabled {
+        background: #76807f;
+      }
+      .color {
+        border: 0;
+        border-radius: 0 5px 5px 0;
+        background: floralwhite;
+        height: 32px;
+      }
+      .color:disabled {
+        background: #76807f;
+      }
+      .car-name {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        font-size: 20px;
+        padding-left: 20px;
+        color: #9b4254;
+      }
+      .message {
+        top: 50%;
+        left: calc(50% - 250px);
+        text-align: center;
+        display: none;
+        position: fixed;
+        color: #fff6a9;
+        font-family: 'Sacramento', cursive;
+        font-size: 60px;
+        font-weight: 600;
+        text-align: center;
+        text-transform: capitalize;
+        margin: 20px auto 0;
+        text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000,
+          0 0 10px #ff8d00, 0 0 98px #ff0000;
+        width: 500px;
+      }
+      .message.visible {
+        display: block;
+      }
+    </style>
+  </head>
+  <body></body>
+</html>
