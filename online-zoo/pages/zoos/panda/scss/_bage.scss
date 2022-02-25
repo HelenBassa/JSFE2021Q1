@@ -1,0 +1,65 @@
+.bage {
+  display: inline-flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 30px;
+  border-radius: 5px 0;
+  border: none;
+
+  &--navy {
+    color: $white;
+    background-color: $navy;
+  }
+
+  &--orange {
+    color: $white;
+    background-color: $orange;
+    padding: 9px 25px;
+    border-radius: 0 0 5px 0;
+    z-index: 1;
+
+    & svg {
+      margin-left: 8px;
+    }
+  }
+
+  &--transparent {
+    color: $white;
+    background-color: transparent;
+    border: 1px solid $white;
+    padding: 4px 28px;
+    margin-left: 10px;
+    z-index: 1;
+
+    @media screen and (max-width: 1200px) {
+      padding: 4px 18px;
+      margin-left: 0;
+    }
+
+    @media screen and (max-width: 640px) {
+      font-size: 10.218px;
+      line-height: 150%;
+      padding: 3px 6px;
+      margin-left: 0;
+      svg {
+        width: 11.35px;
+        height: 11.35px;
+      }
+    }
+
+    @media screen and (max-width: 320px) {
+      padding: 3px 10px;
+    }
+
+    & svg {
+      margin-left: 9px;
+
+      path {
+        fill: $white;
+      }
+    }
+  }
+}

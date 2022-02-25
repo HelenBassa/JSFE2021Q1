@@ -1,0 +1,310 @@
+html {
+  box-sizing: border-box;
+
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  color: $navy;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  position: relative;
+  margin: 0;
+  overflow-y: overlay;
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+ul,
+ol,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+button:focus,
+input:focus {
+  outline: transparent;
+}
+
+// button {
+// 	@include no-btn;
+// }
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+.wrapper {
+  width: 100%;
+  background-color: $white;
+
+  &--header {
+    background-color: $orange;
+
+    @media screen and (max-width: 1000px) {
+      position: fixed;
+      z-index: 99;
+    }
+  }
+
+  &--find-animal {
+    @media screen and (max-width: 1000px) {
+      // position: relative;
+      // z-index: -1;
+    }
+  }
+
+  &--donation,
+  &--footer,
+  &--pay-and-feed,
+  &--users-think {
+    background-color: $navy;
+  }
+}
+
+.container {
+  max-width: 1920px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 260px;
+
+  @media screen and (max-width: 1800px) {
+    padding: 0 220px;
+  }
+
+  @media screen and (max-width: 1600px) {
+    padding: 0 100 / 1600 * 100%;
+  }
+
+  @media screen and (max-width: 1400px) {
+    padding: 0 60 / 1400 * 100%;
+  }
+
+  @media screen and (max-width: 1200px) {
+    padding: 0 40 / 1200 * 100%;
+  }
+
+  @media screen and (max-width: 640px) {
+    padding: 0 20 / 640 * 100%;
+  }
+
+  @media screen and (max-width: 320px) {
+    padding: 0 10 / 320 * 100%;
+  }
+
+  &--header {
+    @media screen and (max-width: 1000px) {
+      position: relative;
+      z-index: 10;
+    }
+  }
+
+  &--welcome {
+    @media screen and (max-width: 640px) {
+      padding: 0;
+    }
+  }
+
+  &--meet-pets {
+    // max-width: 2360px;
+    padding: 0;
+  }
+
+  &--pay-and-feed {
+    @media screen and (max-width: 640px) {
+      padding: 0;
+    }
+  }
+
+  &--users-think {
+    padding: 0;
+    // padding-left: 260px;
+  }
+
+  &--get-in-touch {
+    @media screen and (max-width: 1200px) {
+      padding: 0;
+    }
+  }
+
+  &--care-animals {
+    @media screen and (max-width: 640px) {
+      padding: 0;
+    }
+  }
+
+  &--hand-touch {
+    padding: 150px 260px 150px 260px;
+    @media screen and (max-width: 1200px) {
+      padding: 150px 0 147px 0;
+    }
+
+    @media screen and (max-width: 640px) {
+      padding: 100px 0 100px 0;
+    }
+
+    @media screen and (max-width: 320px) {
+      padding: 80px 0 80px 0;
+    }
+  }
+
+  &--live-cams {
+    padding: 0;
+
+    @media screen and (max-width: 1200px) {
+      padding: 0;
+      margin: 0;
+    }
+
+    @media screen and (max-width: 640px) {
+      padding: 0;
+    }
+
+    @media screen and (max-width: 320px) {
+      padding: 0;
+    }
+  }
+
+  &--did-you-know {
+    @media screen and (max-width: 320px) {
+      padding: 0;
+    }
+  }
+
+  &--footer {
+    @media screen and (max-width: 1200px) {
+      padding: 0;
+    }
+  }
+
+  // &--find-animal {
+  //     padding: 0;
+  //     @media screen and (min-width: 1920px) {
+  //       padding: 0 260px;
+  //     }
+  // }
+
+  // @media screen and (max-width: 1199px) {
+  //   padding: 0 50px;
+  // }
+
+  // @media screen and (max-width: 767px) {
+  //   padding: 0 5%;
+  // }
+}
+
+.inner-bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &--watch-animal {
+    background-image: url(../../assets/images/landing/panda-background.jpg);
+    background-size: 97%;
+    background-position-x: -15px;
+    background-position-y: -43px;
+    transition: 0.3s ease-in-out;
+
+    @media screen and (max-width: 1500px) {
+      background-size: 110%;
+      background-position-x: -86px;
+      background-position-y: -34px;
+    }
+
+    @media screen and (max-width: 1200px) {
+      background-size: 117%;
+      background-position-x: -86px;
+      background-position-y: -34px;
+    }
+
+    @media screen and (max-width: 640px) {
+      background-size: 117%;
+      background-position-x: -46px;
+      background-position-y: 368px;
+    }
+
+    @media screen and (max-width: 320px) {
+      background-size: 160%;
+      background-position-x: -160px;
+      background-position-y: 510px;
+    }
+  }
+
+  &--users-think {
+    background: linear-gradient(
+        177.34deg,
+        #20113d 7.26%,
+        rgba(32, 17, 61, 0) 14.89%
+      ),
+      linear-gradient(144.77deg, #20113d 18.53%, rgba(32, 17, 61, 0) 46.43%),
+      url(../../assets/images/landing/gradient-background.jpg);
+    background-size: cover;
+
+    background-repeat: no-repeat;
+
+    @media screen and (max-width: 1200px) {
+      background-position-x: 0;
+      background-position-y: 196px;
+    }
+
+    @media screen and (max-width: 640px) {
+      background-size: 210%;
+      background-position-x: 0;
+      background-position-y: 550px;
+      background-repeat: no-repeat;
+    }
+
+    @media screen and (max-width: 320px) {
+      background: linear-gradient(
+          177.34deg,
+          #20113d 4.26%,
+          rgba(32, 17, 61, 0) 15.89%
+        ),
+        url(../../assets/images/landing/gradient-background.jpg);
+      background-size: 191%;
+      background-position-x: 0px;
+      background-position-y: 935px;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--hand-touch {
+    background-image: url(../../assets/images/landing/touch-the-animal.jpg);
+  }
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}

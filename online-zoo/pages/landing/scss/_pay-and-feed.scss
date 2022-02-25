@@ -1,0 +1,341 @@
+.pay-and-feed {
+  padding: 92px 0;
+
+  @media screen and (max-width: 1200px) {
+    padding: 150px 0;
+  }
+
+  @media screen and (max-width: 640px) {
+    padding: 80px 0;
+  }
+
+  @media screen and (max-width: 320px) {
+    padding: 20px 0;
+  }
+
+  &__title {
+    color: $white;
+    padding-bottom: 95px;
+
+    @media screen and (max-width: 1200px) {
+      padding-bottom: 95px;
+      padding-left: 5.5%;
+    }
+
+    @media screen and (max-width: 640px) {
+      padding-left: 0;
+      text-align: center;
+      padding-bottom: 47px;
+    }
+
+    @media screen and (max-width: 320px) {
+      font-weight: 500;
+      font-size: 26px;
+      line-height: 32px;
+      padding-bottom: 45px;
+    }
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-rows: 6.8fr 5.66fr 5.28fr;
+    grid-template-columns: 1fr;
+    grid-row-gap: 100px;
+
+    @media screen and (max-width: 1200px) {
+      grid-template-rows: 5.16fr 4.54fr 4.54fr;
+      grid-row-gap: 74px;
+    }
+
+    @media screen and (max-width: 640px) {
+      display: flex;
+      flex-direction: column;
+      grid-row-gap: 42px;
+    }
+
+    @media screen and (max-width: 320px) {
+      grid-row-gap: 40px;
+    }
+  }
+
+  &__row {
+    display: grid;
+    grid-template-areas:
+      "payDelimiter payDelimiter"
+      "payPicture payDescription";
+    grid-template-rows: 1fr 4fr;
+    grid-template-columns: 5fr 6fr;
+    grid-column-gap: 40px;
+
+    @media screen and (max-width: 1200px) {
+      grid-column-gap: 20px;
+      grid-template-rows: 0.6fr 3.58fr;
+    }
+
+    @media screen and (max-width: 640px) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &:nth-of-type(1) {
+      img {
+        @media screen and (max-width: 1200px) {
+          margin: 63px 0 0 0;
+        }
+
+        @media screen and (max-width: 640px) {
+          margin: 55px 0 0 0;
+        }
+
+        @media screen and (max-width: 320px) {
+          margin: 30px 0 0 0;
+        }
+      }
+    }
+
+    &:nth-of-type(2) {
+      img {
+        @media screen and (max-width: 1200px) {
+          margin: 30px 0 0 0;
+        }
+
+        @media screen and (max-width: 640px) {
+          margin: 55px 0 0 0;
+        }
+
+        @media screen and (max-width: 320px) {
+          margin: 36px 0 0 0;
+        }
+      }
+
+      #payDescription {
+        @media screen and (max-width: 1200px) {
+          span {
+            padding: 55px 0 30px;
+          }
+
+          span ~ p {
+            padding: 0 0px 28px 0;
+          }
+        }
+
+        @media screen and (max-width: 640px) {
+          span {
+            padding: 55px 0 22px;
+          }
+
+          span ~ p:last-of-type {
+            padding: 0 0px 7px 0;
+          }
+        }
+
+        @media screen and (max-width: 320px) {
+          span {
+            padding: 31px 0 26px;
+          }
+
+          span ~ p {
+            padding: 0 0px 31px 0;
+          }
+
+          span ~ p:last-of-type {
+            padding: 0 0px 7px 0;
+          }
+        }
+      }
+    }
+
+    &:nth-of-type(3) {
+      img {
+        @media screen and (max-width: 1200px) {
+          margin: 30px 0 0 0;
+        }
+
+        @media screen and (max-width: 640px) {
+          margin: 55px 0 0 0;
+        }
+
+        @media screen and (max-width: 320px) {
+          margin: 30px 0 0 0;
+        }
+      }
+
+      #payDescription {
+        @media screen and (max-width: 1200px) {
+          span {
+            padding: 50px 0 30px;
+          }
+
+          span ~ p {
+            padding: 0 0px 28px 0;
+          }
+        }
+
+        @media screen and (max-width: 640px) {
+          span {
+            padding: 50px 0 25px;
+          }
+
+          span ~ p {
+            padding: 0 0px 35px 0;
+          }
+        }
+
+        @media screen and (max-width: 320px) {
+          span {
+            padding: 31px 0 28px;
+          }
+
+          span ~ p {
+            padding: 0 0px 30px 0;
+          }
+
+          span ~ p:last-of-type {
+            padding: 0 0px 23px 0;
+          }
+        }
+      }
+    }
+
+    &--delimiter {
+      text-align: start;
+      overflow: hidden;
+      color: $white;
+
+      @media screen and (max-width: 640px) {
+        margin: 0 3.125%;
+      }
+
+      @media screen and (max-width: 320px) {
+        margin: 0 0 0 3.125%;
+      }
+
+      &::after {
+        content: "";
+        background: $white;
+        width: 100%;
+        height: 1px;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 -50% 0 3.5em;
+
+        @media screen and (max-width: 640px) {
+          margin: 0 -50% 0 0em;
+        }
+      }
+    }
+
+    &--inner {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      padding-right: 120px;
+
+      @media screen and (max-width: 1200px) {
+        padding-right: 0;
+      }
+
+      img {
+        border-radius: 5px;
+      }
+
+      &--icon {
+        padding: 20px 0 30px;
+
+        @media screen and (max-width: 1200px) {
+          text-align: center;
+        }
+
+        @media screen and (max-width: 640px) {
+          padding: 50px 0 25px;
+        }
+
+        @media screen and (max-width: 320px) {
+          padding: 30px 0 25px;
+        }
+      }
+
+      .subheader {
+        padding: 0 20px 50px 0;
+        color: $white;
+
+        @media screen and (max-width: 1200px) {
+          padding: 0 0px 33px 0;
+          text-align: center;
+        }
+
+        @media screen and (max-width: 320px) {
+          padding: 0 0px 29px 0;
+        }
+      }
+
+      .body-text {
+        // padding-bottom: 100px;
+        color: $white;
+
+        @media screen and (max-width: 1200px) {
+          text-align: center;
+        }
+
+        @media screen and (max-width: 320px) {
+          padding: 0 3%;
+
+          span {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  #payDelimiter {
+    grid-area: payDelimiter;
+  }
+
+  #payPicture {
+    grid-area: payPicture;
+  }
+
+  #payDescription {
+    grid-area: payDescription;
+
+    @media screen and (max-width: 640px) {
+      margin: 0 3.125%;
+    }
+  }
+
+  &__donate {
+    position: relative;
+    height: 74px;
+    margin-top: 50px;
+
+    @media screen and (max-width: 1200px) {
+      margin-top: 97px;
+    }
+
+    @media screen and (max-width: 640px) {
+      margin-top: 19px;
+    }
+
+    button {
+      position: absolute;
+      left: calc(50% - 240px / 2 + 140px);
+
+      @media screen and (max-width: 1200px) {
+        width: 260px;
+        left: calc(50% - 259px / 2 + 143px);
+      }
+
+      @media screen and (max-width: 640px) {
+        width: 290px;
+        left: calc(50% - 290px / 2);
+      }
+
+      @media screen and (max-width: 320px) {
+        width: 300px;
+        left: calc(50% - 300px / 2);
+        padding: 12px 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,95 @@
+.header-text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 82px;
+  line-height: 100px;
+  /* identical to box height */
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: $turquoise;
+}
+
+.header-text-320 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 49px;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: $turquoise;
+}
+
+h2 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 66px;
+  /* identical to box height */
+  text-transform: uppercase;
+  color: $turquoise;
+}
+
+.h2-320 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 32px;
+  /* identical to box height */
+  text-transform: uppercase;
+  color: $turquoise;
+}
+
+h3 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 51px;
+  /* identical to box height */
+  color: $turquoise;
+  text-transform: uppercase;
+}
+
+.subheader {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 130%;
+  /* or 34px */
+  color: $turquoise;
+}
+
+.body-text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 150%;
+  /* identical to box height, or 27px */
+  color: $black;
+
+  &--disable {
+    color: #a4a8ae;
+  }
+}
+
+.btn-text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+  text-transform: uppercase;
+  color: $turquoise;
+
+  &--back {
+    text-transform: capitalize;
+    text-decoration-line: underline;
+  }
+}

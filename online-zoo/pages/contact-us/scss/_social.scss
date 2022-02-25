@@ -1,0 +1,25 @@
+.social {
+  display: flex;
+  align-items: center;
+  z-index: 1;
+
+  &__item {
+    margin: 0 15px;
+    transition: all 0.3s ease-in-out;
+
+    &:nth-last-child(1) {
+      margin-right: 0;
+    }
+
+    &:hover,
+    &:focus {
+      transform: scale(1.2);
+    }
+  }
+}
+
+.header .social {
+  @media screen and (max-width: 1000px) {
+    display: none;
+  }
+}

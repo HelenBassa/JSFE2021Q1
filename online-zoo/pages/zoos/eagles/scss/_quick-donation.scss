@@ -1,0 +1,93 @@
+.quick-donation {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    left: 15px;
+    top: 26px;
+    color: $white;
+    content: "$";
+  }
+
+  &__input {
+    width: 320px;
+    height: 74px;
+    padding: 25px 0;
+    padding-left: 30px;
+    border-radius: 5px;
+    outline: none;
+    color: $white;
+    background-color: transparent;
+    border: 1px solid $white;
+
+    /* Chrome, Safari, Edge, Opera */
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    /* Firefox */
+    &[type="number"] {
+      -moz-appearance: textfield;
+    }
+
+    &::-webkit-input-placeholder {
+      color: $white;
+      opacity: 1;
+      transition: opacity 0.3s ease;
+    }
+
+    &::-moz-placeholder {
+      color: $white;
+      opacity: 1;
+      transition: opacity 0.3s ease;
+      &:focus {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+    }
+
+    &:-moz-placeholder {
+      color: $white;
+      opacity: 1;
+      transition: opacity 0.3s ease;
+      &:focus {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+    }
+
+    &:focus {
+      &::-webkit-input-placeholder {
+        color: $white;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      &::-moz-placeholder {
+        color: $white;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      &:-moz-placeholder {
+        color: $white;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+    }
+
+    // &:hover,
+    // &:active {
+    //   color: $white;
+    //   background-color: $turquoise;
+    // }
+  }
+
+  &__button {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+  }
+}

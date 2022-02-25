@@ -1,0 +1,58 @@
+.wrapper-sidebar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1920px;
+
+  @media screen and (max-width: 1000px) {
+    padding-top: 109px;
+  }
+
+  .main-content {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 75%;
+    max-width: unset;
+    margin: 0;
+    margin-right: 13.54%;
+    padding: 0;
+    padding-top: 50px;
+    padding-left: 40px;
+
+    //flex: 0 0 88.55%;
+
+    @media screen and (min-width: 1200px) and (max-width: 1420px) {
+      align-items: flex-end;
+      width: 90.41%;
+      max-width: unset;
+      margin: 0;
+      padding: 0;
+      padding-right: 40px;
+      padding-left: 20px;
+      margin-top: 34px;
+    }
+
+    @media screen and (min-width: 460px) and (max-width: 1199px) {
+      width: 87.82%;
+      margin-top: 31px;
+      padding-right: 20px;
+      padding-left: 0;
+      padding-top: 0;
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 459px) {
+      position: relative;
+      width: 100%;
+      left: -15.62%;
+      margin: 0;
+      padding: 0;
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+  }
+}

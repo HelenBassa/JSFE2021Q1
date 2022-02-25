@@ -1,0 +1,25 @@
+.did-you-know {
+  padding: 150px 0 0;
+
+  &--inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 120px 0 240px;
+    box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+
+    &__title {
+      padding-top: 50px;
+    }
+
+    &__description {
+      color: $black;
+      margin: 0 6%;
+      padding: 22px 0 47px;
+      line-height: 35px;
+    }
+  }
+}

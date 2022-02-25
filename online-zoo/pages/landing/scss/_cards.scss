@@ -1,0 +1,188 @@
+.cards {
+  margin: 100px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+
+  &__wrapper {
+    margin: 100px 0;
+    overflow: hidden;
+    display: grid;
+    grid-template-areas:
+      "cardsImage cardsImage cardsCard-1"
+      "cardsCard-2 cardsCard-3 cardsCard-4";
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 40px;
+    grid-column-gap: 40px;
+
+    @media screen and (max-width: 1200px) {
+      margin: 50px 0;
+      display: flex;
+      flex-wrap: wrap;
+      grid-gap: 20px;
+    }
+
+    @media screen and (max-width: 640px) {
+      margin: 68px 0 0;
+      flex-wrap: nowrap;
+      width: 100vw;
+      overflow: hidden;
+      padding: 0 3.125%;
+    }
+
+    #cardsImage {
+      grid-area: cardsImage;
+
+      @media screen and (max-width: 1200px) {
+        height: 470px;
+        overflow: hidden;
+        border-radius: 5px;
+        transform: scale(-1, 1);
+        position: relative;
+      }
+
+      @media screen and (max-width: 640px) {
+        display: none;
+      }
+
+      img {
+        @media screen and (max-width: 1200px) {
+          position: absolute;
+          top: -115px;
+          transform: scale(1.02);
+        }
+      }
+    }
+
+    #cardsCard-1 {
+      grid-area: cardsCard-1;
+    }
+
+    #cardsCard-2 {
+      grid-area: cardsCard-2;
+      @media screen and (max-width: 1200px) {
+        order: 2;
+      }
+    }
+
+    #cardsCard-3 {
+      grid-area: cardsCard-3;
+    }
+
+    #cardsCard-4 {
+      grid-area: cardsCard-4;
+      @media screen and (max-width: 1200px) {
+        order: 3;
+      }
+    }
+  }
+
+  &__image {
+    height: 658px;
+    width: 930px;
+  }
+
+  &__card {
+    position: relative;
+    height: 658px;
+    width: 440px;
+    transition: all 0.3s ease-in-out;
+    background-color: $navy;
+    border-radius: 5px;
+    z-index: 2;
+
+    @media screen and (max-width: 1200px) {
+      height: 640px;
+      width: 455px;
+    }
+
+    @media screen and (max-width: 640px) {
+      min-width: 94vw;
+      width: 600px;
+      height: 297px;
+      display: flex;
+    }
+
+    @media screen and (max-width: 320px) {
+      display: block;
+      height: 570px;
+      width: 300px;
+    }
+
+    &:hover {
+      transform: scale(1.09, 1.054);
+    }
+
+    &--link {
+      z-index: 3;
+      height: 100%;
+
+      @media screen and (max-width: 640px) {
+        display: flex;
+      }
+
+      @media screen and (max-width: 320px) {
+        display: block;
+      }
+    }
+
+    &--picture {
+      height: 373px;
+      width: 100%;
+
+      //   /* Сustom figure after normalize.css */
+      //   margin-inline: 0;
+      //   margin-block: 0;
+      z-index: 1;
+      border-radius: 5px 5px 0 0;
+      overflow: hidden;
+
+      @media screen and (max-width: 640px) {
+        width: 300px;
+        height: 297px;
+        overflow: visible;
+        border-radius: 5px 0 0 5px;
+      }
+
+      @media screen and (max-width: 320px) {
+        width: 300px;
+        height: 350px;
+        overflow: hidden;
+        border-radius: 5px 5px 0 0;
+      }
+    }
+
+    .body-text {
+      color: $white;
+      padding: 26px 26px;
+      text-align: center;
+
+      @media screen and (max-width: 640px) {
+        padding: 67px 26px;
+      }
+
+      @media screen and (max-width: 320px) {
+        padding: 13px 13px;
+      }
+    }
+
+    button {
+      position: absolute;
+      left: calc(50% - 142px / 2);
+      top: calc(50% - 74px / 2 + 242px);
+
+      @media screen and (max-width: 640px) {
+        left: calc(50% + 140px / 2 + 10px);
+        top: calc(50% - 74px / 2 + 80px);
+      }
+
+      @media screen and (max-width: 320px) {
+        left: calc(50% - 142px / 2);
+        top: calc(50% - 74px / 2 + 228px);
+      }
+    }
+  }
+}

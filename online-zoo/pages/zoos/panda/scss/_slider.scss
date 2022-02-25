@@ -1,0 +1,215 @@
+.slider {
+  margin: 100px 0 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: 1200px) and (max-width: 1450px) {
+    margin: 12px 0 50px 0;
+  }
+
+  @media screen and (min-width: 640px) and (max-width: 1199px) {
+    margin: 89px 0px 80px 99px;
+  }
+
+  @media screen and (max-width: 320px) {
+    margin: 22px 0 50px 0;
+  }
+
+  &__title {
+    color: $black;
+
+    @media screen and (max-width: 640px) {
+      font-weight: 500;
+      font-size: 26px;
+      line-height: 130%;
+      text-transform: unset;
+      text-align: left;
+      margin-left: -247px;
+    }
+
+    @media screen and (max-width: 320px) {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 22px;
+      text-transform: uppercase;
+      margin-left: 26px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: row;
+
+    &--btn {
+      margin: 65px 13px;
+      @media screen and (max-width: 640px) {
+        display: none;
+        height: 0;
+        margin: 0;
+        padding: 0;
+      }
+
+      svg {
+        @media screen and (max-width: 640px) {
+          display: none;
+          height: 0;
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  &__wrapper {
+    width: 1400px;
+    padding: 30px 70px 100px;
+    margin-left: 125px;
+    // overflow: hidden;
+    display: grid;
+
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 10fr 1fr;
+    grid-gap: 0px;
+
+    @media screen and (min-width: 1200px) and (max-width: 1450px) {
+      width: 1025px;
+      padding: 27px 0px 52px 0px;
+      margin-left: 0;
+    }
+
+    @media screen and (min-width: 897px) and (max-width: 1199px) {
+      padding: 20px 0px 0px 0px;
+      width: 870px;
+    }
+
+    @media screen and (min-width: 440px) and (max-width: 896px) {
+      display: flex;
+      justify-content: flex-end;
+      padding: 20px 0px 0px 0px;
+      width: 446px;
+      margin-left: 0;
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 439px) {
+      overflow: hidden;
+      width: 100vw;
+      justify-content: flex-start;
+      margin-left: 0;
+      padding: 21px 0 0px;
+    }
+  }
+
+  &__container {
+    overflow: hidden;
+    display: grid;
+
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px;
+
+    @media screen and (min-width: 1200px) and (max-width: 1450px) {
+      grid-gap: 20px;
+    }
+
+    @media screen and (min-width: 897px) and (max-width: 1199px) {
+      display: flex;
+      grid-gap: 20px;
+    }
+
+    @media screen and (min-width: 440px) and (max-width: 896px) {
+      overflow: hidden;
+
+      grid-gap: 20px;
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 439px) {
+      overflow: hidden;
+      width: 100vw;
+      margin-left: 11px;
+      grid-gap: 20px;
+    }
+  }
+
+  &__card {
+    position: relative;
+    height: 209px;
+    width: 320px;
+    // transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+
+    @media screen and (max-width: 1200px) {
+      height: 209px;
+      width: 265px;
+    }
+
+    @media screen and (max-width: 640px) {
+      height: 106px;
+      width: 135px;
+    }
+
+    @media screen and (max-width: 320px) {
+      height: 110px;
+      min-width: 140px;
+    }
+
+    // z-index: 2;
+
+    // &:hover {
+    //   transform: scale(1.09, 1.054);
+    // }
+
+    // &:nth-child(1) {
+    //   box-sizing: border-box;
+    //   border: 3px solid $orange;
+
+    //   .bage {
+    //     top: -3px;
+    //   }
+
+    //   .video__button {
+    //     top: calc(50% - 3px);
+    //   }
+
+    //   .slider__card--picture {
+    //     &:first-of-type {
+    //       border-radius: 0;
+    //     }
+    //   }
+    // }
+
+    .video__button {
+      width: 46px;
+      height: 32px;
+
+      @media screen and (max-width: 640px) {
+        width: 26px;
+        height: 20px;
+      }
+
+      svg {
+        width: 46px;
+        height: 32px;
+        @media screen and (max-width: 640px) {
+          width: 26px;
+          height: 20px;
+        }
+      }
+    }
+
+    &--picture {
+      position: relative;
+      height: 100%;
+      width: 100%;
+      border: none;
+      /* Сustom figure after normalize.css */
+      margin-inline: 0;
+      margin-block: 0;
+      z-index: 1;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+  }
+}

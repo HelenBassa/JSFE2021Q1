@@ -1,0 +1,209 @@
+.get-in-touch {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media screen and (max-width: 1000px) {
+    padding-top: 109px;
+  }
+
+  &__image {
+    @media screen and (max-width: 1200px) {
+      overflow: hidden;
+    }
+  }
+
+  &__image img {
+    max-width: 100%;
+    @media screen and (max-width: 1200px) {
+      max-width: 117%;
+    }
+  }
+
+  &__form {
+    margin: 147px 0;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 40px;
+
+    @media screen and (max-width: 1200px) {
+      display: block;
+      margin: 45px 19.17% 100px;
+    }
+
+    @media screen and (max-width: 1000px) {
+      margin: 45px 12.5% 100px;
+    }
+
+    @media screen and (max-width: 640px) {
+      margin: 45px 3.125% 100px;
+    }
+
+    @media screen and (max-width: 600px) {
+      margin: 30px 0 80px;
+    }
+
+    @media screen and (max-width: 320px) {
+      margin: 25px 0 80px;
+    }
+  }
+
+  &__caption {
+    @media screen and (max-width: 1200px) {
+      text-align: center;
+    }
+  }
+
+  &__title {
+    margin-bottom: 50px;
+
+    @media screen and (max-width: 1200px) {
+      margin-bottom: 30px;
+    }
+
+    @media screen and (max-width: 640px) {
+      margin-bottom: 17px;
+    }
+
+    @media screen and (max-width: 320px) {
+      font-size: 26px;
+      font-weight: 500;
+      line-height: 32px;
+    }
+  }
+
+  &__description {
+    display: block;
+    margin-right: 20%;
+
+    @media screen and (max-width: 1200px) {
+      margin: 0 0 24px;
+    }
+
+    @media screen and (max-width: 640px) {
+      margin: 0 0 50px;
+    }
+
+    @media screen and (max-width: 320px) {
+      margin: 0 3.125% 43px;
+    }
+  }
+
+  .form {
+    @media screen and (max-width: 320px) {
+      margin: 0 3.125%;
+    }
+  }
+
+  form {
+    label {
+      display: block;
+      margin-bottom: 0.5em;
+
+      @media screen and (max-width: 320px) {
+        margin-bottom: 0.25em;
+      }
+
+      span {
+        color: $turquoise;
+      }
+    }
+
+    fieldset {
+      border: none;
+      padding: 0;
+      margin: 0 0 30px;
+
+      @media screen and (max-width: 320px) {
+        margin: 0 0 31px;
+      }
+    }
+
+    input,
+    textarea {
+      display: block;
+      width: 100%;
+      padding: 16px 18px;
+      background-color: transparent;
+      border: 1px solid $black;
+      border-radius: 5px;
+      resize: none;
+      outline: none;
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 150%;
+      /* identical to box height, or 27px */
+      color: #969696;
+
+      @media screen and (max-width: 320px) {
+        padding: 10px 9px;
+      }
+
+      &:hover {
+        border: 1px solid $turquoise;
+      }
+
+      &:active,
+      &:focus {
+        border: 1px solid $turquoise;
+        box-shadow: 0px 4px 30px rgba(0, 160, 146, 0.3);
+      }
+
+      &:invalid:not(:placeholder-shown) {
+        background: rgba(245, 128, 33, 0.2);
+        border: 1px solid $orange;
+        & ~ .requirements {
+          max-height: 200px;
+          padding: 0 30px 20px 50px;
+        }
+      }
+
+      &:invalid:focus:not(:placeholder-shown) {
+        & ~ .requirements {
+          max-height: 200px;
+          padding: 12px 0;
+        }
+      }
+    }
+
+    textarea {
+      min-height: 200px;
+    }
+
+    .requirements {
+      max-height: 0;
+      transition: 0.28s;
+      overflow: hidden;
+      color: $orange;
+    }
+  }
+
+  .button {
+    margin: 38px 0 4px;
+
+    @media screen and (max-width: 1200px) {
+      margin: 21px 0 0 0;
+    }
+  }
+
+  .button-wrapper {
+    @media screen and (max-width: 1000px) {
+      text-align: center;
+    }
+
+    & .button--width-360 {
+      @media screen and (max-width: 640px) {
+        width: 290px;
+      }
+
+      @media screen and (max-width: 320px) {
+        margin: 0;
+        width: 300px;
+        padding: 13px 0;
+      }
+    }
+  }
+}

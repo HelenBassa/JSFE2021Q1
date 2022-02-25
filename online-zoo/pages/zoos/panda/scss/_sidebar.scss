@@ -1,0 +1,420 @@
+.sidebar {
+  position: sticky;
+  top: 0px;
+  width: 220px;
+  height: 846px;
+  background-color: $navy;
+  //margin-right: -220px;
+  overflow: auto;
+
+  display: grid;
+
+  grid-template-rows: 1fr 8.6fr 1fr;
+  grid-template-columns: 1fr;
+  grid-gap: 1px;
+
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  flex: 0 0 11.45%;
+  z-index: 10;
+
+  @media screen and (min-width: 1200px) and (max-width: 1420px) {
+    flex: 0 0 9.6%;
+  }
+
+  @media screen and (min-width: 980px) and (max-width: 1199px) {
+    flex: 0 0 12.2%;
+  }
+
+  @media screen and (min-width: 640px) and (max-width: 979px) {
+    flex: 0 0 12.2%;
+    // height: 500px;
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 639px) {
+    flex: 0 0 15.2%;
+    height: 300px;
+    grid-template-rows: 2.15fr 2.15fr 2.15fr 2.15fr 2.15fr 2.15fr;
+  }
+
+  &__show {
+    position: relative;
+    height: 100%;
+
+    @media screen and (max-width: 1420px) {
+      .bage {
+        display: none;
+      }
+    }
+  }
+
+  &__btn--show {
+    cursor: pointer;
+    position: absolute;
+    right: 30px;
+    top: calc(50% - 16px / 2);
+    padding: 0;
+
+    svg {
+      transform: rotatez(0deg);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    @media screen and (max-width: 1420px) {
+      right: calc(50% - 16px / 2);
+    }
+
+    &:hover {
+      svg path {
+        fill: $orange;
+      }
+    }
+  }
+
+  &__item {
+    height: 100%;
+    border-top: 1px solid $white;
+
+    &:last-of-type {
+      border-bottom: 1px solid $white;
+    }
+
+    p {
+      text-align: center;
+      margin: 0 17px 0 114px;
+      color: white;
+      display: none;
+    }
+
+    // .active {
+
+    // }
+
+    .panda,
+    .eagle,
+    .gorilla,
+    .lemur,
+    .alligator,
+    .lion,
+    .tiger,
+    .coala {
+      position: relative;
+      width: 100%;
+      height: 100%;
+
+      display: flex;
+      align-items: center;
+
+      svg {
+        position: absolute;
+        left: calc(50% - 120px / 2);
+        top: calc(50% - 120px / 2);
+
+        @media screen and (max-width: 1420px) {
+          width: 80px;
+          height: 80px;
+          left: calc(50% - 80px / 2);
+          top: calc(50% - 80px / 2);
+        }
+
+        @media screen and (max-width: 640px) {
+          width: 60px;
+          height: 60px;
+          left: calc(50% - 60px / 2);
+          top: calc(50% - 60px / 2);
+        }
+
+        @media screen and (min-width: 320px) and (max-width: 640px) {
+          width: 40px;
+          height: 40px;
+          left: calc(50% - 40px / 2);
+          top: calc(50% - 40px / 2);
+        }
+
+        circle {
+          stroke: transparent;
+        }
+
+        g {
+          path,
+          circle {
+            fill: $orange;
+
+            @media screen and (max-width: 1420px) {
+              fill: transparent;
+            }
+          }
+        }
+
+        path {
+          @media screen and (max-width: 1420px) {
+            fill: $orange;
+          }
+        }
+      }
+    }
+
+    .alligator,
+    .lion,
+    .tiger,
+    .coala {
+      svg path {
+        transform: translate(30px, 30px);
+      }
+    }
+
+    &.active {
+      // pointer-events: none;
+      cursor: default;
+      svg {
+        circle {
+          stroke: $white;
+
+          @media screen and (max-width: 1420px) {
+            stroke: transparent;
+          }
+        }
+
+        g {
+          path,
+          circle {
+            fill: $white;
+
+            @media screen and (max-width: 1420px) {
+              fill: transparent;
+            }
+          }
+        }
+
+        path {
+          @media screen and (max-width: 1420px) {
+            fill: $white;
+          }
+        }
+      }
+    }
+
+    &:not(.active) {
+      .panda:hover,
+      .eagle:hover,
+      .gorilla:hover,
+      .lemur:hover,
+      .alligator:hover,
+      .lion:hover,
+      .tiger:hover,
+      .coala:hover {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        svg {
+          position: absolute;
+          left: calc(50% - 120px / 2);
+          top: calc(50% - 120px / 2);
+
+          @media screen and (max-width: 1420px) {
+            width: 80px;
+            height: 80px;
+            left: calc(50% - 80px / 2);
+            top: calc(50% - 80px / 2);
+          }
+
+          @media screen and (max-width: 640px) {
+            width: 60px;
+            height: 60px;
+            left: calc(50% - 60px / 2);
+            top: calc(50% - 60px / 2);
+          }
+
+          @media screen and (min-width: 320px) and (max-width: 640px) {
+            width: 40px;
+            height: 40px;
+            left: calc(50% - 40px / 2);
+            top: calc(50% - 40px / 2);
+          }
+
+          circle {
+            stroke: transparent;
+          }
+
+          g {
+            path,
+            circle {
+              fill: $white;
+
+              @media screen and (max-width: 1420px) {
+                fill: transparent;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.opened {
+    width: 300px;
+    flex: 0 0 19.525%;
+
+    @media screen and (min-width: 1200px) and (max-width: 1420px) {
+      width: 300px;
+      flex: 0 0 31.25%;
+    }
+
+    .sidebar__btn--show {
+      svg {
+        transform: rotatez(-180deg);
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+
+    p {
+      display: block;
+    }
+
+    .panda,
+    .eagle,
+    .gorilla,
+    .lemur,
+    .alligator,
+    .lion,
+    .tiger,
+    .coala {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      svg {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        left: 26.67px;
+        top: calc(50% - 80px / 2);
+
+        circle {
+          stroke: transparent;
+        }
+
+        g {
+          path,
+          circle {
+            fill: transparent;
+          }
+        }
+
+        path {
+          fill: $orange;
+        }
+      }
+    }
+
+    .panda:hover,
+    .eagle:hover,
+    .gorilla:hover,
+    .lemur:hover,
+    .alligator:hover,
+    .lion:hover,
+    .tiger:hover,
+    .coala:hover {
+      svg {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        left: 26.67px;
+        top: calc(50% - 80px / 2);
+
+        circle {
+          stroke: transparent;
+        }
+
+        g {
+          path,
+          circle {
+            fill: transparent;
+          }
+        }
+
+        path {
+          fill: $white;
+        }
+      }
+    }
+
+    .active {
+      // pointer-events: none;
+      cursor: default;
+      svg path {
+        fill: $white;
+      }
+    }
+  }
+
+  &__btn--next {
+    cursor: pointer;
+    padding: 12% 0%;
+
+    &:hover {
+      svg path {
+        fill: $orange;
+      }
+    }
+  }
+
+  /* tooltip */
+  /*  .tooltip {
+    position: relative;
+  }
+  .tooltip:before,
+  .tooltip:after {
+    display: block;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+  }
+  .tooltip:after {
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid $turquoise;
+    border-left: 6px solid transparent;
+    content: "";
+    height: 0;
+    top: 130px;
+    left: 47%;
+    width: 0;
+    z-index: 9;
+  }
+  .tooltip:before {
+    background: $turquoise;
+    border-radius: 2px;
+    color: $white;
+    content: attr(data-title);
+    font-size: 14px;
+    padding: 6px 10px;
+    top: 136px;
+    left: 10%;
+    right: 10%;
+    text-align: center;
+    z-index: 9;
+  }
+*/
+  /* the animations */
+  /* expand */
+
+  /*
+  .tooltip.expand:before {
+    transform: scale3d(0.2, 0.2, 1);
+    transition: all 0.2s ease-in-out;
+  }
+  .tooltip.expand:after {
+    transform: translate3d(0, 6px, 0);
+    transition: all 0.1s ease-in-out;
+  }
+  .tooltip.expand:hover:before,
+  .tooltip.expand:hover:after {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+  .tooltip.expand:hover:after {
+    transition: all 0.2s 0.1s ease-in-out;
+  }
+  */
+}
