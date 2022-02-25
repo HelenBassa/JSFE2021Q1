@@ -1,0 +1,131 @@
+.popup {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.25);
+
+  &.opened {
+    display: block;
+  }
+
+  &__body {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    width: 640px;
+    height: 420px;
+    padding: 1%;
+    overflow: hidden;
+    position: relative;
+    background: #fafafa;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2), 0px 3px 4px rgba(0, 0, 0, 0.12),
+      0px 2px 4px rgba(0, 0, 0, 0.14);
+    border-radius: 4px;
+  }
+
+  &__title {
+    height: 10%;
+    background-color: rgba(143, 209, 209, 0.466);
+    margin-bottom: 10%;
+    text-align: left;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.15px;
+    color: rgba(0, 0, 0, 0.87);
+  }
+
+  &__form {
+    &--main {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8%;
+    }
+
+    fieldset {
+      // display: flex;
+      border: none;
+      padding: 0;
+      margin: 0 0 15px;
+    }
+  }
+
+  &__input {
+    width: 330px;
+    height: 56px;
+    text-align: left;
+    padding: 16px 40px;
+    background: rgba(33, 33, 33, 0.08);
+    border-radius: 4px 4px 0px 0px;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    color: black;
+
+    &:hover {
+      border: 1px solid turquoise;
+    }
+
+    &:active,
+    &:focus {
+      border: 1px solid turquoise;
+      box-shadow: 0px 4px 30px rgba(0, 160, 146, 0.3);
+    }
+
+    &:invalid:not(:placeholder-shown) {
+      background: rgba(245, 128, 33, 0.2);
+      border: 1px solid orange;
+      & ~ .requirements {
+        max-height: 200px;
+        padding: 0 30px 20px 50px;
+      }
+    }
+
+    &:invalid:focus:not(:placeholder-shown) {
+      & ~ .requirements {
+        max-height: 200px;
+        padding: 5px;
+      }
+    }
+  }
+
+  .requirements {
+    max-height: 0;
+    transition: 0.28s;
+    overflow: hidden;
+    color: orange;
+  }
+
+  &__avatar {
+    display: flex;
+    width: 35%;
+    height: auto;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__button {
+    margin-left: 17px;
+    cursor: pointer;
+  }
+}
